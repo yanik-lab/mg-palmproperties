@@ -1,0 +1,38 @@
+/*=============================================
+GENERAL COLORS VARIABLES
+=============================================*/
+$white: #ffffff;
+$black: #000000;
+/*=============================================
+GENERAL COLORS ATTRIBUTIONS
+=============================================*/
+$body-bg: darken(#ffffff, 2%);
+$wrapper-bg: #ffffff;
+/*=============================================
+THEMES COLORS VARIABLES
+=============================================*/
+:root {
+    --paddingYsection: 6rem;
+    --paddingXsection: 6rem;
+}
+$crea-black-400: rgba(42, 42, 42, 1);
+$crea-black-300: rgba(143, 143, 143, 1);
+$crea-green-600: rgba(0, 41, 50, 1);
+$crea-green-500: rgba(3, 49, 59, 1);
+$crea-green-400: rgba(16, 73, 81, 1);
+$crea-cuivre-400: rgba(189, 153, 126, 1);
+$crea-beige-500: rgba(192, 185, 166, 1);
+$crea-beige-400: rgba(224, 223, 210, 1);
+$crea-beige-300: rgba(247, 247, 244, 1);
+$crea-white-400: rgba(255, 255, 255, 1);
+/*=============================================
+THEMES COLORS ATTRIBUTIONS
+=============================================*/
+$ham: $black;
+$loader-bg: $crea-green-500;
+// $loader1: $crea-green-400;
+// $loader2: $crea-cuivre-400;
+// $loader3: $crea-beige-500;
+$text-color: $crea-black-400;
+$title-color: $crea-black-400;
+$icon-color: $crea-cuivre-400;

@@ -1,0 +1,148 @@
+#header {
+    z-index: 10003;
+    position: fixed;
+    width: 1920px;
+    max-width: 100%;
+    left: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    .header {
+        display: flex;
+        align-items: center;
+        padding: 1.8rem 3.2rem;
+        background: transparent;
+        box-shadow: 2px 0 5px 0px rgba($black, 0);
+        @include transition(all 0.15s cubic-bezier(0.25, 0.74, 0.22, 0.99));
+        .left,
+        .right {
+            display: flex;
+            align-items: center;
+            flex: 0 0 20%;
+        }
+        .left {
+            justify-content: flex-start;
+        }
+        .right {
+            justify-content: flex-end;
+        }
+        .middle {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        ul {
+            li {
+                display: inline-block;
+                margin-bottom: 0;
+                a {
+                    position: relative;
+                    z-index: 2;
+                    display: block;
+                    padding: 1rem 2.5rem;
+                    color: $white;
+                    @include crea-cta;
+                    text-decoration: none;
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        width: 0;
+                        left: 50%;
+                        top: 50%;
+                        height: 1rem;
+                        background-color: rgba($white, 0.2);
+                        @include transform(translate(-50%, 0%));
+                        @include transition(
+                            width 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99)
+                        );
+                    }
+                }
+                &:hover,
+                &.current-menu-item,
+                &.current-lang {
+                    a {
+                        &:after {
+                            width: 85%;
+                        }
+                    }
+                }
+            }
+            &#langs {
+                margin-right: 1rem;
+                li {
+                    a {
+                        padding: 1rem 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+/* purgecss start ignore */
+#header {
+    &.scrolled {
+        .header {
+            padding: 1.4rem 3.2rem;
+            background: $white;
+            box-shadow: 2px 0 5px 0px rgba($black, 0.2);
+            ul {
+                li {
+                    a {
+                        color: $crea-green-500;
+                        &:after {
+                            background-color: rgba($crea-beige-400, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #myburger {
+        position: fixed;
+        top: 1.2rem;
+        right: 2.5rem;
+        z-index: 3;
+        @include transition(all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99));
+        .ham {
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: transform 400ms;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .line {
+            fill: none;
+            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+            stroke: $ham;
+            stroke-width: 4;
+            stroke-linecap: square;
+            @include transition(all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99));
+        }
+        .ham1 .top {
+            stroke-dasharray: 40 139;
+        }
+        .ham1 .bottom {
+            stroke-dasharray: 40 180;
+        }
+    }
+    &.activeMobile {
+        .hamRotate {
+            transform: rotate(45deg);
+        }
+        .hamRotate180 {
+            transform: rotate(180deg);
+        }
+        .ham1 .top {
+            stroke-dashoffset: -98px;
+        }
+        .ham1 .bottom {
+            stroke-dashoffset: -138px;
+        }
+    }
+}
+/* purgecss end ignore */

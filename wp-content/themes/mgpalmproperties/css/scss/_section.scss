@@ -1,0 +1,314 @@
+// UTILITAIRES
+section {
+    position: relative;
+    z-index: 4;
+    &.standard {
+        padding: var(--paddingYsection) 0;
+        &.first {
+            padding-top: calc(var(--paddingYsection) * 2);
+        }
+        &.firstxl {
+            padding-top: calc(var(--paddingYsection) * 3);
+        }
+        &.last {
+            padding-bottom: calc(var(--paddingYsection) * 2);
+        }
+        &.lastxl {
+            padding-bottom: calc(var(--paddingYsection) * 3);
+        }
+        &.noPT {
+            padding-top: 0;
+        }
+        &.noPB {
+            padding-bottom: 0;
+        }
+        .compenseTop {
+            margin-top: calc(var(--paddingYsection) * 3);
+        }
+        .compenseBottom {
+            margin-bottom: calc(var(--paddingYsection) * 3);
+        }
+        .contentHover {
+            position: absolute;
+            z-index: 4;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .ico {
+                color: $crea-cuivre-400;
+                font-size: 4rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+    &.bgGreen {
+        color: $crea-beige-400;
+        background-color: $crea-green-600;
+    }
+    &.bgWhite {
+        background-color: $wrapper-bg;
+    }
+    &.full {
+        overflow: hidden;
+        height: 100vh;
+        max-height: 90rem;
+    }
+    &.fullxl {
+        overflow: hidden;
+        height: 150vh;
+        max-height: 180rem;
+    }
+    .colFull {
+        overflow: hidden;
+        height: 80vh;
+        max-height: 80rem;
+        .bgLink {
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                top: 100%;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: $crea-green-600;
+                background: linear-gradient(
+                    0deg,
+                    rgba(0, 41, 50, 1) 0%,
+                    rgba(0, 41, 50, 0.9) 100%
+                );
+                @include opacity(0);
+                @include transition(
+                    opacity 0.55s cubic-bezier(0.25, 0.74, 0.22, 0.99),
+                    top 0.55s cubic-bezier(0.25, 0.74, 0.22, 0.99)
+                );
+            }
+            .wContent {
+                position: relative;
+                z-index: 3;
+                .content {
+                    display: flex;
+                    align-items: flex-end;
+                    color: $crea-beige-400;
+                    padding: 5rem;
+                    .btn-link {
+                        margin-top: 2.5rem;
+                    }
+                    .bottom {
+                        max-height: 0;
+                        // overflow: hidden;
+                        margin-top: 0.5rem;
+                        @include opacity(0);
+                        @include transition(
+                            all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99)
+                        );
+                    }
+                }
+            }
+        }
+        .bgLink {
+            &:hover {
+                &:before {
+                    top: 0;
+                    @include opacity(1);
+                }
+                .wContent {
+                    .content {
+                        .btn-link {
+                            color: $crea-beige-300;
+                        }
+                        .bottom {
+                            @include opacity(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .introduction {
+        margin-bottom: 4.5rem;
+        .ico {
+            display: block;
+            color: $crea-cuivre-400;
+            margin-bottom: 2rem;
+            font-size: 5rem;
+        }
+        .btn {
+            .ico {
+                margin-bottom: 0;
+                color: inherit;
+            }
+        }
+    }
+    &.section-header {
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: 2;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+        &:before {
+            top: 0;
+            background: $crea-green-600;
+            background: linear-gradient(
+                180deg,
+                rgba(0, 41, 50, 0) 0%,
+                rgba(0, 41, 50, 0.8) 70%,
+                rgba(0, 41, 50, 1) 100%
+            );
+        }
+        &:after {
+            z-index: 5;
+            height: 50vh;
+            background: $crea-green-600;
+            background: linear-gradient(
+                180deg,
+                rgba(0, 41, 50, 0) 0%,
+                rgba(0, 41, 50, 1) 50%,
+                rgba(0, 41, 50, 1) 100%
+            );
+        }
+        .special {
+            position: fixed;
+            z-index: 3;
+            width: 100%;
+            bottom: calc(var(--paddingYsection) * 2);
+        }
+    }
+    &.section-team {
+        .compense {
+            margin-left: 2rem;
+            margin-top: calc(var(--paddingYsection) * 4);
+        }
+    }
+    &.section-luxe {
+        background-image: url("images/logo-fond.png");
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: left -7rem center;
+    }
+    &.section-contact {
+        .bgSection {
+            padding-top: calc(var(--paddingYsection) * 2);
+            padding-bottom: calc(var(--paddingYsection) * 2);
+            background-image: url("images/logo-fond-light.png");
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            background-position: center;
+        }
+    }
+}
+/* purgecss start ignore */
+section {
+    .mySwiper {
+        .swiper-wrapper {
+            padding-bottom: 3.5rem;
+            .swiper-slide {
+                user-select: none;
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                .baseline {
+                    padding: 2.4rem;
+                    text-transform: uppercase;
+                    color: $crea-black-300;
+                    b,
+                    strong {
+                        color: $crea-black-400;
+                    }
+                    span {
+                        padding-right: 0.3rem;
+                        &:after {
+                            content: "•";
+                            padding-left: 0.8rem;
+                            color: $crea-black-300;
+                        }
+                        &:last-child {
+                            &:after {
+                                content: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-scrollbar {
+            left: 50%;
+            width: 40rem;
+            max-width: 80%;
+            height: 0.4rem;
+            margin: auto;
+            background-color: $crea-beige-400;
+            @include transform(translateX(-50%));
+        }
+        .swiper-scrollbar-drag {
+            background-color: $crea-beige-500;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            width: 22vw;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            margin: 0;
+            &:after {
+                color: $white;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: rgb(0, 0, 0);
+                @include opacity(0);
+                @include transition(
+                    all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99)
+                );
+            }
+            &:hover {
+                &:before {
+                    @include opacity(1);
+                }
+            }
+        }
+        .swiper-button-next {
+            right: 0;
+            padding-right: 2rem;
+            justify-content: flex-end;
+            &:before {
+                background: linear-gradient(
+                    90deg,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(0, 0, 0, 0.3) 90%,
+                    rgba(0, 0, 0, 0.3) 100%
+                );
+            }
+        }
+        .swiper-button-prev {
+            left: 0;
+            padding-left: 2rem;
+            justify-content: flex-start;
+            &:before {
+                background: linear-gradient(
+                    -90deg,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(0, 0, 0, 0.3) 90%,
+                    rgba(0, 0, 0, 0.3) 100%
+                );
+            }
+        }
+    }
+}
+/* purgecss end ignore */

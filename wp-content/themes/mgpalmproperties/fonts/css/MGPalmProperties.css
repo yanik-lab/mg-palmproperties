@@ -1,0 +1,32 @@
+@font-face {
+font-family: 'MGPalmProperties';
+src: url("../fonts/MGPalmProperties.ttf") format("truetype"),
+url("../fonts/MGPalmProperties.eot") format("embedded-opentype"),
+url("../fonts/MGPalmProperties.woff") format("woff");
+}
+.ico {
+    font-family: 'MGPalmProperties' !important;
+    font-size: 18px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.pictophone:before { content: "\ea01"; }
+.pictotransition-immo:before { content: "\ea02"; }
+.pictobien:before { content: "\ea03"; }
+.pictomail:before { content: "\ea04"; }
+.pictofb:before { content: "\ea05"; }
+.pictolinkedin:before { content: "\ea06"; }
+.pictoinsta:before { content: "\ea07"; }
+.pictoarrow:before { content: "\ea08"; }
+.pictocity:before { content: "\ea09"; }
+.pictophotos:before { content: "\ea0a"; }
+.pictosuperficie:before { content: "\ea0b"; }
+.pictobathroom:before { content: "\ea0c"; }
+.pictobedroom:before { content: "\ea0d"; }
+.pictostrategie:before { content: "\ea0e"; }
+.pictovalorisation:before { content: "\ea0f"; }
+.pictoaccompagnement:before { content: "\ea10"; }
+.pictofavicon:before { content: "\ea11"; }
+.pictoarrow-right:before { content: "\ea12"; }

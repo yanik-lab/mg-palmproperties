@@ -1,0 +1,75 @@
+#footer {
+    position: relative;
+    z-index: 10003;
+    color: $crea-beige-400;
+    background-color: $crea-green-500;
+    a {
+        text-decoration: none;
+        color: $crea-beige-400;
+        &:hover {
+            color: $crea-cuivre-400;
+        }
+    }
+    .current-menu-item {
+        a {
+            color: $crea-cuivre-400;
+        }
+    }
+    .top {
+        text-transform: uppercase;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        .primary-menu {
+            li {
+                list-style-type: none;
+                &:first-child {
+                    display: none;
+                }
+            }
+            a {
+                display: block;
+                padding: 0.4rem 0;
+            }
+        }
+        .second-menu {
+            a {
+                display: flex;
+                padding: 0.4rem 0;
+                @include crea-texte-14-book;
+                text-transform: none;
+            }
+            .ico {
+                font-size: 1.4rem;
+                flex: 0 0 1.4rem;
+                margin-right: 0.8rem;
+            }
+        }
+        .socials {
+            display: flex;
+            align-items: center;
+            li {
+                list-style-type: none;
+                margin-right: 2rem;
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+    .bottom {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-top: 1px solid $crea-green-400;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+            margin: 0 1.5rem;
+            @include crea-texte-14-medium;
+        }
+        a {
+            display: block;
+            @include crea-texte-14-book;
+        }
+    }
+}

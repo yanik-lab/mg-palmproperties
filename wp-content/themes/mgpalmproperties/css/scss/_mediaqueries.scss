@@ -1,0 +1,42 @@
+$xxdesktop: "only screen and (max-width : 1750px)";
+$xdesktop: "only screen and (max-width : 1650px)";
+$desktop: "only screen and (max-width : 1400px)";
+$laptop: "only screen and (max-width : 1200px)";
+$tablet: "only screen and (max-width : 992px)";
+$mobile: "only screen and (max-width : 768px)";
+$mobileSM: "only screen and (max-width : 570px)";
+$nokia: "only screen and (max-width : 450px)";
+
+@media #{$xxdesktop} {
+}
+
+@media #{$xdesktop} {
+}
+
+@media #{$desktop} {
+}
+
+@media #{$laptop} {
+}
+
+@media #{$tablet} {
+}
+
+@media #{$mobile} {
+}
+
+@media #{$mobileSM} {
+}
+
+@media #{$nokia} {
+}
+
+$mediumHeightLarge: "only screen and (max-height : 700px)";
+
+@media #{$mediumHeightLarge} {
+}
+
+$mediumHeightMed: "only screen and (max-height : 550px)";
+
+@media #{$mediumHeightMed} {
+}

@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+h1 b,
+h2 b,
+h3 b,
+h4 b,
+h5 b,
+h6 b,
+h1 strong,
+h2 strong,
+h3 strong,
+H4 strong,
+h5 strong,
+h6 strong {
+    color: #c82254;
+}
+h2 {
+    font-size: 20px;
+    line-height: 1.2;
+}
+p.intro,
+.intro,
+.intro p {
+    font-size: 30px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+p.titre,
+.titre,
+.titre p {
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+/* .acf-field-group { */
+/* border: 10px solid red; */
+/* } */
+/* .acf-field-group .acf-input .acf-label label {
+    text-transform: none;
+    font-weight: normal;
+}
+.acf-field-group .acf-label label {
+    text-transform: uppercase;
+    font-weight: bold;
+} */

@@ -1,0 +1,88 @@
+@mixin reset-box {
+    padding: 0;
+    margin: 0;
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+@mixin no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin headings {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @content;
+    }
+}
+
+@function calculate-line-height($line-height-percent) {
+    $line-height: calc($line-height-percent / 100);
+    @return $line-height;
+}
+
+@mixin line-height($line-height-percent) {
+    $line-height-value: calculate-line-height($line-height-percent);
+    line-height: $line-height-value;
+}
+
+@mixin font-size(
+    $font-size-mobile: null,
+    $font-size-preferred: null,
+    $font-size-desktop: null
+) {
+    $font-size-mobile: if(
+        $font-size-mobile != null,
+        $font-size-mobile + rem,
+        null
+    );
+    $font-size-preferred: if(
+        $font-size-preferred != null,
+        $font-size-preferred + vw,
+        if($font-size-mobile != null, $font-size-mobile, null)
+    );
+    $font-size-desktop: if(
+        $font-size-desktop != null,
+        $font-size-desktop + rem,
+        $font-size-mobile
+    );
+
+    font-size: clamp(
+        #{$font-size-mobile},
+        #{$font-size-preferred},
+        #{$font-size-desktop}
+    );
+}

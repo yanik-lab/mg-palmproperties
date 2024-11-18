@@ -1,0 +1,37 @@
+@font-face {
+font-family: 'MGPalmProperties';
+src: url("../fonts/MGPalmProperties.ttf") format("truetype"),
+url("../fonts/MGPalmProperties.eot") format("embedded-opentype"),
+url("../fonts/MGPalmProperties.woff") format("woff");
+}
+.ico {
+    font-family: 'MGPalmProperties' !important;
+    font-size: 18px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$icons: (
+"pictophone": "\ea01",
+"pictotransition-immo": "\ea02",
+"pictobien": "\ea03",
+"pictomail": "\ea04",
+"pictofb": "\ea05",
+"pictolinkedin": "\ea06",
+"pictoinsta": "\ea07",
+"pictoarrow": "\ea08",
+"pictocity": "\ea09",
+"pictophotos": "\ea0a",
+"pictosuperficie": "\ea0b",
+"pictobathroom": "\ea0c",
+"pictobedroom": "\ea0d",
+"pictostrategie": "\ea0e",
+"pictovalorisation": "\ea0f",
+"pictoaccompagnement": "\ea10",
+"pictofavicon": "\ea11",
+"pictoarrow-right": "\ea12"
+);
+@each $name, $glyph in $icons {
+.#{$name}:before { content: $glyph; }
+}
