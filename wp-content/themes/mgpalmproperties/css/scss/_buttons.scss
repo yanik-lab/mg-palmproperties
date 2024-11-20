@@ -41,9 +41,21 @@ button,
         padding: 0.8rem 2.4rem;
         color: $crea-black-400;
         background-color: $crea-beige-300;
+        border: 1px solid $crea-beige-300;
         .ico {
             font-size: 1.4rem;
         }
+        &:hover {
+            color: $crea-black-400;
+            background-color: $crea-beige-400;
+        }
+    }
+    &.btn-burger {
+        @include crea-cta;
+        padding: 0.2rem 1.4rem;
+        margin-left: 1rem;
+        color: $crea-beige-300;
+        border: 1px solid $crea-beige-300;
         &:hover {
             color: $crea-black-400;
             background-color: $crea-beige-400;
@@ -78,8 +90,19 @@ button,
             &.btn-header {
                 color: $white;
                 background-color: $crea-green-500;
+                border: none;
                 &:hover {
                     background-color: $crea-green-400;
+                    border: none;
+                }
+            }
+            &.btn-burger {
+                color: $white;
+                background-color: $crea-green-500;
+                border: none;
+                &:hover {
+                    background-color: $crea-green-400;
+                    border: none;
                 }
             }
         }

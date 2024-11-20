@@ -11,24 +11,169 @@ $nokia: "only screen and (max-width : 450px)";
 }
 
 @media #{$xdesktop} {
+    #header {
+        .header {
+            ul li a {
+                padding: 1rem 1.8rem;
+            }
+        }
+    }
 }
 
 @media #{$desktop} {
+    #header {
+        .header {
+            ul li a {
+                padding: 1rem 1.5rem;
+            }
+            .left,
+            .right {
+                flex: 0 0 17%;
+            }
+        }
+        .btn-header {
+            i {
+                margin-right: 0;
+            }
+            span {
+                display: none;
+            }
+        }
+    }
 }
 
 @media #{$laptop} {
+    #header {
+        .header {
+            justify-content: space-between;
+            .left,
+            .right {
+                flex: auto;
+                align-items: stretch;
+            }
+            .right {
+                .btn {
+                    align-items: center;
+                }
+            }
+        }
+        #menu-mobile {
+            li {
+                &:hover,
+                &.current-menu-item {
+                    a {
+                        color: $crea-cuivre-400;
+                    }
+                }
+            }
+            #langs-mobile {
+                display: flex;
+                margin-top: 4rem;
+                justify-content: center;
+                border-top: 1px solid rgba($crea-beige-300, 0.2);
+                border-bottom: 1px solid rgba($crea-beige-300, 0.2);
+                li {
+                    a {
+                        padding-left: 1rem;
+                        padding-right: 1rem;
+                    }
+                    &:hover,
+                    &.current-lang {
+                        a {
+                            color: $crea-cuivre-400;
+                        }
+                    }
+                }
+            }
+            .bottom {
+                display: flex;
+                justify-content: center;
+                margin-top: 5rem;
+                .btn-header {
+                    i {
+                        margin-right: 1rem;
+                    }
+                    span {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media #{$tablet} {
 }
 
 @media #{$mobile} {
+    #header {
+        .header {
+            padding: 1.2rem 2rem;
+            #logo-header {
+                img {
+                    max-height: 4rem;
+                }
+            }
+        }
+        #menu-mobile {
+            ul {
+                li {
+                    a {
+                        padding: 1.6rem 0;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+    section {
+        text-align: center;
+    }
+    /* purgecss start ignore */
+    #header {
+        &.scrolled {
+            .header {
+                padding: 1rem 2rem;
+            }
+        }
+    }
+    /* purgecss end ignore */
 }
 
 @media #{$mobileSM} {
 }
 
 @media #{$nokia} {
+    #header {
+        .header {
+            padding: 1.2rem 1rem;
+            .btn-header {
+                display: none;
+            }
+        }
+        #menu-mobile {
+            #langs-mobile {
+                margin-top: 2rem;
+                padding: 0.7rem 0;
+                display: block;
+                a {
+                    padding: 0.7rem 0;
+                }
+            }
+            .bottom {
+                margin-top: 3rem;
+            }
+        }
+    }
+    /* purgecss start ignore */
+    #header {
+        &.scrolled {
+            .header {
+                padding: 1rem 1rem;
+            }
+        }
+    }
+    /* purgecss end ignore */
 }
 
 $mediumHeightLarge: "only screen and (max-height : 700px)";

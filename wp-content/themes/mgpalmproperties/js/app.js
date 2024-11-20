@@ -208,14 +208,14 @@
           MENU MOBILE SYSTEM
          *************
          *************/
-        // var btn = $("#myburger");
-        // btn.on("click", function () {
-        //     const hh = $header.outerHeight();
-        //     console.log(hh);
-        //     $("#header").toggleClass("activeMobile");
-        //     $("body").toggleClass("no-scroll");
-        //     $("#header .primary-menu").css("padding-top", hh / 2);
-        // });
+        var btn = $("#myburger");
+        btn.on("click", function () {
+            const hh = $header.outerHeight();
+            // console.log(hh);
+            $("#header").toggleClass("activeMobile");
+            $("body").toggleClass("no-scroll");
+            $("#menu-mobile .primary-menu").css("padding-top", hh * 2);
+        });
 
         /*************
          *************

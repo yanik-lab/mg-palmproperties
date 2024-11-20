@@ -19,7 +19,7 @@
         .right {
             display: flex;
             align-items: center;
-            flex: 0 0 20%;
+            flex: 0 0 22%;
         }
         .left {
             justify-content: flex-start;
@@ -72,6 +72,9 @@
             }
             &#langs {
                 margin-right: 1rem;
+                @include transition(
+                    opacity 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99)
+                );
                 li {
                     a {
                         padding: 1rem 1rem;
@@ -80,9 +83,80 @@
             }
         }
     }
+    .altmobile {
+        position: relative;
+        z-index: 9;
+    }
+    #menu-mobile {
+        position: fixed;
+        width: 1920px;
+        max-width: 100%;
+        z-index: 8;
+        top: 0;
+        right: 0;
+        bottom: 100%;
+        left: 0;
+        margin: auto;
+        background-color: rgba($crea-green-400, 0.99);
+        @include opacity(0);
+        @include transform(translateX(-100%));
+        @include transition(
+            bottom 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99),
+            opacity 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99)
+        );
+        ul {
+            text-align: center;
+            li {
+                list-style-type: none;
+                a {
+                    display: block;
+                    padding: 2.6rem 0;
+                    color: $crea-beige-400;
+                    @include crea-cta;
+                    font-size: 2.4rem;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 }
 /* purgecss start ignore */
 #header {
+    .btn-burger {
+        #myburger {
+            @include transition(all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99));
+            .ham {
+                cursor: pointer;
+                -webkit-tap-highlight-color: transparent;
+                transition: transform 400ms;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .line {
+                fill: none;
+                transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+                stroke: $ham;
+                stroke-width: 4;
+                stroke-linecap: square;
+                @include transition(
+                    all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99)
+                );
+            }
+            .ham1 .top {
+                stroke-dasharray: 40 139;
+            }
+            .ham1 .bottom {
+                stroke-dasharray: 40 180;
+            }
+        }
+        &:hover {
+            #myburger .line {
+                stroke: $crea-black-400;
+            }
+        }
+    }
     &.scrolled {
         .header {
             padding: 1.4rem 3.2rem;
@@ -99,37 +173,20 @@
                 }
             }
         }
-    }
-    #myburger {
-        position: fixed;
-        top: 1.2rem;
-        right: 2.5rem;
-        z-index: 3;
-        @include transition(all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99));
-        .ham {
-            cursor: pointer;
-            -webkit-tap-highlight-color: transparent;
-            transition: transform 400ms;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        .line {
-            fill: none;
-            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-            stroke: $ham;
-            stroke-width: 4;
-            stroke-linecap: square;
-            @include transition(all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99));
-        }
-        .ham1 .top {
-            stroke-dasharray: 40 139;
-        }
-        .ham1 .bottom {
-            stroke-dasharray: 40 180;
+        .btn-burger {
+            #myburger {
+                .line {
+                    stroke: $white;
+                }
+            }
+            &:hover {
+                #myburger .line {
+                    stroke: $white;
+                }
+            }
         }
     }
+
     &.activeMobile {
         .hamRotate {
             transform: rotate(45deg);
@@ -142,6 +199,17 @@
         }
         .ham1 .bottom {
             stroke-dashoffset: -138px;
+        }
+        #menu-mobile {
+            @include opacity(1);
+            bottom: 0;
+            @include transform(translateX(0%));
+        }
+        .header {
+            #langs,
+            .btn-header {
+                @include opacity(0);
+            }
         }
     }
 }

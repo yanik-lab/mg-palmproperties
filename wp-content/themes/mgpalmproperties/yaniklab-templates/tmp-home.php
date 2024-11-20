@@ -7,27 +7,31 @@ Template Name: Accueil
 
 <?php while (have_posts()) : the_post(); ?>
 
-    <section class="section-header fullxl bgGreen bgResponsive bgFixed" style="background-image:url('<?php bloginfo('template_url'); ?>/images/bg/home-1.jpg');">
-        <div class="special">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-lg-22">
-                        <div class="reveal revealFB reveal1">
-                            <h1>
-                                L'excellence immobilière, <br>
-                                l'attention humaine.
-                            </h1>
-                            <div class="buttons">
-                                <a href="<?php echo get_the_permalink(22); ?>" class="btn btn-basic btn-beige">
-                                    Nos biens à la vente
-                                </a>
+    <?php
+    $hero = get_field('section_header');
+    if ($hero):
+    ?>
+        <section class="section-header fullxl bgGreen bgResponsive bgFixed" style="background-image:url('<?php echo $hero['image']['sizes']['xlarge']; ?>');">
+            <div class="special">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col-md-20">
+                            <div class="reveal revealFB reveal1">
+                                <?php echo $hero['contenu']; ?>
+                                <?php if ($hero['lien']): ?>
+                                    <div class="buttons">
+                                        <a href="<?php echo $hero['lien']['url']; ?>" class="btn btn-basic btn-beige" title="<?php echo $hero['lien']['title']; ?>" target="<?php echo $hero['lien']['target']; ?>">
+                                            <?php echo $hero['lien']['title']; ?>
+                                        </a>
+                                    </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    <?php endif; ?>
 
     <section class="section-team bgGreen">
         <div class="row g-0 d-flex">
