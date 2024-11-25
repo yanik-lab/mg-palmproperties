@@ -57,7 +57,7 @@ section {
     &.full {
         overflow: hidden;
         height: 100vh;
-        max-height: 90rem;
+        max-height: 95rem;
     }
     &.fullxl {
         overflow: hidden;
@@ -133,7 +133,7 @@ section {
         }
     }
     .introduction {
-        margin-bottom: 4.5rem;
+        margin-bottom: 6rem;
         .ico {
             display: block;
             color: $crea-cuivre-400;
@@ -185,6 +185,40 @@ section {
             bottom: calc(var(--paddingYsection) * 2);
         }
     }
+    &.section-header-page {
+        .bgSection {
+            position: relative;
+            &:after {
+                z-index: 1;
+                height: 100%;
+                background-image: url("images/logo-fond-large.png");
+                background-repeat: no-repeat;
+                background-size: auto 100%;
+                background-position: center;
+            }
+        }
+        .bgHeader {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 90%;
+            overflow: hidden;
+        }
+        .ico {
+            display: block;
+            color: $crea-cuivre-400;
+            margin-bottom: 2rem;
+            font-size: 5rem;
+        }
+        h1 {
+            @include crea-h1-alternatif;
+        }
+        p {
+            padding-right: 18vw;
+        }
+    }
     &.section-team {
         .compense {
             margin-left: 2rem;
@@ -207,6 +241,52 @@ section {
             background-position: center;
         }
     }
+    &.section-colonnes {
+        .boxes {
+            picture {
+                img {
+                    width: auto;
+                    display: block;
+                    margin: auto;
+                }
+            }
+            .boxContent {
+                margin-top: 2.5rem;
+                margin-bottom: 5rem;
+                &.boxCenter {
+                    text-align: center;
+                    padding: 0 4rem;
+                }
+                @include headings {
+                    text-transform: uppercase;
+                    margin-bottom: 0.8rem;
+                }
+            }
+        }
+    }
+    &.section-liste {
+        .imageDecal {
+            @include transform(translateY(calc(var(--paddingYsection) * -3)));
+        }
+        .contenuDecal {
+            padding-top: 10rem;
+        }
+        .liste {
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid $crea-green-400;
+            @include headings {
+                text-transform: uppercase;
+                margin-bottom: 0.8rem;
+                display: flex;
+                align-items: center;
+                .ico {
+                    margin-right: 1rem;
+                    color: $crea-cuivre-400;
+                }
+            }
+        }
+    }
 }
 /* purgecss start ignore */
 section {
@@ -214,13 +294,14 @@ section {
         .swiper-wrapper {
             padding-bottom: 3.5rem;
             .swiper-slide {
+                cursor: grab;
                 user-select: none;
                 text-align: center;
                 font-size: 18px;
                 background: #fff;
                 .baseline {
                     padding: 2.4rem;
-                    text-transform: uppercase;
+                    // text-transform: uppercase;
                     color: $crea-black-300;
                     b,
                     strong {

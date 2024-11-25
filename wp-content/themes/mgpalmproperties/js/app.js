@@ -180,7 +180,7 @@
                     breakpoints: {
                         // when window width is >= 992px
                         992: {
-                            slidesPerView: 2,
+                            slidesPerView: 2.5,
                         },
                         // when window width is >= 570px
                         570: {

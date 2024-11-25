@@ -156,6 +156,9 @@ picture {
         right: 0;
         bottom: 0;
         left: 0;
+        img {
+            height: 100%;
+        }
     }
 }
 .bgResponsive {
@@ -330,14 +333,14 @@ picture {
             position: absolute;
             top: 0;
             right: 0;
-            bottom: 0;
+            bottom: 100%;
             left: 0;
-            background-color: rgba($black, 1);
+            @include opacity(0);
             @include transition(all 0.65s cubic-bezier(0.25, 0.74, 0.22, 0.99));
         }
         &.loaded {
             &:after {
-                bottom: 100%;
+                @include opacity(1);
             }
         }
     }

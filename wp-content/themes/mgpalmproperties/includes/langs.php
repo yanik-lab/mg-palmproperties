@@ -1,6 +1,6 @@
 <?php
 // Charger le Text Domain
-load_theme_textdomain('yaniklab', get_template_directory() . '/languages');
+load_theme_textdomain('mgpalmproperties', get_template_directory() . '/languages');
 
 function pll_get_the_id($post_id)
 {

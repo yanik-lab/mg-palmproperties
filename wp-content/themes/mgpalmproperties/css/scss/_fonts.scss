@@ -102,6 +102,12 @@ FONTS STYLE
     line-height: clamp(4rem, 4vw, 8rem);
     letter-spacing: 0em;
 }
+@mixin crea-h1-alternatif {
+    // @include MonserratR;
+    @include font-size(3.2, 3.2, 6);
+    line-height: clamp(3.6rem, 3.6vw, 7rem);
+    letter-spacing: 0em;
+}
 @mixin crea-h2 {
     // @include MonserratR;
     @include font-size(3, 3, 4);

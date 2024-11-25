@@ -100,6 +100,8 @@ class Job
      * A `json_encode`able object which gets persisted for this job which you can use
      * in your executor.
      *
+     * If you set `keepClientData` to `true`, the data will not be omitted when sending the job to the client.
+     *
      * @var mixed
      */
     public $data;
@@ -393,6 +395,10 @@ class Job
     public function omitClientData()
     {
         if ($this->worker === Job::WORKER_SERVER) {
+            if (\property_exists($this->data, 'keepClientData') && $this->data->keepClientData === \true) {
+                unset($this->data->keepClientData);
+                return;
+            }
             $this->data = (object) [];
             $this->callable = null;
         }
@@ -407,18 +413,23 @@ class Job
     /**
      * Set error handler.
      *
-     * @param string $errno
+     * @param int $errno
      * @param string $errstr
      * @param string $errfile
      * @param int $errline
      * @param string $errcontext
      * @see https://stackoverflow.com/a/1241751/5506547
+     * @see https://www.php.net/manual/en/errorfunc.constants.php#constant.e-warning
      * @throws ErrorException
      */
     public static function set_error_handler($errno, $errstr, $errfile, $errline, $errcontext = [])
     {
         // error was suppressed with the @-operator
         if (0 === \error_reporting()) {
+            return \false;
+        }
+        // Ignore non-critical errors
+        if (\in_array($errno, [\E_WARNING, \E_NOTICE, \E_CORE_WARNING, \E_COMPILE_WARNING, \E_USER_WARNING, \E_USER_NOTICE, \E_DEPRECATED, \E_USER_DEPRECATED], \true)) {
             return \false;
         }
         throw new ErrorException($errstr, 0, $errno, $errfile, $errline);

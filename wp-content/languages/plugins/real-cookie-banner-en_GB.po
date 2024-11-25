@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Real Cookie Banner: GDPR &amp; ePrivacy Cookie Consent - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-09-26 09:28:40+0000\n"
+"PO-Revision-Date: 2024-11-07 08:42:10+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,209 @@ msgstr ""
 "X-Generator: GlotPress/4.0.1\n"
 "Language: en_GB\n"
 "Project-Id-Version: Plugins - Real Cookie Banner: GDPR &amp; ePrivacy Cookie Consent - Stable (latest release)\n"
+
+#. translators:
+#: inc/settings/Reset.php:154
+msgid "Your multilingual plugin Weglot does currently not support resetting texts for %s."
+msgstr "Your multilingual plugin Weglot does currently not support resetting texts for %s."
+
+#: inc/comp/migration/DbConsentV2.php:377
+msgid "Real Cookie Banner v5.0 introduces an optimized database schema that allows consent documents to be stored in less storage space. The migration failed. Please try again or contact the support of Real Cookie Banner!"
+msgstr "Real Cookie Banner v5.0 introduces an optimized database schema that allows consent documents to be stored in less storage space. The migration failed. Please try again or contact the support of Real Cookie Banner!"
+
+#: inc/comp/migration/DbConsentV2.php:345
+msgid "Real Cookie Banner: Migration of consent data"
+msgstr "Real Cookie Banner: Migration of consent data"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:195
+msgid "<strong>Be sure to review the following points and consider whether you would like to adjust them in your cookie banner configuration!</strong> You decide which changes to activate or ignore - we don't make any fundamental changes without your consent."
+msgstr "<strong>Be sure to review the following points and consider whether you would like to adjust them in your cookie banner configuration!</strong> You decide which changes to activate or ignore - we don't make any fundamental changes without your consent."
+
+#. translators:
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:194
+msgid "https://devowl.io/news/real-cookie-banner-5-0/"
+msgstr "https://devowl.io/news/real-cookie-banner-5-0/"
+
+#. translators:
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:193
+msgid "Discover the new Real Cookie Banner 5.0! In this update, we have included many new features that could be of interest to specific target groups and help you collect consents more effectively. You can find more details in the <strong><a href=\"%s\" target=\"_blank\">release notes on our blog</a></strong>!"
+msgstr "Discover the new Real Cookie Banner 5.0! In this update, we have included many new features that could be of interest to specific target groups and help you collect consents more effectively. You can find more details in the <strong><a href=\"%s\" target=\"_blank\">release notes on our blog</a></strong>!"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:186
+msgid "Updates in v5.0: You need to make adjustments!"
+msgstr "Updates in v5.0: You need to make adjustments!"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:138
+msgid "Already configured"
+msgstr "Already configured"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:138
+msgid "Adjust handling of failed consent documentation"
+msgstr "Adjust handling of failed consent documentation"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:138
+msgid "But what happens in the meantime? By default, only essential services will be served in this case. <strong>However, you can now customize this behavior and take a higher risk.</strong> This can be particularly useful if you are expecting a large number of visitors in a short period of time, for example after being on a TV show."
+msgstr "But what happens in the meantime? By default, only essential services will be served in this case. <strong>However, you can now customize this behavior and take a higher risk.</strong> This can be particularly useful if you are expecting a large number of visitors in a short period of time, for example after being on a TV show."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:138
+msgid "It may happen that your website is accessible (e.g. through a scalable page cache), but the consents granted in the cookie banner cannot be documented (e.g. due to server overload caused by high traffic). In this case, Real Cookie Banner will try to document the consents according to your legal obligations as soon as the server is available again."
+msgstr "It may happen that your website is accessible (e.g. through a scalable page cache), but the consents granted in the cookie banner cannot be documented (e.g. due to server overload caused by high traffic). In this case, Real Cookie Banner will try to document the consents according to your legal obligations as soon as the server is available again."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:136
+msgid "Create TCF vendor configurations for Google AdSense"
+msgstr "Create TCF vendor configurations for Google AdSense"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:136
+msgid "<strong>Real Cookie Banner allows you to automatically configure all relevant TCF vendors for your cookie banner,</strong> so you don't have to manually set up hundreds of vendors to maximize revenue."
+msgstr "<strong>Real Cookie Banner allows you to automatically configure all relevant TCF vendors for your cookie banner,</strong> so you don't have to manually set up hundreds of vendors to maximize revenue."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:136
+msgid "As of January 2024, Google AdSense requires consent in accordance with the Transparency & Consent Framework (TCF) in order to continue to be able to display advertising in full. This requires consent not only for Google Advertising Products (vendor ID <code>755</code>), but also for all other advertising networks connected to Google AdSense. This allows them to participate in the real-time bidding process and maximizes the revenue from advertising on your website."
+msgstr "As of January 2024, Google AdSense requires consent in accordance with the Transparency & Consent Framework (TCF) in order to continue to be able to display advertising in full. This requires consent not only for Google Advertising Products (vendor ID <code>755</code>), but also for all other advertising networks connected to Google AdSense. This allows them to participate in the real-time bidding process and maximizes the revenue from advertising on your website."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:136
+msgid "Obtain full consent for Google AdSense in accordance with the TCF"
+msgstr "Obtain full consent for Google AdSense in accordance with the TCF"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:133
+msgid "Configure Google Consent Mode"
+msgstr "Configure Google Consent Mode"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:133
+msgid "To be able to use all features of Google Services, in particular Google Analytics and Google Ads Conversion Tracking, you should check the documentation of the respective Google Services to see if consents are required according to the Google Consent Mode. <strong>If this is the case, you have to configure the Google Consent Mode in Real Cookie Banner accordingly.</strong>"
+msgstr "To be able to use all features of Google Services, in particular Google Analytics and Google Ads Conversion Tracking, you should check the documentation of the respective Google Services to see if consents are required according to the Google Consent Mode. <strong>If this is the case, you have to configure the Google Consent Mode in Real Cookie Banner accordingly.</strong>"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:133
+msgid "You use Google services on your website. Since Google was classified as a so-called gatekeeper under the Digital Markets Act in March 2024, Google is obliged to ensure and be able to prove that website operators obtain legally compliant consent for data processing using Google services. In order to fulfill this requirement, Google has introduced Google Consent Mode v2, which Real Cookie Banner supports."
+msgstr "You use Google services on your website. Since Google was classified as a so-called gatekeeper under the Digital Markets Act in March 2024, Google is obliged to ensure and be able to prove that website operators obtain legally compliant consent for data processing using Google services. In order to fulfill this requirement, Google has introduced Google Consent Mode v2, which Real Cookie Banner supports."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:133
+msgid "Obtain consent with Google Consent Mode"
+msgstr "Obtain consent with Google Consent Mode"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:131
+msgid "Create cookie policy page"
+msgstr "Create cookie policy page"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:131
+msgid "Real Cookie Banner now allows you to generate automatically a cookie policy!"
+msgstr "Real Cookie Banner now allows you to generate automatically a cookie policy!"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:131
+msgid "A cookie policy is a document that lists all the cookies and similar instruments used on a website and provides comprehensive information about each cookie. There <strong>is no obligation</strong> to create a cookie policy under the GDPR or the ePrivacy Directive. But it can help you to present the handling of cookies and cookie-like technologies to your website visitors transparently and separately from your privacy policy."
+msgstr "A cookie policy is a document that lists all the cookies and similar instruments used on a website and provides comprehensive information about each cookie. There <strong>is no obligation</strong> to create a cookie policy under the GDPR or the ePrivacy Directive. But it can help you to present the handling of cookies and cookie-like technologies to your website visitors transparently and separately from your privacy policy."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:131
+msgid "Cookie policy page for more transparency"
+msgstr "Cookie policy page for more transparency"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:131
+msgid "pro-modal/banner-less-consent.png"
+msgstr "pro-modal/banner-less-consent.png"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:131
+msgid "Activate banner-less consent"
+msgstr "Activate banner-less consent"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:131
+msgid "If you only use essential services and those with a visual content blocker, you can avoid using a cookie banner so that your website visitors are not distracted. Visual content blockers initially block all services that require consent. For example, if a visitor wants to watch a YouTube video, they can give their consent in the content blocker for these videos to always be loaded in future. To fulfill your information obligations, you should have a cookie policy on your website (created automatically) or provide all necessary information in your privacy policy (manually)."
+msgstr "If you only use essential services and those with a visual content blocker, you can avoid using a cookie banner so that your website visitors are not distracted. Visual content blockers initially block all services that require consent. For example, if a visitor wants to watch a YouTube video, they can give their consent in the content blocker for these videos to always be loaded in future. To fulfill your information obligations, you should have a cookie policy on your website (created automatically) or provide all necessary information in your privacy policy (manually)."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:131
+msgid "Obtain consent without cookie banner (banner-less)"
+msgstr "Obtain consent without cookie banner (banner-less)"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:125
+msgid "Activate new design options"
+msgstr "Activate new design options"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:125
+msgid "That's why we're offering new design options that provide more clarity while complying with the law. With the <strong>\"Define a maximum height for the cookie banner\"</strong> option, you can limit the size of the banner so that it still displays all the necessary information but remains more compact. Website visitors can see when it is possible to scroll. With <strong>\"Initially hide less relevant details about services\"</strong>, more detailed technical and legal information about the individual services can be hidden by default in the individual privacy settings. This significantly improves the overview for all services, while the information remains accessible with a single click when needed."
+msgstr "That's why we're offering new design options that provide more clarity while complying with the law. With the <strong>\"Define a maximum height for the cookie banner\"</strong> option, you can limit the size of the banner so that it still displays all the necessary information but remains more compact. Website visitors can see when it is possible to scroll. With <strong>\"Initially hide less relevant details about services\"</strong>, more detailed technical and legal information about the individual services can be hidden by default in the individual privacy settings. This significantly improves the overview for all services, while the information remains accessible with a single click when needed."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:125
+msgid "Your cookie banner can quickly become overwhelming if you comply with all legal requirements – especially if you use services that set or read numerous cookies and cookie-like information."
+msgstr "Your cookie banner can quickly become overwhelming if you comply with all legal requirements – especially if you use services that set or read numerous cookies and cookie-like information."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:125
+msgid "More clarity in the cookie banner thanks to new design options"
+msgstr "More clarity in the cookie banner thanks to new design options"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:119
+msgid "Activate sticky legal links"
+msgstr "Activate sticky legal links"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:119
+msgid "Activate the sticky legal links widget on your website now!"
+msgstr "Activate the sticky legal links widget on your website now!"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:119
+msgid "Real Cookie Banner now offers you a sticky widget that, for example, displays a fingerprint icon in the bottom left corner of every subpage, making the corresponding links easily accessible at all times. It takes just one click to set up and increases transparency for your website visitors by making the features particularly easy to access. The design of the widget and the icon can be fully customized."
+msgstr "Real Cookie Banner now offers you a sticky widget that, for example, displays a fingerprint icon in the bottom left corner of every subpage, making the corresponding links easily accessible at all times. It takes just one click to set up and increases transparency for your website visitors by making the features particularly easy to access. The design of the widget and the icon can be fully customized."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:119
+msgid "Changing or revoking consent must be as easy as giving consent itself. Therefore, you need to provide legal links for these actions on every subpage of your website, which was previously only possible via shortcodes or menus."
+msgstr "Changing or revoking consent must be as easy as giving consent itself. Therefore, you need to provide legal links for these actions on every subpage of your website, which was previously only possible via shortcodes or menus."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:119
+msgid "Show sticky legal links widget on all pages"
+msgstr "Show sticky legal links widget on all pages"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:116
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:119
+msgid "upgrade-wizard/v5/safety-mechanisms-for-data-processing-in-third-countries.png"
+msgstr "upgrade-wizard/v5/safety-mechanisms-for-data-processing-in-third-countries.png"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:113
+msgid "<strong>You should adopt the new standard text for third-country data processing in the cookie banner to correctly inform about all possible safety mechanisms!</strong> The settings for the security mechanisms themselves can be configured for each service."
+msgstr "<strong>You should adopt the new standard text for third-country data processing in the cookie banner to correctly inform about all possible safety mechanisms!</strong> The settings for the security mechanisms themselves can be configured for each service."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:113
+msgid "Most cookie banners address data processing in third countries by only offering a special consent according to Art. 49 GDPR for the US. Real Cookie Banner has been taking this into account for all countries of the world for a long time. In the latest version, Real Cookie Banner goes one step further and only considers Art. 49 GDPR as a last resort for data processing in third countries. Before relying on consent, factors such as adequacy decisions should be considered (with special cases such as the TADPF in the USA). Alternatively, standard contractual clauses with providers should be considered to ensure safe data processing. Real Cookie Banner covers all these scenarios under both the GDPR (EU) and the DSG (Switzerland) and provides simple, guided questions for users to make this complex process easier to navigate."
+msgstr "Most cookie banners address data processing in third countries by only offering a special consent according to Art. 49 GDPR for the US. Real Cookie Banner has been taking this into account for all countries of the world for a long time. In the latest version, Real Cookie Banner goes one step further and only considers Art. 49 GDPR as a last resort for data processing in third countries. Before relying on consent, factors such as adequacy decisions should be considered (with special cases such as the TADPF in the USA). Alternatively, standard contractual clauses with providers should be considered to ensure safe data processing. Real Cookie Banner covers all these scenarios under both the GDPR (EU) and the DSG (Switzerland) and provides simple, guided questions for users to make this complex process easier to navigate."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:113
+msgid "Safety mechanisms for third-country data processing reworked"
+msgstr "Safety mechanisms for third-country data processing reworked"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:108
+msgid "upgrade-wizard/v5/cdn.png"
+msgstr "upgrade-wizard/v5/cdn.png"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:108
+msgid "Already started"
+msgstr "Already started"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:108
+msgid "The scanner of Real Cookie Banner can now automatically detect popular CDNs and explain to you what steps you need to take to use the service in a privacy-compliant way. <strong>Scan your entire website again to get recommendations for CDNs you may be using!</strong>"
+msgstr "The scanner of Real Cookie Banner can now automatically detect popular CDNs and explain to you what steps you need to take to use the service in a privacy-compliant way. <strong>Scan your entire website again to get recommendations for CDNs you may be using!</strong>"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:108
+msgid "Maybe you use one or more content delivery networks (CDNs) on your website. CDNs are networks of servers distributed around the world that cache content and deliver it faster based on the location of your visitors. This reduces the loading time of your website. Servers can also be located in countries that are considered insecure from a data protection perspective."
+msgstr "Maybe you use one or more content delivery networks (CDNs) on your website. CDNs are networks of servers distributed around the world that cache content and deliver it faster based on the location of your visitors. This reduces the loading time of your website. Servers can also be located in countries that are considered insecure from a data protection perspective."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:108
+msgid "Legally compliant use of used Content Delivery Networks (CDNs)"
+msgstr "Legally compliant use of used Content Delivery Networks (CDNs)"
+
+#. translators:
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:99
+msgid "We recommend that you use the official translations for <strong>%s</strong> to obtain the most compliant consents possible."
+msgstr "We recommend that you use the official translations for <strong>%s</strong> to obtain the most compliant consents possible."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:97
+msgid "Real Cookie Banner is now fully translated into Greek, Finnish, Slovak, Hungarian and Romanian and adapted to the legal details of the countries."
+msgstr "Real Cookie Banner is now fully translated into Greek, Finnish, Slovak, Hungarian and Romanian and adapted to the legal details of the countries."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:97
+msgid "Legal adjustments of texts and translations in 5 more languages"
+msgstr "Legal adjustments of texts and translations in 5 more languages"
+
+#. translators:
+#: inc/Assets.php:397
+msgctxt "legal-text"
+msgid "Data processing in third countries"
+msgstr "Data processing in third countries"
 
 #: inc/view/shortcode/LinkShortcode.php:60
 msgid "This legal link on your website has the corresponding functionality. It is deactivated in the preview you are currently in."
@@ -19,6 +222,7 @@ msgstr "This legal link on your website has the corresponding functionality. It 
 msgid "Some services perform data processing in unsafe third countries within the meaning of data protection regulations.  In the service configurations, you have stated that no security mechanisms are in place for this data processing. You should obtain special consent for this or only use services with data processing in secure countries or with appropriate security mechanisms."
 msgstr "Some services perform data processing in unsafe third countries within the meaning of data protection regulations.  In the service configurations, you have stated that no security mechanisms are in place for this data processing. You should obtain special consent for this or only use services with data processing in secure countries or with appropriate security mechanisms."
 
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:108
 #: inc/view/Notices.php:885
 msgid "Start scanner"
 msgstr "Start scanner"
@@ -301,6 +505,11 @@ msgid "Reset cookie banner consent to default"
 msgstr "Reset cookie banner consent to default"
 
 #. translators:
+#: inc/templates/TemplateConsumers.php:273
+msgid "Acknowledged"
+msgstr "Acknowledged"
+
+#. translators:
 #: inc/templates/TemplateConsumers.php:272
 msgid "How do I conclude standard contractual clauses with %s?"
 msgstr "How do I conclude standard contractual clauses with %s?"
@@ -377,228 +586,228 @@ msgstr "Consents collected under TCF stored in TC String format, including TCF v
 msgid "Unique identifier for the consent, but not for the website visitor. Revision hash for settings of cookie banner (texts, colors, features, service groups, services, content blockers etc.). IDs for consented services and service groups."
 msgstr "Unique identifier for the consent, but not for the website visitor. Revision hash for settings of cookie banner (texts, colors, features, service groups, services, content blockers etc.). IDs for consented services and service groups."
 
-#: inc/settings/CookiePolicy.php:288
+#: inc/settings/CookiePolicy.php:292
 msgid "Customize cookie policy content"
 msgstr "Customize cookie policy content"
 
-#: inc/settings/CookiePolicy.php:275
+#: inc/settings/CookiePolicy.php:279
 #: public/dist/chunk-config-tab-consent.lite.js:1
 msgid "Cookie Policy Page"
 msgstr "Cookie Policy Page"
 
-#: inc/settings/CookiePolicy.php:264
+#: inc/settings/CookiePolicy.php:268
 msgid "No matching records found"
 msgstr "No matching records found"
 
-#: inc/settings/CookiePolicy.php:263
+#: inc/settings/CookiePolicy.php:267
 msgid "results"
 msgstr "results"
 
-#: inc/settings/CookiePolicy.php:262
+#: inc/settings/CookiePolicy.php:266
 msgid "to"
 msgstr "to"
 
-#: inc/settings/CookiePolicy.php:261
+#: inc/settings/CookiePolicy.php:265
 msgid "of"
 msgstr "of"
 
 #. translators:
-#: inc/settings/CookiePolicy.php:260
+#: inc/settings/CookiePolicy.php:264
 msgid "Showing"
 msgstr "Showing"
 
 #. translators:
-#: inc/settings/CookiePolicy.php:259
+#: inc/settings/CookiePolicy.php:263
 msgid "Page %d"
 msgstr "Page %d"
 
 #. translators:
-#: inc/settings/CookiePolicy.php:257
+#: inc/settings/CookiePolicy.php:261
 msgid "Page %1$d of %2$d"
 msgstr "Page %1$d of %2$d"
 
-#: inc/settings/CookiePolicy.php:255
+#: inc/settings/CookiePolicy.php:259
 msgid "Next"
 msgstr "Next"
 
-#: inc/settings/CookiePolicy.php:254
+#: inc/settings/CookiePolicy.php:258
 msgid "Previous"
 msgstr "Previous"
 
-#: inc/settings/CookiePolicy.php:253
+#: inc/settings/CookiePolicy.php:257
 msgid "Sort column descending"
 msgstr "Sort column descending"
 
-#: inc/settings/CookiePolicy.php:253
+#: inc/settings/CookiePolicy.php:257
 msgid "Sort column ascending"
 msgstr "Sort column ascending"
 
-#: inc/settings/CookiePolicy.php:248
+#: inc/settings/CookiePolicy.php:252
 msgctxt "legal-text"
 msgid "Service"
 msgstr "Service"
 
-#: inc/settings/CookiePolicy.php:248
+#: inc/settings/CookiePolicy.php:252
 msgctxt "legal-text"
 msgid "Technical cookie host"
 msgstr "Technical cookie host"
 
-#: inc/settings/CookiePolicy.php:248
+#: inc/settings/CookiePolicy.php:252
 msgctxt "legal-text"
 msgid "TCF vendors"
 msgstr "TCF vendors"
 
-#: inc/settings/CookiePolicy.php:248
+#: inc/settings/CookiePolicy.php:252
 msgctxt "legal-text"
 msgid "Category"
 msgstr "Category"
 
 #. translators:
-#: inc/settings/CookiePolicy.php:202
+#: inc/settings/CookiePolicy.php:206
 msgctxt "legal-text"
 msgid "In addition, cookies can also be used by services from the following groups or for the following purposes: %s"
 msgstr "In addition, cookies can also be used by services from the following groups or for the following purposes: %s"
 
-#: inc/settings/CookiePolicy.php:172
+#: inc/settings/CookiePolicy.php:176
 msgctxt "gdpr-legal-basis"
 msgid "Chapter 9 Section 28 Swedish Electronic Communications Act (Lag om elektronisk kommunikation)"
 msgstr "Chapter 9 Section 28 Swedish Electronic Communications Act (Lag om elektronisk kommunikation)"
 
-#: inc/settings/CookiePolicy.php:169
+#: inc/settings/CookiePolicy.php:173
 msgctxt "gdpr-legal-basis"
 msgid "Article 55 Electronic Communications Act (zákon elektronických komunikáciách)"
 msgstr "Article 55 Electronic Communications Act (zákon elektronických komunikáciách)"
 
-#: inc/settings/CookiePolicy.php:166
+#: inc/settings/CookiePolicy.php:170
 msgctxt "gdpr-legal-basis"
 msgid "Article 4 Act on the Processing of Personal Data and the Protection of Privacy in the Electronic Communications Sector (LEGE privind prelucrarea datelor cu caracter personal și protecția vieții private în sectorul comunicațiilor electronice)"
 msgstr "Article 4 Act on the Processing of Personal Data and the Protection of Privacy in the Electronic Communications Sector (LEGE privind prelucrarea datelor cu caracter personal și protecția vieții private în sectorul comunicațiilor electronice)"
 
-#: inc/settings/CookiePolicy.php:163
+#: inc/settings/CookiePolicy.php:167
 msgctxt "gdpr-legal-basis"
 msgid "§ 173 Telecommunications Act (Prawo telekomunikacyjne)"
 msgstr "§ 173 Telecommunications Act (Prawo telekomunikacyjne)"
 
-#: inc/settings/CookiePolicy.php:160
+#: inc/settings/CookiePolicy.php:164
 msgctxt "gdpr-legal-basis"
 msgid "§ 2-7b Electronic Communications Act (Elektroniskekommunikasjonsloven)"
 msgstr "§ 2-7b Electronic Communications Act (Elektroniskekommunikasjonsloven)"
 
-#: inc/settings/CookiePolicy.php:157
+#: inc/settings/CookiePolicy.php:161
 msgctxt "gdpr-legal-basis"
 msgid "Section 122 Italian personal data protection code (Codice in materia di protezione dei dati personali)"
 msgstr "Section 122 Italian personal data protection code (Codice in materia di protezione dei dati personali)"
 
-#: inc/settings/CookiePolicy.php:154
+#: inc/settings/CookiePolicy.php:158
 msgctxt "gdpr-legal-basis"
 msgid "§ 13/A Act on certain aspects of electronic commerce services and information society services (Törvény az elektronikus kereskedelmi szolgáltatások, valamint az információs társadalommal összefüggő szolgáltatások egyes kérdéseiről)"
 msgstr "§ 13/A Act on certain aspects of electronic commerce services and information society services (Törvény az elektronikus kereskedelmi szolgáltatások, valamint az információs társadalommal összefüggő szolgáltatások egyes kérdéseiről)"
 
-#: inc/settings/CookiePolicy.php:151
+#: inc/settings/CookiePolicy.php:155
 msgctxt "gdpr-legal-basis"
 msgid "§ 3 Cookie Order (Cookiebekendtgørelsen)"
 msgstr "§ 3 Cookie Order (Cookiebekendtgørelsen)"
 
-#: inc/settings/CookiePolicy.php:148
+#: inc/settings/CookiePolicy.php:152
 msgctxt "gdpr-legal-basis"
 msgid "§ 89 (3) Electronic Communications Act (Zákon o elektronických komunikacích)"
 msgstr "§ 89 (3) Electronic Communications Act (Zákon o elektronických komunikacích)"
 
-#: inc/settings/CookiePolicy.php:141
+#: inc/settings/CookiePolicy.php:145
 msgctxt "gdpr-legal-basis"
 msgid "Article 22 (2) Information Society Services and e-Commerce Act (LSSI, Ley de Servicios de la Sociedad de la Información y de Comercio Electrónico)"
 msgstr "Article 22 (2) Information Society Services and e-Commerce Act (LSSI, Ley de Servicios de la Sociedad de la Información y de Comercio Electrónico)"
 
-#: inc/settings/CookiePolicy.php:138
+#: inc/settings/CookiePolicy.php:142
 msgctxt "gdpr-legal-basis"
 msgid "Article 5 Electronic Communications Privacy Law (Lei da Privacidade nas Comunicações Eletrónicas)"
 msgstr "Article 5 Electronic Communications Privacy Law (Lei da Privacidade nas Comunicações Eletrónicas)"
 
-#: inc/settings/CookiePolicy.php:135
+#: inc/settings/CookiePolicy.php:139
 msgctxt "gdpr-legal-basis"
 msgid "Article 4 (5) of Law 3471/2006 (Protection of personal data and privacy in the electronic communications sector and amendment of Law 2472/1997)"
 msgstr "Article 4 (5) of Law 3471/2006 (Protection of personal data and privacy in the electronic communications sector and amendment of Law 2472/1997)"
 
-#: inc/settings/CookiePolicy.php:132
+#: inc/settings/CookiePolicy.php:136
 msgctxt "gdpr-legal-basis"
 msgid "§ 25 TDDDG (Germany) and § 165 TKG (Austria)"
 msgstr "§ 25 TDDDG (Germany) and § 165 TKG (Austria)"
 
-#: inc/settings/CookiePolicy.php:129
+#: inc/settings/CookiePolicy.php:133
 msgctxt "gdpr-legal-basis"
 msgid "Article 82 Data Protection Act (Loi informatique et libertés, France) and Article 129 Electronic Communications Act (Loi relative aux communications electroniques, Belgium)"
 msgstr "Article 82 Data Protection Act (Loi informatique et libertés, France) and Article 129 Electronic Communications Act (Loi relative aux communications electroniques, Belgium)"
 
-#: inc/settings/CookiePolicy.php:126
+#: inc/settings/CookiePolicy.php:130
 msgctxt "gdpr-legal-basis"
 msgid "§ 205 Act on electronic communications services (Laki sähköisen viestinnän palveluista)"
 msgstr "§ 205 Act on electronic communications services (Laki sähköisen viestinnän palveluista)"
 
-#: inc/settings/CookiePolicy.php:123
+#: inc/settings/CookiePolicy.php:127
 msgctxt "gdpr-legal-basis"
 msgid "Article 11.7a Dutch Telecommunications Act (Telecommunicatiewet) and Article 129 Electronic Communications Act (Wet betreffende de elektronische communicatie, Belgium)"
 msgstr "Article 11.7a Dutch Telecommunications Act (Telecommunicatiewet) and Article 129 Electronic Communications Act (Wet betreffende de elektronische communicatie, Belgium)"
 
-#: inc/settings/CookiePolicy.php:118
+#: inc/settings/CookiePolicy.php:122
 msgctxt "gdpr-legal-basis"
 msgid "Art. 5 (3) ePrivacy Directive and Recital 66 ePrivacy Directive"
 msgstr "Art. 5 (3) ePrivacy Directive and Recital 66 ePrivacy Directive"
 
-#: inc/rest/Config.php:511
+#: inc/rest/Config.php:512
 msgid "Limit result set to posts with one or more specific statuses."
 msgstr "Limit result set to posts with one or more specific statuses."
 
-#: inc/rest/Config.php:471
+#: inc/rest/Config.php:472
 msgid "The singular name of the post type."
 msgstr "The singular name of the post type."
 
-#: inc/rest/Config.php:374
+#: inc/rest/Config.php:375
 msgctxt "legal-text"
 msgid "Cookie policy"
 msgstr "Cookie policy"
 
 #. translators:
-#: inc/Assets.php:395
+#: inc/Assets.php:398
 msgctxt "legal-text"
 msgid "Contractual guarantee for standard contractual clauses with sub-processors"
 msgstr "Contractual guarantee for standard contractual clauses with sub-processors"
 
 #. translators:
-#: inc/Assets.php:395
+#: inc/Assets.php:398
 msgctxt "legal-text"
 msgid "Switzerland"
 msgstr "Switzerland"
 
 #. translators:
-#: inc/Assets.php:395
+#: inc/Assets.php:398
 msgctxt "legal-text"
 msgid "EU"
 msgstr "EU"
 
 #. translators:
-#: inc/Assets.php:395
+#: inc/Assets.php:398
 msgctxt "legal-text"
 msgid "Safety mechanisms for data transmission"
 msgstr "Safety mechanisms for data transmission"
 
-#: inc/Assets.php:370 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:373 inc/settings/CookiePolicy.php:252
 msgctxt "legal-text"
 msgid "Technical cookie name"
 msgstr "Technical cookie name"
 
 #. translators:
-#: inc/Assets.php:360
+#: inc/Assets.php:363
 msgctxt "legal-text"
 msgid "Hide more details (%s)"
 msgstr "Hide more details (%s)"
 
 #. translators:
-#: inc/Assets.php:358
+#: inc/Assets.php:361
 msgctxt "legal-text"
 msgid "Show more details (%s)"
 msgstr "Show more details (%s)"
 
-#: inc/Assets.php:355
+#: inc/Assets.php:358
 msgid "Show more"
 msgstr "Show more"
 
@@ -611,6 +820,16 @@ msgstr "Since the request returned a <code>403</code> error, it is possible that
 #: inc/view/Notices.php:364
 msgid "There seems to be something generally wrong with the REST API of your WordPress instance. Please deactivate Real Cookie Banner and then check under <a href=\"%s\">Tools > Site Health</a> whether errors regarding the REST API are listed there."
 msgstr "There seems to be something generally wrong with the REST API of your WordPress instance. Please deactivate Real Cookie Banner and then check under <a href=\"%s\">Tools > Site Health</a> whether errors regarding the REST API are listed there."
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:125
+#: public/dist/chunk-config-tab-consent.lite.js:1
+msgid "pro-modal/sticky-legal-links.webm"
+msgstr "pro-modal/sticky-legal-links.webm"
+
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:138
+#: public/dist/chunk-config-tab-consent.lite.js:1
+msgid "Handling of failed consent documentation"
+msgstr "Handling of failed consent documentation"
 
 #: inc/view/Notices.php:451
 msgid "Check consent storage process again"
@@ -784,7 +1003,7 @@ msgstr "Enable animations for the menu and menu items"
 msgid "Sticky legal links widget"
 msgstr "Sticky legal links widget"
 
-#: inc/Assets.php:383
+#: inc/Assets.php:386
 msgctxt "legal-text"
 msgid "Reading the consent has failed. Please try again later!"
 msgstr "Reading the consent has failed. Please try again later!"
@@ -891,17 +1110,17 @@ msgstr "Accordions and list"
 msgid "Transparency & Consent Framework (TCF)"
 msgstr "Transparency & Consent Framework (TCF)"
 
-#: inc/Assets.php:392
+#: inc/Assets.php:395
 msgctxt "legal-text"
 msgid "Some services set cookies and/or process personal data without complying with consent communication standards. These services are divided into several groups. So-called \"essential services\" are used based on legitimate interest and cannot be opted out (an objection may have to be made by email or letter in accordance with the privacy policy), while all other services are used only after consent has been given."
 msgstr "Some services set cookies and/or process personal data without complying with consent communication standards. These services are divided into several groups. So-called \"essential services\" are used based on legitimate interest and cannot be opted out (an objection may have to be made by email or letter in accordance with the privacy policy), while all other services are used only after consent has been given."
 
-#: inc/Assets.php:391
+#: inc/Assets.php:394
 msgctxt "legal-text"
 msgid "Non-standardized data processing"
 msgstr "Non-standardized data processing"
 
-#: inc/Assets.php:379
+#: inc/Assets.php:382
 msgctxt "legal-text"
 msgid "Purposes"
 msgstr "Purposes"
@@ -952,19 +1171,19 @@ msgid "Are you really embedding ads and content from all created TCF vendors on 
 msgstr "Are you really embedding ads and content from all created TCF vendors on your website? <strong>Asking for consent from vendors you don't use could be an abuse of rights and could make the entire consent ineffective.</strong> You make it difficult for your website visitors to make an informed choice by using too many vendors. We therefore recommend you to create only TCF vendors that you actually use!"
 
 #. translators:
-#: inc/Assets.php:361
+#: inc/Assets.php:364
 msgctxt "legal-text"
 msgid "Other"
 msgstr "Other"
 
 #. translators:
-#: inc/Assets.php:395
+#: inc/Assets.php:398
 msgctxt "legal-text"
 msgid "Binding corporate rules"
 msgstr "Binding corporate rules"
 
 #. translators:
-#: inc/Assets.php:395
+#: inc/Assets.php:398
 msgctxt "legal-text"
 msgid "Adequacy decision"
 msgstr "Adequacy decision"
@@ -1051,10 +1270,15 @@ msgid "Specify additional links in the footer of the cookie banner"
 msgstr "Specify additional links in the footer of the cookie banner"
 
 #: inc/comp/migration/DashboardTileMigrationMajor4.php:103
-msgid "Feature is enabled."
-msgstr "Feature is enabled."
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:119
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:125
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:131
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:133
+msgid "Feature is enabled"
+msgstr "Feature is enabled"
 
 #: inc/comp/migration/DashboardTileMigrationMajor4.php:103
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:116
 msgid "Obtain consent for data processing in unsecure third countries"
 msgstr "Obtain consent for data processing in unsecure third countries"
 
@@ -1108,6 +1332,7 @@ msgstr "Help us make Real Cookie Banner even better!"
 
 #: inc/comp/migration/DashboardTileMigrationMajor4.php:86
 #: inc/comp/migration/DashboardTileMigrationMajor4.php:103
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:119
 msgid "The following services should be reviewed:"
 msgstr "The following services should be reviewed:"
 
@@ -1230,6 +1455,7 @@ msgid "Accessibility to comply with the European Accessibility Act"
 msgstr "Accessibility to comply with the European Accessibility Act"
 
 #: inc/comp/migration/DashboardTileMigrationMajor4.php:60
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:103
 msgid "We will overwrite all texts in your cookie banner with new text suggestions. Please check afterwards if all adjustments are correct for your individual requirements and reconfigure your cookie banner yourself if necessary. Are you sure you want to apply the changes?"
 msgstr "We will overwrite all texts in your cookie banner with new text suggestions. Please check afterwards if all adjustments are correct for your individual requirements and reconfigure your cookie banner yourself if necessary. Are you sure you want to apply the changes?"
 
@@ -1250,6 +1476,7 @@ msgid "Legal adjustments of texts and translations in 12 languages"
 msgstr "Legal adjustments of texts and translations in 12 languages"
 
 #: inc/comp/migration/DashboardTileMigrationMajor4.php:56
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:80
 msgid "Configure data processing countries"
 msgstr "Configure data processing countries"
 
@@ -1350,27 +1577,27 @@ msgstr "Footer links"
 msgid "Footer link"
 msgstr "Footer link"
 
-#: inc/Assets.php:388 inc/settings/CookiePolicy.php:233
+#: inc/Assets.php:391 inc/settings/CookiePolicy.php:237
 msgctxt "legal-text"
 msgid "Contact form"
 msgstr "Contact form"
 
-#: inc/Assets.php:387 inc/settings/CookiePolicy.php:233
+#: inc/Assets.php:390 inc/settings/CookiePolicy.php:237
 msgctxt "legal-text"
 msgid "Email"
 msgstr "Email"
 
-#: inc/Assets.php:386 inc/settings/CookiePolicy.php:233
+#: inc/Assets.php:389 inc/settings/CookiePolicy.php:237
 msgctxt "legal-text"
 msgid "Phone"
 msgstr "Phone"
 
-#: inc/Assets.php:364
+#: inc/Assets.php:367
 msgctxt "legal-text"
 msgid "Art. 17 (1) (a) DSG (Switzerland)"
 msgstr "Art. 17 (1) (a) DSG (Switzerland)"
 
-#: inc/Assets.php:364
+#: inc/Assets.php:367
 msgctxt "legal-text"
 msgid "Art. 49 (1) (a) GDPR"
 msgstr "Art. 49 (1) (a) GDPR"
@@ -1391,47 +1618,47 @@ msgstr "Some adblockers are able to block cookie banners. This means that these 
 msgid "Please use this text input for custom CSS explicitly for your cookie banner. Custom CSS outside this field, e.g. in your theme options, will not work due to anti-adblocker optimization. Use class names like <code>rcb-headline</code> that you only see here in the customizer preview, and not auto-generated class names that look like <code>ac04ddfa165</code>."
 msgstr "Please use this text input for custom CSS explicitly for your cookie banner. Custom CSS outside this field, e.g. in your theme options, will not work due to anti-adblocker optimization. Use class names like <code>rcb-headline</code> that you only see here in the customizer preview, and not auto-generated class names that look like <code>ac04ddfa165</code>."
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "years"
 msgstr "years"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "hours"
 msgstr "hours"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "minutes"
 msgstr "minutes"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "seconds"
 msgstr "seconds"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "year"
 msgstr "year"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "month"
 msgstr "month"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "day"
 msgstr "day"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "hour"
 msgstr "hour"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "minute"
 msgstr "minute"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "second"
 msgstr "second"
 
-#: inc/Assets.php:381
+#: inc/Assets.php:384
 msgctxt "legal-text"
 msgid "Skip to consent choices"
 msgstr "Skip to consent choices"
@@ -1441,12 +1668,12 @@ msgid "The Service Cloud is currently not reachable, we will try to download the
 msgstr "The Service Cloud is currently not reachable, we will try to download the templates again in a few minutes automatically..."
 
 #. translators:
-#: inc/Assets.php:395
+#: inc/Assets.php:398
 msgctxt "legal-text"
 msgid "Standard contractual clauses"
 msgstr "Standard contractual clauses"
 
-#: inc/Assets.php:410
+#: inc/Assets.php:413
 msgctxt "legal-text"
 msgid "Appropriate safeguard"
 msgstr "Appropriate safeguard"
@@ -1482,7 +1709,7 @@ msgstr "Data processing notice in cookie banner"
 msgid "Consent for data processing in unsafe third countries"
 msgstr "Consent for data processing in unsafe third countries"
 
-#: inc/Assets.php:412
+#: inc/Assets.php:415
 msgctxt "legal-text"
 msgid "Data processing in unsafe third countries"
 msgstr "Data processing in unsafe third countries"
@@ -1502,7 +1729,7 @@ msgstr "Consent Forwarding is currently disabled or no external hosts have been 
 msgid "Please activate %s in settings to use this template."
 msgstr "Please activate %s in settings to use this template."
 
-#: inc/Assets.php:390 inc/settings/BannerLink.php:201
+#: inc/Assets.php:393 inc/settings/BannerLink.php:201
 msgctxt "legal-text"
 msgid "Legal notice"
 msgstr "Legal notice"
@@ -1543,7 +1770,7 @@ msgstr "You must explain to your website visitors in your privacy policy which d
 msgid "Explain data processing of cookie banner in privacy policy"
 msgstr "Explain data processing of cookie banner in privacy policy"
 
-#: inc/Assets.php:406
+#: inc/Assets.php:409
 msgid "https://devowl.io/knowledge-base/license-installation-type/"
 msgstr "https://devowl.io/knowledge-base/license-installation-type/"
 
@@ -1555,7 +1782,7 @@ msgstr "Scan website again"
 msgid "You have enabled or disabled plugins on your website, which may require your cookie banner to be adjusted. Please scan your website again as soon as you have finished the changes!"
 msgstr "You have enabled or disabled plugins on your website, which may require your cookie banner to be adjusted. Please scan your website again as soon as you have finished the changes!"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 msgid "months"
 msgstr "months"
 
@@ -1563,7 +1790,7 @@ msgstr "months"
 msgid "Scan this page"
 msgstr "Scan this page"
 
-#: inc/UserConsent.php:145
+#: inc/UserConsent.php:201
 msgid "Invalid IP address. Please insert a valid IPv4 or IPv6 address."
 msgstr "Invalid IP address. Please insert a valid IPv4 or IPv6 address."
 
@@ -1747,87 +1974,87 @@ msgstr "https://www.gesetze-im-internet.de/ttdsg/"
 msgid "In recent months, more clarity has been created about what consent management on websites should look like - and what it shouldn't. In particular, through the <a href=\"%1$s\" target=\"_blank\">TDDDG (former TTDSG)</a> (Telecommunications Digital Services Data Protection Act; Germany) and <a href=\"%2$s\" target=\"_blank\">Guidance of the Conference of Independent Data Protection Authorities for cookie banners</a> (coordinated legal interpretation of all German data protection authorities; in German), there are now clearer rules that further interpret or complement the EU-wide applicable <a href=\"%3$s\" target=\"_blank\">ePrivacy Directive</a> and <a href=\"%4$s\" target=\"_blank\">GDPR</a>. Furthermore, there were important decisions such as the evaluation of <a href=\"%5$s\" target=\"_blank\">TCF by ADP (Belgium)</a>, the <a href=\"%6$s\" target=\"_blank\">Google Analytics decision by dsb (Austria)</a> and the <a href=\"%7$s\" target=\"_blank\">position on Google Analytics by CNIL</a>."
 msgstr "In recent months, more clarity has been created about what consent management on websites should look like – and what it shouldn't. In particular, through the <a href=\"%1$s\" target=\"_blank\">TDDDG (former TTDSG)</a> (Telecommunications Digital Services Data Protection Act; Germany) and <a href=\"%2$s\" target=\"_blank\">Guidance of the Conference of Independent Data Protection Authorities for cookie banners</a> (coordinated legal interpretation of all German data protection authorities; in German), there are now clearer rules that further interpret or complement the EU-wide applicable <a href=\"%3$s\" target=\"_blank\">ePrivacy Directive</a> and <a href=\"%4$s\" target=\"_blank\">GDPR</a>. Furthermore, there were important decisions such as the evaluation of <a href=\"%5$s\" target=\"_blank\">TCF by ADP (Belgium)</a>, the <a href=\"%6$s\" target=\"_blank\">Google Analytics decision by dsb (Austria)</a> and the <a href=\"%7$s\" target=\"_blank\">position on Google Analytics by CNIL</a>."
 
-#: inc/Assets.php:389
+#: inc/Assets.php:392
 msgctxt "legal-text"
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
-#: inc/Assets.php:385 inc/settings/CookiePolicy.php:233
+#: inc/Assets.php:388 inc/settings/CookiePolicy.php:237
 msgctxt "legal-text"
 msgid "Provider"
 msgstr "Provider"
 
-#: inc/Assets.php:384
+#: inc/Assets.php:387
 msgctxt "legal-text"
 msgid "Not yet consented to"
 msgstr "Not yet consented to"
 
-#: inc/Assets.php:382
+#: inc/Assets.php:385
 msgctxt "legal-text"
 msgid "Show consent from"
 msgstr "Show consent from"
 
-#: inc/Assets.php:380
+#: inc/Assets.php:383
 msgctxt "legal-text"
 msgid "History of your privacy settings"
 msgstr "History of your privacy settings"
 
-#: inc/Assets.php:378 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:381 inc/settings/CookiePolicy.php:252
 msgctxt "legal-text"
 msgid "Purpose"
 msgstr "Purpose"
 
-#: inc/Assets.php:377 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:380 inc/settings/CookiePolicy.php:252
 msgctxt "legal-text"
 msgid "Type"
 msgstr "Type"
 
-#: inc/Assets.php:376
+#: inc/Assets.php:379
 msgctxt "legal-text"
 msgid "No expiration"
 msgstr "No expiration"
 
-#: inc/Assets.php:375 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:378 inc/settings/CookiePolicy.php:252
 msgctxt "legal-text"
 msgid "Duration"
 msgstr "Duration"
 
-#: inc/Assets.php:374
+#: inc/Assets.php:377
 msgctxt "legal-text"
 msgid "Host"
 msgstr "Host"
 
-#: inc/Assets.php:372
+#: inc/Assets.php:375
 msgctxt "legal-text"
 msgid "Cookie refresh"
 msgstr "Cookie refresh"
 
-#: inc/Assets.php:371
+#: inc/Assets.php:374
 msgctxt "legal-text"
 msgid "Uses cookies"
 msgstr "Uses cookies"
 
-#: inc/Assets.php:369
+#: inc/Assets.php:372
 msgctxt "legal-text"
 msgid "Technical cookie definitions"
 msgstr "Technical cookie definitions"
 
-#: inc/Assets.php:367
+#: inc/Assets.php:370
 msgctxt "legal-text"
 msgid "Consent"
 msgstr "Consent"
 
-#: inc/Assets.php:366
+#: inc/Assets.php:369
 msgctxt "legal-text"
 msgid "Compliance with a legal obligation"
 msgstr "Compliance with a legal obligation"
 
-#: inc/Assets.php:365
+#: inc/Assets.php:368
 msgctxt "legal-text"
 msgid "Legitimate interest"
 msgstr "Legitimate interest"
 
-#: inc/Assets.php:362
+#: inc/Assets.php:365
 msgctxt "legal-text"
 msgid "Use on legal basis of"
 msgstr "Use on legal basis of"
@@ -1841,12 +2068,12 @@ msgstr "Activate license"
 msgid "Ignore"
 msgstr "Ignore"
 
-#: inc/Assets.php:396 inc/settings/CookiePolicy.php:248
+#: inc/Assets.php:399 inc/settings/CookiePolicy.php:252
 #: public/dist/chunk-config-tab-consent.lite.js:1
 msgid "days"
 msgstr "days"
 
-#: inc/settings/CookiePolicy.php:253
+#: inc/settings/CookiePolicy.php:257
 #: public/dist/chunk-config-tab-blocker.lite.js:1
 #: public/dist/chunk-config-tab-settings.lite.js:1
 msgid "Search..."
@@ -2381,7 +2608,7 @@ msgstr "The GDPR (EU 2016/679) and ePrivacy Directive (EU 2009/136/EC) defines t
 msgid "Continue without consent"
 msgstr "Continue without consent"
 
-#: inc/Assets.php:356 inc/view/customize/banner/Decision.php:63
+#: inc/Assets.php:359 inc/view/customize/banner/Decision.php:63
 #: inc/view/customize/banner/Decision.php:67
 msgid "Hide"
 msgstr "Hide"
@@ -3063,12 +3290,12 @@ msgstr "Skip failed pages"
 msgid "Cancel scan"
 msgstr "Cancel scan"
 
-#: inc/scanner/Scanner.php:438
+#: inc/comp/migration/DbConsentV2.php:360 inc/scanner/Scanner.php:438
 msgid "Contact support"
 msgstr "Contact support"
 
-#: inc/scanner/Scanner.php:438 public/dist/admin.lite.js:1
-#: public/dist/chunk-config-tab-consent.lite.js:1
+#: inc/comp/migration/DbConsentV2.php:360 inc/scanner/Scanner.php:438
+#: public/dist/admin.lite.js:1 public/dist/chunk-config-tab-consent.lite.js:1
 #: public/dist/chunk-config-tab-scanner.lite.js:1
 msgid "https://devowl.io/support/"
 msgstr "https://devowl.io/support/"
@@ -3463,7 +3690,7 @@ msgstr "No consents found. Please navigate back and check your input."
 msgid "Please provide a UUID or a date range."
 msgstr "Please provide a UUID or a date range."
 
-#: inc/Core.php:334 inc/view/checklist/GetPro.php:47
+#: inc/Core.php:336 inc/view/checklist/GetPro.php:47
 msgid "https://devowl.io/go/real-cookie-banner?source=rcb-lite"
 msgstr "https://devowl.io/go/real-cookie-banner?source=rcb-lite"
 
@@ -3712,6 +3939,8 @@ msgstr "Are you sure? All your current texts will be overwritten (this does not 
 
 #: inc/comp/migration/DashboardTileMigrationMajor2.php:39
 #: inc/comp/migration/DashboardTileMigrationMajor4.php:60
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:103
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:113
 msgid "Apply new texts"
 msgstr "Apply new texts"
 
@@ -3757,51 +3986,52 @@ msgstr "If you delete a service, it will not be deleted in other languages."
 msgid "If you delete a service group, it will not be deleted in other languages."
 msgstr "If you delete a service group, it will not be deleted in other languages."
 
-#: inc/Assets.php:405 inc/Assets.php:426 inc/view/checklist/GetPro.php:58
+#: inc/Assets.php:408 inc/Assets.php:429 inc/view/checklist/GetPro.php:58
 #: inc/view/Notices.php:545
 msgid "Learn more"
 msgstr "Learn more"
 
 #. translators:
-#: inc/Assets.php:408 inc/comp/migration/DashboardTileMigrationMajor3.php:90
+#: inc/Assets.php:411 inc/comp/migration/DashboardTileMigrationMajor3.php:90
+#: inc/comp/migration/DashboardTileMigrationMajor5.php:102
 #: inc/view/Notices.php:526 inc/view/Notices.php:854 inc/view/Notices.php:855
 msgid " and "
 msgstr " and "
 
-#: inc/Assets.php:404
+#: inc/Assets.php:407
 msgid "Product license not for production use!"
 msgstr "Product license not for production use!"
 
-#: inc/Assets.php:403
+#: inc/Assets.php:406
 msgid "No license activated - not for production use!"
 msgstr "No license activated - not for production use!"
 
-#: inc/Assets.php:402 inc/view/customize/banner/BasicLayout.php:92
+#: inc/Assets.php:405 inc/view/customize/banner/BasicLayout.php:92
 #: inc/view/customize/banner/BasicLayout.php:108
 #: inc/view/customize/banner/BodyDesign.php:186
 #: inc/view/customize/banner/Design.php:66
 msgid "None"
 msgstr "None"
 
-#: inc/Assets.php:401
+#: inc/Assets.php:404
 msgid "Unknown"
 msgstr "Unknown"
 
-#: inc/Assets.php:400 public/dist/chunk-config-tab-dashboard.lite.js:1
+#: inc/Assets.php:403 public/dist/chunk-config-tab-dashboard.lite.js:1
 #: public/dist/chunk-config-tab-scanner.lite.js:1
 msgid "No"
 msgstr "No"
 
-#: inc/Assets.php:399 public/dist/chunk-config-tab-dashboard.lite.js:1
+#: inc/Assets.php:402 public/dist/chunk-config-tab-dashboard.lite.js:1
 #: public/dist/chunk-config-tab-scanner.lite.js:1
 msgid "Yes"
 msgstr "Yes"
 
-#: inc/Assets.php:398
+#: inc/Assets.php:401
 msgid "Close without saving"
 msgstr "Close without saving"
 
-#: inc/Assets.php:397 public/dist/admin.lite.js:1
+#: inc/Assets.php:400 public/dist/admin.lite.js:1
 #: public/dist/chunk-config-tab-consent.lite.js:1
 #: public/dist/chunk-config-tab-scanner.lite.js:1
 msgid "Close"
@@ -3818,12 +4048,12 @@ msgstr "Type"
 msgid "Duration"
 msgstr "Duration"
 
-#: inc/Assets.php:373
+#: inc/Assets.php:376
 msgctxt "legal-text"
 msgid "Uses cookie-like information (LocalStorage, SessionStorage, IndexDB, etc.)"
 msgstr "Uses cookie-like information (LocalStorage, SessionStorage, IndexDB, etc.)"
 
-#: inc/Assets.php:368
+#: inc/Assets.php:371
 msgctxt "legal-text"
 msgid "We have recognized that you are a crawler/bot. Only natural persons must consent to cookies and processing of personal data. Therefore, the link has no function for you."
 msgstr "We have recognized that you are a crawler/bot. Only natural persons must consent to cookies and processing of personal data. Therefore, the link has no function for you."

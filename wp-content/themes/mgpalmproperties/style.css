@@ -9066,6 +9066,9 @@ picture img {
   bottom: 0;
   left: 0;
 }
+.imgResponsive.imgAbsolute img {
+  height: 100%;
+}
 
 .bgResponsive {
   background-repeat: no-repeat;
@@ -9286,9 +9289,10 @@ picture img {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: 100%;
   left: 0;
-  background-color: black;
+  opacity: 0;
+  filter: alpha(opacity=0);
   -webkit-transition: all 0.65s cubic-bezier(0.25, 0.74, 0.22, 0.99);
   -moz-transition: all 0.65s cubic-bezier(0.25, 0.74, 0.22, 0.99);
   -ms-transition: all 0.65s cubic-bezier(0.25, 0.74, 0.22, 0.99);
@@ -9296,7 +9300,8 @@ picture img {
   transition: all 0.65s cubic-bezier(0.25, 0.74, 0.22, 0.99);
 }
 .reveal.revealBG.loaded:after {
-  bottom: 100%;
+  opacity: 1;
+  filter: alpha(opacity=100);
 }
 .reveal.revealIMG {
   overflow: hidden;
@@ -9691,7 +9696,7 @@ section.bgWhite {
 section.full {
   overflow: hidden;
   height: 100vh;
-  max-height: 90rem;
+  max-height: 95rem;
 }
 section.fullxl {
   overflow: hidden;
@@ -9761,7 +9766,7 @@ section .colFull .bgLink:hover .wContent .content .bottom {
   filter: alpha(opacity=100);
 }
 section .introduction {
-  margin-bottom: 4.5rem;
+  margin-bottom: 6rem;
 }
 section .introduction .ico {
   display: block;
@@ -9798,6 +9803,40 @@ section.section-header .special {
   width: 100%;
   bottom: calc(var(--paddingYsection) * 2);
 }
+section.section-header-page .bgSection {
+  position: relative;
+}
+section.section-header-page .bgSection:after {
+  z-index: 1;
+  height: 100%;
+  background-image: url("images/logo-fond-large.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+section.section-header-page .bgHeader {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 90%;
+  overflow: hidden;
+}
+section.section-header-page .ico {
+  display: block;
+  color: rgb(189, 153, 126);
+  margin-bottom: 2rem;
+  font-size: 5rem;
+}
+section.section-header-page h1, section.section-header-page .h1 {
+  font-size: clamp(3.2rem, 3.2vw, 6rem);
+  line-height: clamp(3.6rem, 3.6vw, 7rem);
+  letter-spacing: 0em;
+}
+section.section-header-page p {
+  padding-right: 18vw;
+}
 section.section-team .compense {
   margin-left: 2rem;
   margin-top: calc(var(--paddingYsection) * 4);
@@ -9816,12 +9855,84 @@ section.section-contact .bgSection {
   background-size: auto 100%;
   background-position: center;
 }
+section.section-colonnes .boxes picture img {
+  width: auto;
+  display: block;
+  margin: auto;
+}
+section.section-colonnes .boxes .boxContent {
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+}
+section.section-colonnes .boxes .boxContent.boxCenter {
+  text-align: center;
+  padding: 0 4rem;
+}
+section.section-colonnes .boxes .boxContent h1, section.section-colonnes .boxes .boxContent .h1,
+section.section-colonnes .boxes .boxContent h2,
+section.section-colonnes .boxes .boxContent .h2,
+section.section-colonnes .boxes .boxContent h3,
+section.section-colonnes .boxes .boxContent .h3,
+section.section-colonnes .boxes .boxContent h4,
+section.section-colonnes .boxes .boxContent .h4,
+section.section-colonnes .boxes .boxContent h5,
+section.section-colonnes .boxes .boxContent .h5,
+section.section-colonnes .boxes .boxContent h6,
+section.section-colonnes .boxes .boxContent .h6 {
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+section.section-liste .imageDecal {
+  -webkit-transform: translateY(calc(var(--paddingYsection) * -3));
+  -moz-transform: translateY(calc(var(--paddingYsection) * -3));
+  -ms-transform: translateY(calc(var(--paddingYsection) * -3));
+  transform: translateY(calc(var(--paddingYsection) * -3));
+}
+section.section-liste .contenuDecal {
+  padding-top: 10rem;
+}
+section.section-liste .liste {
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgb(16, 73, 81);
+}
+section.section-liste .liste h1, section.section-liste .liste .h1,
+section.section-liste .liste h2,
+section.section-liste .liste .h2,
+section.section-liste .liste h3,
+section.section-liste .liste .h3,
+section.section-liste .liste h4,
+section.section-liste .liste .h4,
+section.section-liste .liste h5,
+section.section-liste .liste .h5,
+section.section-liste .liste h6,
+section.section-liste .liste .h6 {
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+section.section-liste .liste h1 .ico, section.section-liste .liste .h1 .ico,
+section.section-liste .liste h2 .ico,
+section.section-liste .liste .h2 .ico,
+section.section-liste .liste h3 .ico,
+section.section-liste .liste .h3 .ico,
+section.section-liste .liste h4 .ico,
+section.section-liste .liste .h4 .ico,
+section.section-liste .liste h5 .ico,
+section.section-liste .liste .h5 .ico,
+section.section-liste .liste h6 .ico,
+section.section-liste .liste .h6 .ico {
+  margin-right: 1rem;
+  color: rgb(189, 153, 126);
+}
 
 /* purgecss start ignore */
 section .mySwiper .swiper-wrapper {
   padding-bottom: 3.5rem;
 }
 section .mySwiper .swiper-wrapper .swiper-slide {
+  cursor: grab;
   user-select: none;
   text-align: center;
   font-size: 18px;
@@ -9829,7 +9940,6 @@ section .mySwiper .swiper-wrapper .swiper-slide {
 }
 section .mySwiper .swiper-wrapper .swiper-slide .baseline {
   padding: 2.4rem;
-  text-transform: uppercase;
   color: rgb(143, 143, 143);
 }
 section .mySwiper .swiper-wrapper .swiper-slide .baseline b,

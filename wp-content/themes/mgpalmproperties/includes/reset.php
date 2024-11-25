@@ -18,6 +18,7 @@ if (function_exists('add_theme_support')) {
     add_theme_support('post-thumbnails');
     add_image_size('xlarge', 1920, 9999, false);
     // add_image_size('xlargeland', 1920, 800, true);
+    add_image_size('square', 768, 768, true);
     add_image_size('bloc', 768, 500, true);
     add_image_size('bloclarge', 1920, 800, true);
 }
