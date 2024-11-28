@@ -18,6 +18,20 @@ $nokia: "only screen and (max-width : 450px)";
             }
         }
     }
+    section {
+        .mySwiper .swiper-wrapper .swiper-slide .baseline span {
+            &:first-child {
+                display: block;
+                &:after {
+                    content: none;
+                }
+            }
+        }
+        .colFull {
+            height: 80vh;
+            max-height: 70rem;
+        }
+    }
 }
 
 @media #{$desktop} {
@@ -40,9 +54,19 @@ $nokia: "only screen and (max-width : 450px)";
             }
         }
     }
+    section {
+        .colFull {
+            height: 70vh;
+            max-height: 60rem;
+        }
+    }
 }
 
 @media #{$laptop} {
+    :root {
+        --paddingYsection: 5rem;
+        --paddingXsection: 5rem;
+    }
     #header {
         .header {
             justify-content: space-between;
@@ -100,12 +124,101 @@ $nokia: "only screen and (max-width : 450px)";
             }
         }
     }
+    section {
+        &.full {
+            max-height: 70rem;
+        }
+        .colFull {
+            height: 60vh;
+            max-height: 55rem;
+            .bgLink .wContent .content {
+                padding: 3.5rem;
+            }
+        }
+    }
+    /* purgecss start ignore */
+    #header {
+        &.activeMobile {
+            .header {
+                #langs,
+                .btn-header {
+                    @include opacity(0);
+                }
+            }
+            #menu-mobile {
+                @include opacity(1);
+                bottom: 0;
+                @include transform(translateX(0%));
+            }
+        }
+    }
+    /* purgecss end ignore */
 }
 
 @media #{$tablet} {
+    :root {
+        --paddingYsection: 4rem;
+        --paddingXsection: 4rem;
+    }
+    .tabletTop {
+        margin-top: calc(var(--paddingYsection) * 2);
+    }
+    .tabletBottom {
+        margin-bottom: calc(var(--paddingYsection) * 2);
+    }
+    .tabletBottomL {
+        margin-bottom: calc(var(--paddingYsection) * 1);
+    }
+    .tabletCenter {
+        text-align: center;
+    }
+    section {
+        &.standard {
+            .compenseTop {
+                margin-top: calc(var(--paddingYsection) * 2);
+            }
+            .compenseBottom {
+                margin-bottom: calc(var(--paddingYsection) * 2);
+            }
+        }
+        &.full {
+            height: auto;
+            max-height: auto;
+            padding-top: calc(var(--paddingYsection) * 3);
+            padding-bottom: calc(var(--paddingYsection) * 3);
+        }
+        .colFull {
+            height: 80vh;
+            max-height: 70rem;
+            .bgLink .wContent .content {
+                padding: 3.5rem;
+            }
+        }
+        &.section-team {
+            .compense {
+                margin-left: 2rem;
+                margin-top: calc(var(--paddingYsection) * 2);
+            }
+            .compensealt {
+                margin-right: -2rem;
+            }
+        }
+    }
+    #footer .top {
+        .second-menu a,
+        .socials {
+            justify-content: center;
+            li {
+                margin: 0 1rem;
+            }
+        }
+    }
 }
 
 @media #{$mobile} {
+    .mobileBottomL {
+        margin-bottom: calc(var(--paddingYsection) * 1);
+    }
     #header {
         .header {
             padding: 1.2rem 2rem;
@@ -128,6 +241,33 @@ $nokia: "only screen and (max-width : 450px)";
     }
     section {
         text-align: center;
+        &.full {
+            height: auto;
+            max-height: auto;
+            padding-top: calc(var(--paddingYsection) * 3);
+            padding-bottom: calc(var(--paddingYsection) * 3);
+        }
+        .colFull {
+            height: auto;
+            max-height: auto;
+            .bgLink {
+                &:before {
+                    top: 0;
+                    @include opacity(0.3);
+                }
+                .wContent .content {
+                    padding: calc(var(--paddingYsection) * 3) 2.5rem;
+                    .btn-link {
+                        color: $crea-beige-300;
+                    }
+                    .bottom {
+                        height: auto !important;
+                        max-height: 50rem !important;
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
     }
     /* purgecss start ignore */
     #header {
@@ -137,10 +277,69 @@ $nokia: "only screen and (max-width : 450px)";
             }
         }
     }
+    .reveal-content {
+        position: relative;
+        z-index: 3;
+    }
+    .reveal {
+        $revealDistance: 2rem;
+        transition-delay: 0.1s;
+        &.revealFT,
+        &.revealFR,
+        &.revealFL,
+        &.revealFB {
+            @include transform(translateY($revealDistance));
+            &.loaded {
+                @include transform(translateY(0px));
+            }
+        }
+        @for $i from 1 to 10 {
+            &.reveal#{$i} {
+                transition-delay: $i * 0.1s;
+                &.revealIMG {
+                    &:after {
+                        transition-delay: $i * 0.1s;
+                    }
+                }
+                &.revealBG {
+                    &:after {
+                        transition-delay: $i * 0.1s;
+                    }
+                }
+            }
+        }
+    }
     /* purgecss end ignore */
 }
 
 @media #{$mobileSM} {
+    section {
+        &.standard {
+            .compenseTop {
+                margin-top: 0;
+            }
+            .compenseBottom {
+                margin-top: calc(var(--paddingYsection) * 1);
+                margin-bottom: 0;
+            }
+        }
+        .colFull {
+            .bgLink {
+                .wContent .content {
+                    padding: calc(var(--paddingYsection) * 3) 1rem;
+                }
+            }
+        }
+        &.section-team {
+            .compense {
+                margin-left: 0;
+                margin-top: calc(var(--paddingYsection) * 1);
+            }
+            .compensealt {
+                margin-right: 0;
+            }
+        }
+    }
 }
 
 @media #{$nokia} {

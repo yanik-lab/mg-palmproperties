@@ -1,15 +1,20 @@
-<section class="section-colonnes standard first last bgWhite">
+<?php
+global $counterS;
+$introduction = get_sub_field('introduction');
+$colonnes = get_sub_field('colonnes');
+?>
+<section id="section-builder-<?php echo $counterS; ?>" class="section-colonnes standard first last bgWhite">
     <?php
-    if ($args['hero']['introduction']):
+    if ($introduction):
         get_template_part('yaniklab-parts/section', 'introduction', array(
-            'introduction' => $args['hero']['introduction'],
+            'introduction' => $introduction,
             'icon' => false
         ));
     endif;
     ?>
     <?php
     $counter = 1;
-    $rows = $args['hero']['colonnes'];
+    $rows = $colonnes;
     if ($rows) :
     ?>
         <div class="container-fluid">

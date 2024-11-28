@@ -31,6 +31,8 @@ require_once('includes/cpt.php');
 require_once('includes/seo.php');
 // CF7
 // require_once('includes/cf7.php');
+// BREADCRUMB
+require_once('includes/breadcrumb.php');
 
 // SECURITY
 remove_action("wp_head", "wp_generator");

@@ -1,21 +1,17 @@
 <?php
 global $counterS;
 
-if (have_rows('page_builder')) :
-    while (have_rows('page_builder')) : the_row();
+if (have_rows('sections')) :
+    while (have_rows('sections')) : the_row();
 ?>
 
 <?php
-        if (get_row_layout() == 'section_contenu') :
-            $hero = get_sub_field('contenu');
-            if ($hero) :
-                get_template_part('yaniklab-flexibles/section', 'contenu', array('hero' => $hero));
-            endif;
-        // elseif (get_row_layout() == 'section_ig_td') :
-        //     $hero = get_sub_field('contenu');
-        //     if ($hero) :
-        //         get_template_part('yaniklab-flexibles/section', 'deux-colonnes', array('hero' => $hero));
-        //     endif;
+        if (get_row_layout() == 'section_colonnes') :
+            get_template_part('yaniklab-flexibles/section', 'colonnes');
+        elseif (get_row_layout() == 'section_liste') :
+            get_template_part('yaniklab-flexibles/section', 'liste');
+        elseif (get_row_layout() == 'section_full') :
+            get_template_part('yaniklab-flexibles/section', 'full');
         endif;
 ?>
 

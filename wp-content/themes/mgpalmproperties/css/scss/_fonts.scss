@@ -6,157 +6,224 @@ $font-size-base: 62.5%;
 $font-size-normal: 1.6rem;
 $line-height-base: 1;
 
+$font-weight-light: 300;
 $font-weight-regular: 400;
+$font-weight-medium: 500;
 $font-weight-bold: 700;
 
 /*=============================================
 FONTS LOADINGS
 =============================================*/
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap");
-$font-family-montserrat: "Montserrat", sans-serif;
+$font-family-proxima: "proxima-nova", sans-serif;
 
-@mixin MonserratR {
-    font-family: $font-family-montserrat;
+@mixin ProximaNovaL {
+    font-family: $font-family-proxima;
+    font-weight: $font-weight-light;
+    font-optical-sizing: auto;
+    font-style: normal;
+    // font-feature-settings: "lnum" 1;
+}
+@mixin ProximaNovaLI {
+    font-family: $font-family-proxima;
+    font-weight: $font-weight-light;
+    font-optical-sizing: auto;
+    font-style: italic;
+    // font-feature-settings: "lnum" 1;
+}
+@mixin ProximaNovaR {
+    font-family: $font-family-proxima;
     font-weight: $font-weight-regular;
     font-optical-sizing: auto;
     font-style: normal;
     // font-feature-settings: "lnum" 1;
 }
-@mixin MonserratRI {
-    font-family: $font-family-montserrat;
+@mixin ProximaNovaRI {
+    font-family: $font-family-proxima;
     font-weight: $font-weight-regular;
     font-optical-sizing: auto;
     font-style: italic;
     // font-feature-settings: "lnum" 1;
 }
-@mixin MonserratB {
-    font-family: $font-family-montserrat;
+@mixin ProximaNovaM {
+    font-family: $font-family-proxima;
+    font-weight: $font-weight-medium;
+    font-optical-sizing: auto;
+    font-style: normal;
+    // font-feature-settings: "lnum" 1;
+}
+@mixin ProximaNovaMI {
+    font-family: $font-family-proxima;
+    font-weight: $font-weight-medium;
+    font-optical-sizing: auto;
+    font-style: italic;
+    // font-feature-settings: "lnum" 1;
+}
+@mixin ProximaNovaB {
+    font-family: $font-family-proxima;
     font-weight: $font-weight-bold;
     font-optical-sizing: auto;
     font-style: normal;
     // font-feature-settings: "lnum" 1;
 }
-@mixin MonserratBI {
-    font-family: $font-family-montserrat;
+@mixin ProximaNovaBI {
+    font-family: $font-family-proxima;
     font-weight: $font-weight-bold;
     font-optical-sizing: auto;
     font-style: italic;
     // font-feature-settings: "lnum" 1;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
-
-$font-family-cormorant: "Cormorant Garamond", serif;
-
-@mixin CormorantR {
-    font-family: $font-family-cormorant;
-    font-weight: $font-weight-regular;
-    font-optical-sizing: auto;
-    font-style: normal;
-    // font-feature-settings: "lnum" 1;
-}
-@mixin CormorantRI {
-    font-family: $font-family-cormorant;
-    font-weight: $font-weight-regular;
-    font-optical-sizing: auto;
-    font-style: italic;
-    // font-feature-settings: "lnum" 1;
-}
 /*=============================================
 FONTS STYLE
 =============================================*/
 
 @mixin body {
-    // @include MonserratR;
-    // em {
-    //     @include MonserratRI;
-    //     b,
-    //     strong {
-    //         @include MonserratBI;
-    //     }
-    // }
-    // b,
-    // strong {
-    //     @include MonserratB;
-    //     em {
-    //         @include MonserratBI;
-    //     }
-    // }
+    @include ProximaNovaR;
+    em {
+        @include ProximaNovaRI;
+        b,
+        strong {
+            @include ProximaNovaMI;
+        }
+    }
+    b,
+    strong {
+        @include ProximaNovaM;
+        em {
+            @include ProximaNovaMI;
+        }
+    }
 }
 @include headings {
-    // @include CormorantR;
     // color: $title-color;
     margin-bottom: 3rem;
+    @include ProximaNovaL;
+    letter-spacing: 0.01em;
     &:last-child {
         margin-bottom: 0rem;
     }
-    // em {
-    //     @include CormorantRI;
-    // }
+    em {
+        @include ProximaNovaLI;
+        b,
+        strong {
+            @include ProximaNovaMI;
+        }
+    }
+    b,
+    strong {
+        @include ProximaNovaM;
+        em {
+            @include ProximaNovaMI;
+        }
+    }
 }
 @mixin crea-h1 {
     // @include MonserratR;
     @include font-size(3.5, 3.5, 7);
     line-height: clamp(4rem, 4vw, 8rem);
-    letter-spacing: 0em;
 }
 @mixin crea-h1-alternatif {
     // @include MonserratR;
     @include font-size(3.2, 3.2, 6);
     line-height: clamp(3.6rem, 3.6vw, 7rem);
-    letter-spacing: 0em;
 }
 @mixin crea-h2 {
     // @include MonserratR;
     @include font-size(3, 3, 4);
     line-height: clamp(3.8rem, 3.8vw, 5rem);
-    letter-spacing: 0em;
 }
 @mixin crea-h3 {
     // @include MonserratR;
     @include font-size(2.4, 2.4, 3.6);
     line-height: clamp(3rem, 3vw, 4.2rem);
-    letter-spacing: 0em;
 }
 @mixin crea-h4 {
-    // @include MonserratR;
     @include font-size(2.2, 2.2, 2.4);
     line-height: 3rem;
-    letter-spacing: 0em;
+    @include ProximaNovaR;
+    em {
+        @include ProximaNovaRI;
+        b,
+        strong {
+            @include ProximaNovaMI;
+        }
+    }
+    b,
+    strong {
+        @include ProximaNovaM;
+        em {
+            @include ProximaNovaMI;
+        }
+    }
 }
 @mixin crea-h5 {
-    // @include MonserratR;
     @include font-size(2);
     line-height: 3rem;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
+    @include ProximaNovaM;
+    em {
+        @include ProximaNovaMI;
+        b,
+        strong {
+            @include ProximaNovaBI;
+        }
+    }
+    b,
+    strong {
+        @include ProximaNovaB;
+        em {
+            @include ProximaNovaBI;
+        }
+    }
 }
 @mixin crea-h6 {
-    // @include MonserratR;
     @include font-size(1.6);
     line-height: 2.4rem;
-    letter-spacing: 0em;
-}
-@mixin crea-texte-16-book {
-    // @include MonserratR;
-    @include font-size(1.6);
-    line-height: 2.4rem;
-    letter-spacing: 0em;
-    white-space: initial;
+    letter-spacing: 0.04em;
+    @include ProximaNovaM;
+    em {
+        @include ProximaNovaMI;
+        b,
+        strong {
+            @include ProximaNovaBI;
+        }
+    }
+    b,
+    strong {
+        @include ProximaNovaB;
+        em {
+            @include ProximaNovaBI;
+        }
+    }
 }
 @mixin crea-texte-16-heavy {
-    @include crea-texte-16-book;
+    @include ProximaNovaB;
+    @include font-size(1.6);
+    line-height: 2.4rem;
+    letter-spacing: 0.01em;
+    white-space: initial;
+}
+@mixin crea-texte-16-book {
+    @include ProximaNovaR;
+    @include font-size(1.6);
+    line-height: 2.4rem;
+    letter-spacing: 0.01em;
+    white-space: initial;
 }
 @mixin crea-texte-14-medium {
-    // @include MonserratR;
+    @include ProximaNovaM;
     @include font-size(1.4);
     line-height: 2rem;
-    letter-spacing: 0em;
+    letter-spacing: 0.01em;
     white-space: initial;
 }
 @mixin crea-texte-14-book {
-    @include crea-texte-14-medium;
+    @include ProximaNovaR;
+    @include font-size(1.4);
+    line-height: 2rem;
+    letter-spacing: 0.01em;
+    white-space: initial;
 }
 @mixin paragraphe {
     @include crea-texte-16-book;
@@ -167,35 +234,37 @@ FONTS STYLE
     &:last-child {
         margin-bottom: 0rem;
     }
-    // em {
-    //     @include MonserratRI;
-    //     b,
-    //     strong {
-    //         @include MonserratBI;
-    //     }
-    // }
-    // b,
-    // strong {
-    //     @include MonserratB;
-    //     em {
-    //         @include MonserratBI;
-    //     }
-    // }
+    em {
+        @include ProximaNovaRI;
+        b,
+        strong {
+            @include ProximaNovaBI;
+        }
+    }
+    b,
+    strong {
+        @include ProximaNovaB;
+        em {
+            @include ProximaNovaBI;
+        }
+    }
 }
 @mixin menu {
     @include crea-texte-16-book;
 }
 @mixin crea-cta {
+    @include ProximaNovaM;
     @include font-size(1.4);
     line-height: 2rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     white-space: initial;
     text-transform: uppercase;
 }
 @mixin crea-link {
+    @include ProximaNovaR;
     @include font-size(1.4);
     line-height: 2rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     white-space: initial;
     text-transform: uppercase;
 }

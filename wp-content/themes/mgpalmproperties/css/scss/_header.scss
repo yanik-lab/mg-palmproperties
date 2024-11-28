@@ -12,7 +12,7 @@
         display: flex;
         align-items: center;
         padding: 1.8rem 3.2rem;
-        background: transparent;
+        // background: $white;
         box-shadow: 2px 0 5px 0px rgba($black, 0);
         @include transition(all 0.15s cubic-bezier(0.25, 0.74, 0.22, 0.99));
         .left,
@@ -42,7 +42,7 @@
                     z-index: 2;
                     display: block;
                     padding: 1rem 2.5rem;
-                    color: $white;
+                    color: $crea-green-500;
                     @include crea-cta;
                     text-decoration: none;
                     &:after {
@@ -53,7 +53,7 @@
                         left: 50%;
                         top: 50%;
                         height: 1rem;
-                        background-color: rgba($white, 0.2);
+                        background-color: rgba($crea-beige-400, 0.5);
                         @include transform(translate(-50%, 0%));
                         @include transition(
                             width 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99)
@@ -173,20 +173,22 @@
                 }
             }
         }
-        .btn-burger {
-            #myburger {
-                .line {
-                    stroke: $white;
+        .btn,
+        button {
+            &.btn-burger {
+                #myburger {
+                    .line {
+                        stroke: $white;
+                    }
                 }
-            }
-            &:hover {
-                #myburger .line {
-                    stroke: $white;
+                &:hover {
+                    #myburger .line {
+                        stroke: $white;
+                    }
                 }
             }
         }
     }
-
     &.activeMobile {
         .hamRotate {
             transform: rotate(45deg);
@@ -200,16 +202,79 @@
         .ham1 .bottom {
             stroke-dashoffset: -138px;
         }
-        #menu-mobile {
-            @include opacity(1);
-            bottom: 0;
-            @include transform(translateX(0%));
-        }
-        .header {
-            #langs,
-            .btn-header {
-                @include opacity(0);
+        .btn,
+        button {
+            &.btn-burger {
+                color: $crea-black-400;
+                background-color: $crea-beige-300;
+                &:hover {
+                    color: $crea-black-400;
+                    background-color: $crea-beige-400;
+                    border: none;
+                }
+                #myburger {
+                    .line {
+                        stroke: $crea-black-400;
+                    }
+                }
             }
+        }
+        &.scrolled {
+            .btn,
+            button {
+                &.btn-burger {
+                    #myburger {
+                        .line {
+                            stroke: $white;
+                        }
+                    }
+                    &:hover {
+                        #myburger .line {
+                            stroke: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.page-template-tmp-page,
+.page-template-tmp-home,
+.page-template-tmp-contact {
+    #header {
+        background: transparent;
+        .header {
+            ul {
+                li {
+                    a {
+                        color: $white;
+                        &:after {
+                            background-color: rgba($white, 0.2);
+                        }
+                    }
+                }
+            }
+        }
+        &.scrolled {
+            .header {
+                ul {
+                    li {
+                        a {
+                            color: $crea-green-500;
+                            &:after {
+                                background-color: rgba($crea-beige-400, 0.5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.single-propriete {
+    #header {
+        .header {
+            background-color: $white;
         }
     }
 }

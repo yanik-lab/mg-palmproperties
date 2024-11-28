@@ -30,6 +30,9 @@ button,
 }
 h1 {
     @include crea-h1;
+    &.h2 {
+        @include crea-h2;
+    }
 }
 .homeh1 {
     margin-bottom: 6rem;
@@ -53,6 +56,10 @@ p,
 li,
 address {
     @include paragraphe;
+}
+.heavy p,
+p.heavy {
+    @include crea-texte-16-heavy;
 }
 sup {
     font-size: 0.6em;
@@ -149,6 +156,10 @@ picture {
     }
     &.topRight {
         object-position: top right;
+    }
+    source,
+    img {
+        height: 100%;
     }
     &.imgAbsolute {
         position: absolute;

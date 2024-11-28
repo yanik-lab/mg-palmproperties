@@ -3,6 +3,9 @@
     z-index: 10003;
     color: $crea-beige-400;
     background-color: $crea-green-500;
+    #logo-footer {
+        margin-left: 2rem;
+    }
     a {
         text-decoration: none;
         color: $crea-beige-400;
@@ -57,18 +60,20 @@
         }
     }
     .bottom {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
         border-top: 1px solid $crea-green-400;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         p {
             margin: 0 1.5rem;
             @include crea-texte-14-medium;
         }
         a {
             display: block;
+            padding: 0.4rem;
             @include crea-texte-14-book;
         }
     }

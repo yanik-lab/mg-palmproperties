@@ -3,13 +3,13 @@
 <footer id="footer">
     <div class="top">
         <div class="container-xl">
-            <div class="row justify-content-center">
-                <div class="col-xl-8">
-                    <a href="<?php echo get_bloginfo('url'); ?>" class="logo group" id="logo-footer">
+            <div class="row flex-column flex-md-row justify-content-center">
+                <div class="col-lg-8 tabletCenter tabletBottomL">
+                    <a href="<?php echo get_bloginfo('url'); ?>" class="logo group d-block" id="logo-footer">
                         <img src='<?php bloginfo('template_url'); ?>/images/logo-mg-palm-properties-horizontal.png.webp' alt='<?php _e("Logo", "mgpalmproperties"); ?> <?php bloginfo('title'); ?>' srcset='<?php bloginfo('template_url'); ?>/images/logo-mg-palm-properties-horizontal@2x.png.webp 2x' class='img-fluid logo-loader' loading='lazy'>
                     </a>
                 </div>
-                <div class="col">
+                <div class="col tabletCenter mobileBottomL">
                     <?php
                     wp_nav_menu(array(
                         'theme_location' => 'primary-menu',
@@ -20,20 +20,24 @@
                     ));
                     ?>
                 </div>
-                <div class="col">
+                <div class="col tabletCenter mobileBottomL">
                     <p><?php _e("Nous contacter", "mgpalmproperties"); ?></p>
                     <div class="second-menu">
-                        <a href="#" class="btn btn-icon">
-                            <i class="ico pictophone"></i>
-                            <span><?php _e("Nous appeler", "mgpalmproperties"); ?></span>
-                        </a>
-                        <a href="#" class="btn btn-icon">
-                            <i class="ico pictomail"></i>
-                            <span><?php _e("Nous écrire", "mgpalmproperties"); ?></span>
-                        </a>
+                        <?php if (get_field('telephone', 'options')) : ?>
+                            <a href="<?php echo formatPhoneNumber(get_field('telephone', 'options')); ?>" class="btn btn-icon" title="<?php _e("Nous appeler", "mgpalmproperties"); ?>">
+                                <i class="ico pictophone"></i>
+                                <span><?php _e("Nous appeler", "mgpalmproperties"); ?></span>
+                            </a>
+                        <?php endif; ?>
+                        <?php if (get_field('mail', 'options')) : ?>
+                            <a href="mailto:<?php echo get_field('mail', 'options'); ?>" class="btn btn-icon" title="<?php _e("Nous écrire", "mgpalmproperties"); ?>">
+                                <i class="ico pictomail"></i>
+                                <span><?php _e("Nous écrire", "mgpalmproperties"); ?></span>
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col tabletCenter">
                     <p><?php _e("Nous suivre", "mgpalmproperties"); ?></p>
                     <?php echo get_template_part('yaniklab-parts/part', 'socials'); ?>
                 </div>

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
+    <link rel="stylesheet" href="https://use.typekit.net/yzw7bzt.css">
+
     <?php wp_head(); ?>
 </head>
 
@@ -26,7 +28,7 @@
             <img src='<?php bloginfo('template_url'); ?>/images/logo-mg-palm-properties.png' alt='<?php _e("Logo", "mgpalmproperties"); ?> <?php bloginfo('title'); ?>' srcset='<?php bloginfo('template_url'); ?>/images/logo-mg-palm-properties@2x.png 2x' class='img-fluid logo-loader' loading='lazy'>
         </div>
         <header id="header">
-            <div class="reveal revealFT reveal3 altmobile">
+            <div class="reveal revealFT reveal1 altmobile">
                 <div class="header">
                     <div class="left">
                         <a href="<?php echo get_bloginfo('url'); ?>" class="logo group" id="logo-header">
@@ -64,11 +66,11 @@
                             ));
                             ?>
                         </ul>
-                        <a href="#" class="btn btn-header btn-icon">
+                        <a href="<?php echo pll_get_the_permalink(380); ?>" title="<?php echo pll_get_the_title(380); ?>" class="btn btn-header btn-icon">
                             <i class="ico pictophone"></i>
-                            <span>Nous contacter</span>
+                            <span><?php echo pll_get_the_title(380); ?></span>
                         </a>
-                        <a href="#" class="btn btn-burger d-flex d-xl-none">
+                        <button class="btn btn-burger d-flex d-xl-none">
                             <div id="myburger" class="">
                                 <svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="30">
                                     <path class="line top"
@@ -78,7 +80,7 @@
                                         d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
                                 </svg>
                             </div>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -102,9 +104,9 @@
                     ?>
                 </ul>
                 <div class="bottom">
-                    <a href="#" class="btn btn-header btn-icon">
+                    <a href="<?php echo pll_get_the_permalink(380); ?>" title="<?php echo pll_get_the_title(380); ?>" class="btn btn-header btn-icon">
                         <i class="ico pictophone"></i>
-                        <span>Nous contacter</span>
+                        <span><?php echo pll_get_the_title(380); ?></span>
                     </a>
                 </div>
             </div>

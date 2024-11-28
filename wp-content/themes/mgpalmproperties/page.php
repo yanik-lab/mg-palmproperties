@@ -1,23 +1,18 @@
 <?php
-get_header();
-?>
-<?php //var_dump('page.php');
-?>
+get_header(); ?>
+
 <?php while (have_posts()) : the_post(); ?>
 
-    <section class="standard">
+    <section class="section-properties-introduction standard firstxl bgWhite">
         <div class="container-fluid">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-24">
-                    <div class="reveal revealFB reveal1 intro-content">
-                        <h1 class="titre">
-                            <?php the_title(); ?>
-                        </h1>
+            <div class="row justify-content-center">
+                <div class="col-24 text-center introduction">
+                    <div class="reveal revealFB reveal1">
+                        <i class="ico pictofavicon"></i>
                     </div>
-                </div>
-            </div>
-            <div class="row justify-content-center align-items-center">
-                <div class="col-24 page-content">
+                    <div class="reveal revealFB reveal2">
+                        <h1> <?php the_title(); ?></h1>
+                    </div>
                     <?php the_content(); ?>
                 </div>
             </div>

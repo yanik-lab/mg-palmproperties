@@ -13,10 +13,14 @@ function tswtb_scripts()
         wp_register_script('app', get_template_directory_uri() . '/js/app.min.js', array('jquery'), '1.0.0', true);
         wp_enqueue_script('app');
     }
-    if (is_front_page()) {
+    if (is_front_page() || is_singular('propriete')) {
         wp_register_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '11.1.14', true);
         wp_enqueue_script('swiper');
     }
+    // if (is_singular('propriete')) {
+    //     wp_register_script('lightgallery', get_template_directory_uri() . '/js/libs-alone/lightgallery.min.js', array('jquery'), '2.5.0', true);
+    //     wp_enqueue_script('lightgallery');
+    // }
 }
 // add_action('init', 'tswtb_scripts');
 add_action('wp_enqueue_scripts', 'tswtb_scripts', 450);
@@ -31,9 +35,13 @@ function tswtb_styles()
         wp_register_style('style', get_template_directory_uri() . '/style.min.css', array(), '1.0', 'all');
         wp_enqueue_style('style');
     }
-    if (is_front_page()) {
+    if (is_front_page() || is_singular('propriete')) {
         wp_register_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '1.0', 'all');
         wp_enqueue_style('swiper');
     }
+    // if (is_singular('propriete')) {
+    //     wp_register_style('lightgallery', get_template_directory_uri() . '/css/libs-alone/lightgallery-bundle.min.css', array(), '2.5.0', 'all');
+    //     wp_enqueue_style('lightgallery');
+    // }
 }
 add_action('wp_enqueue_scripts', 'tswtb_styles', 500);

@@ -40,8 +40,8 @@ Template Name: Accueil
     if ($hero):
     ?>
         <section class="section-team bgGreen">
-            <div class="row g-0 d-flex">
-                <div class="col-lg-6">
+            <div class="row g-0 d-flex justify-content-center justify-content-lg-start">
+                <div class="col-18 col-sm-10 col-md-9 col-lg-6">
                     <?php if ($hero['image_1']):  ?>
                         <div class="reveal revealFB reveal1 ">
                             <div class="reveal revealIMG reveal2">
@@ -50,7 +50,7 @@ Template Name: Accueil
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="col-lg-6 compense">
+                <div class="col-18 col-sm-10 col-md-9 col-lg-6 compense">
                     <?php if ($hero['image_2']): ?>
                         <div class="reveal revealFB reveal2">
                             <div class="reveal revealIMG reveal3">
@@ -59,7 +59,7 @@ Template Name: Accueil
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="col-lg-6 offset-lg-2 d-flex align-items-center">
+                <div class="col-22 col-sm-22 col-md-16 col-lg-8 offset-lg-2 col-xl-6 offset-xl-2 d-flex align-items-center tabletTop tabletBottom tabletCenter">
                     <div class="reveal revealFR reveal4">
                         <?php echo $hero['contenu']; ?>
                         <?php
@@ -94,21 +94,21 @@ Template Name: Accueil
             $properties_featured = $hero['properties_featured'];
             if ($properties_featured):
             ?>
-                <div class="row g-0">
+                <div class="row g-0 justify-content-center">
                     <div class="col-24">
-                        <!-- Slider main container -->
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <?php
                                 foreach ($properties_featured as $propertie):
                                     $ID = $propertie->ID;
+                                    $link = get_the_permalink($propertie->ID);
                                     $titre = get_the_title($propertie->ID);
                                     $image = get_the_post_thumbnail($propertie->ID, 'bloc',  ['class' => 'img-fluid']);
                                     $chambres = get_field('chambres', $propertie->ID);
                                     $surface_habitable = get_field('surface_habitable', $propertie->ID);
                                     $localisation = get_field('localisation', $propertie->ID);
                                 ?>
-                                    <div class="swiper-slide">
+                                    <a href="<?php echo $link; ?>" title="<?php echo $titre; ?>" class="swiper-slide">
                                         <?php if ($image) : ?>
                                             <?php echo $image; ?>
                                         <?php else: ?>
@@ -128,13 +128,15 @@ Template Name: Accueil
                                                 <?php endif; ?>
                                             </h6>
                                         </div>
-                                    </div>
+                                    </a>
                                 <?php endforeach; ?>
                             </div>
                             <div class="swiper-scrollbar"></div>
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
+                    </div>
+                    <div class="col-20">
                         <?php
                         if ($hero['lien']):
                             get_template_part('yaniklab-parts/part', 'link', array(
@@ -144,11 +146,6 @@ Template Name: Accueil
                             ));
                         endif;
                         ?>
-                        <!-- <div class="buttons bigger center">
-                            <a href="<?php echo get_the_permalink(22); ?>" class="btn btn-basic btn-dark" title="<?php _e('Découvrez tous nos biens', 'mgpalmproperties'); ?>">
-                                <?php _e('Découvrez tous nos biens', 'mgpalmproperties'); ?>
-                            </a>
-                        </div> -->
                     </div>
                 </div>
             <?php endif; ?>
@@ -161,8 +158,8 @@ Template Name: Accueil
     ?>
         <section class="section-luxe standard firstxl lastxl bgGreen">
             <div class="container-fluid">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 offset-lg-3 d-flex align-items-center">
+                <div class="row align-items-center justify-content-center justify-content-lg-start">
+                    <div class="col-sm-22 col-md-16 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 d-flex align-items-center tabletBottom tabletCenter">
                         <div class="reveal revealFL reveal4">
                             <?php echo $hero['contenu']; ?>
                             <?php
@@ -176,7 +173,7 @@ Template Name: Accueil
                             ?>
                         </div>
                     </div>
-                    <div class="col-lg-6 offset-lg-1 compenseTop">
+                    <div class="col-20 col-sm-10 col-md-9 col-lg-6 offset-lg-1 compenseTop">
                         <?php if ($hero['image_1']): ?>
                             <div class="reveal revealFB reveal1">
                                 <div class="reveal revealIMG reveal2 position-relative">
@@ -193,7 +190,7 @@ Template Name: Accueil
                             </div>
                         <?php endif; ?>
                     </div>
-                    <div class="col-lg-6 compenseBottom">
+                    <div class="col-20 col-sm-10 col-md-9 col-lg-6 compenseBottom">
                         <?php if ($hero['image_2']): ?>
                             <div class="reveal revealFB reveal2">
                                 <div class="reveal revealIMG reveal3 position-relative">
@@ -235,14 +232,14 @@ Template Name: Accueil
                 ));
             endif;
             ?>
-            <div class="row g-0">
+            <div class="row g-0 justify-content-center">
                 <?php
                 $bloc = $hero['bloc_1'];
                 if ($bloc) : ?>
-                    <div class="col-lg-8 colFull position-relative">
+                    <div class="col-md-16 col-lg-8 colFull position-relative tabletBottom">
                         <div class="reveal revealFB reveal1 w-100 h-100">
                             <div class="reveal revealIMG reveal2 w-100 h-100 bgLink">
-                                <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid imgResponsive imgAbsolute']); ?>
+                                <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
                                 <div class="wContent w-100 h-100">
                                     <div class="reveal revealFB reveal2 position-relative z-1 w-100 h-100">
                                         <div class="content w-100 h-100">
@@ -270,10 +267,10 @@ Template Name: Accueil
                 <?php
                 $bloc = $hero['bloc_2'];
                 if ($bloc) : ?>
-                    <div class="col-lg-8 colFull position-relative">
+                    <div class="col-md-16 col-lg-8 colFull position-relative tabletBottom">
                         <div class="reveal revealFB reveal2 w-100 h-100">
                             <div class="reveal revealIMG reveal3 w-100 h-100 bgLink">
-                                <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid imgResponsive imgAbsolute']); ?>
+                                <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
                                 <div class="wContent w-100 h-100">
                                     <div class="reveal revealFB reveal3 position-relative z-1 w-100 h-100">
                                         <div class="content w-100 h-100">
@@ -301,10 +298,10 @@ Template Name: Accueil
                 <?php
                 $bloc = $hero['bloc_3'];
                 if ($bloc) : ?>
-                    <div class="col-lg-8 colFull position-relative">
+                    <div class="col-md-16 col-lg-8 colFull position-relative tabletBottom">
                         <div class="reveal revealFB reveal3 w-100 h-100">
                             <div class="reveal revealIMG reveal4 w-100 h-100 bgLink">
-                                <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid imgResponsive imgAbsolute']); ?>
+                                <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
                                 <div class="wContent w-100 h-100">
                                     <div class="reveal revealFB reveal4 position-relative z-1 w-100 h-100">
                                         <div class="content w-100 h-100">
@@ -333,11 +330,7 @@ Template Name: Accueil
         </section>
     <?php endif; ?>
 
-    <?php
-    get_template_part('yaniklab-parts/section', 'contact', array(
-        'hero' => $hero
-    ));
-    ?>
+    <?php get_template_part('yaniklab-parts/section', 'contact', array()); ?>
 
 <?php endwhile; ?>
 

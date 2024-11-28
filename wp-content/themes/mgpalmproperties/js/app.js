@@ -73,39 +73,108 @@
          *************
          *************/
         const $header = $("#header");
-        const $logo = $("#logo-header img");
+        const $picture = $("#logo-header picture");
+        const $img = $picture.find("img");
+        const $sources = $picture.find("source");
+        const $body = $("body");
         function manageHeaderOnScroll() {
             const scrollTop = $(window).scrollTop();
             if (scrollTop > 10) {
                 $header.addClass("scrolled");
-                $logo.attr("src", $logo.data("logo-color")); // Logo coloré standard
-                $logo.attr(
-                    "srcset",
-                    `${$logo.data("logo-color")} 1x, ${$logo.data(
-                        "logo-color-2x"
-                    )} 2x`
-                ); // Logo coloré Retina
+                // Change uniquement le logo si les classes spécifiques sont présentes
+                if (
+                    $body.hasClass("page-template-tmp-page") ||
+                    $body.hasClass("page-template-tmp-home") ||
+                    $body.hasClass("page-template-tmp-contact")
+                ) {
+                    // Met à jour l'image principale
+                    $img.attr("src", $img.data("logo-color"));
+                    $img.attr(
+                        "srcset",
+                        `${$img.data("logo-color")} 1x, ${$img.data(
+                            "logo-color-2x"
+                        )} 2x`
+                    );
+
+                    // Met à jour les balises <source>
+                    $sources.each(function () {
+                        $(this).attr(
+                            "srcset",
+                            `${$img.data("logo-color-2x")}.webp 2x`
+                        );
+                    });
+                } else {
+                    // Si pas les classes, charge le logo color par défaut
+                    $img.attr("src", $img.data("logo-color"));
+                    $img.attr(
+                        "srcset",
+                        `${$img.data("logo-color")} 1x, ${$img.data(
+                            "logo-color-2x"
+                        )} 2x`
+                    );
+
+                    $sources.each(function () {
+                        $(this).attr(
+                            "srcset",
+                            `${$img.data("logo-color-2x")}.webp 2x`
+                        );
+                    });
+                }
             } else {
                 $header.removeClass("scrolled");
-                $logo.attr("src", $logo.data("logo-white")); // Logo blanc standard
-                $logo.attr(
-                    "srcset",
-                    `${$logo.data("logo-white")} 1x, ${$logo.data(
-                        "logo-white-2x"
-                    )} 2x`
-                ); // Logo blanc Retina
+                // Change uniquement le logo si les classes spécifiques sont présentes
+                if (
+                    $body.hasClass("page-template-tmp-page") ||
+                    $body.hasClass("page-template-tmp-home")
+                ) {
+                    // Remet l'image principale en blanc
+                    $img.attr("src", $img.data("logo-white"));
+                    $img.attr(
+                        "srcset",
+                        `${$img.data("logo-white")} 1x, ${$img.data(
+                            "logo-white-2x"
+                        )} 2x`
+                    );
+
+                    // Remet les balises <source> en blanc
+                    $sources.each(function () {
+                        $(this).attr(
+                            "srcset",
+                            `${$img.data("logo-white-2x")}.webp 2x`
+                        );
+                    });
+                } else {
+                    // Si pas les classes, charge le logo color par défaut
+                    $img.attr("src", $img.data("logo-color"));
+                    $img.attr(
+                        "srcset",
+                        `${$img.data("logo-color")} 1x, ${$img.data(
+                            "logo-color-2x"
+                        )} 2x`
+                    );
+
+                    $sources.each(function () {
+                        $(this).attr(
+                            "srcset",
+                            `${$img.data("logo-color-2x")}.webp 2x`
+                        );
+                    });
+                }
             }
         }
         manageHeaderOnScroll();
 
         function manageHeaderOnResize() {
             const hh = $header.outerHeight();
+            if ($("#breadcrumb").length > 0) {
+                $("#breadcrumb").css("top", hh);
+            }
             // $("body").css("padding-top", hh);
             // $("#main").css("padding-top", hh);
             // $("#main section").first().css("margin-top", hh);
             // $("#mobile-menu").css("top", hh);
         }
-        // manageHeaderOnResize();
+        manageHeaderOnResize();
 
         /*************
          *************
@@ -153,7 +222,7 @@
 
         /*************
          *************
-         SWIPER
+         SWIPERS
          *************
          *************/
         if ($(".mySwiper").length) {
@@ -161,10 +230,12 @@
                 const swiper = new Swiper(this, {
                     slidesPerView: 1,
                     // initialSlide: 1,
+                    grabCursor: true,
                     spaceBetween: 20,
                     centeredSlides: true,
                     speed: 650,
                     loop: true,
+                    // lazy: true,
                     keyboard: {
                         enabled: true,
                     },
@@ -182,9 +253,13 @@
                         992: {
                             slidesPerView: 2.5,
                         },
+                        // when window width is >= 768px
+                        768: {
+                            slidesPerView: 2,
+                        },
                         // when window width is >= 570px
                         570: {
-                            slidesPerView: 1,
+                            slidesPerView: 1.5,
                         },
                         // when window width is < 570px
                         0: {
@@ -194,11 +269,56 @@
                 });
             });
         }
+        if ($(".mySwiperSingle").length) {
+            $(".mySwiperSingle").each(function (index, element) {
+                const swiper = new Swiper(this, {
+                    slidesPerView: 1,
+                    grabCursor: true,
+                    loop: true,
+                    speed: 650,
+                    // lazy: true,
+                    effect: "fade",
+                    keyboard: {
+                        enabled: true,
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    // breakpoints: {
+                    //     // when window width is >= 992px
+                    //     992: {
+                    //         slidesPerView: 2.5,
+                    //     },
+                    //     // when window width is >= 570px
+                    //     570: {
+                    //         slidesPerView: 1,
+                    //     },
+                    //     // when window width is < 570px
+                    //     0: {
+                    //         slidesPerView: 1,
+                    //     },
+                    // },
+                });
+            });
+        }
         function sizeNavigation() {
             if ($(".mySwiper").length) {
-                const hslide = $(".swiper-slide img").outerHeight();
-                $(".swiper-button-prev").css("height", hslide);
-                $(".swiper-button-next").css("height", hslide);
+                let maxHeight = 0;
+
+                // Parcourir chaque image et trouver la hauteur maximale
+                $(".swiper-slide .img-fluid").each(function () {
+                    const h = $(this).outerHeight();
+                    if (h > maxHeight) {
+                        maxHeight = h;
+                    }
+                });
+
+                console.log(maxHeight);
+
+                // Appliquer la hauteur maximale aux boutons de navigation
+                $(".swiper-button-prev").css("height", maxHeight);
+                $(".swiper-button-next").css("height", maxHeight);
             }
         }
         sizeNavigation();
@@ -242,7 +362,7 @@
             reveals();
             sameHeight();
             sizeNavigation();
-            // manageHeaderOnResize();
+            manageHeaderOnResize();
         });
 
         /*************
