@@ -59,6 +59,12 @@ $nokia: "only screen and (max-width : 450px)";
             height: 70vh;
             max-height: 60rem;
         }
+        &.full {
+            max-height: 80rem;
+        }
+        &.section-header-page p {
+            padding-right: 10rem;
+        }
     }
 }
 
@@ -181,11 +187,21 @@ $nokia: "only screen and (max-width : 450px)";
                 margin-bottom: calc(var(--paddingYsection) * 2);
             }
         }
+        &.fullxl {
+            // height: 100vh;
+            max-height: 150rem;
+        }
         &.full {
             height: auto;
             max-height: auto;
             padding-top: calc(var(--paddingYsection) * 3);
             padding-bottom: calc(var(--paddingYsection) * 3);
+            &.section-header-page {
+                height: 100vh;
+                max-height: 70rem;
+                padding-top: calc(var(--paddingYsection) * 0);
+                padding-bottom: calc(var(--paddingYsection) * 0);
+            }
         }
         .colFull {
             height: 80vh;
@@ -201,6 +217,30 @@ $nokia: "only screen and (max-width : 450px)";
             }
             .compensealt {
                 margin-right: -2rem;
+            }
+        }
+        &.section-liste .liste {
+            @include headings {
+                justify-content: center;
+                flex-direction: column;
+                .ico {
+                    margin-bottom: 1rem;
+                    margin-right: 0rem;
+                    @include transform(rotate(90deg));
+                }
+            }
+        }
+        &.section-properties-list .list-propertie {
+            margin-bottom: 6rem;
+            .tabletBottom {
+                margin-bottom: 4rem;
+            }
+            .localisation {
+                justify-content: center;
+            }
+            &:last-child {
+                padding-bottom: 6rem;
+                margin-bottom: 0;
             }
         }
     }
@@ -268,6 +308,31 @@ $nokia: "only screen and (max-width : 450px)";
                 }
             }
         }
+        .introduction {
+            @include headings {
+                br {
+                    display: none;
+                }
+            }
+        }
+        &.section-header-page {
+            .bgHeader {
+                width: 100%;
+                height: 100%;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: rgba($crea-green-600, 0.5);
+                }
+            }
+            p {
+                padding-right: 0;
+            }
+        }
     }
     /* purgecss start ignore */
     #header {
@@ -309,6 +374,14 @@ $nokia: "only screen and (max-width : 450px)";
             }
         }
     }
+    section {
+        .mySwiper {
+            .swiper-button-next,
+            .swiper-button-prev {
+                width: 5rem;
+            }
+        }
+    }
     /* purgecss end ignore */
 }
 
@@ -330,13 +403,39 @@ $nokia: "only screen and (max-width : 450px)";
                 }
             }
         }
+        &.full {
+            &.section-header-page {
+                height: auto;
+                max-height: auto;
+                .row {
+                    padding-top: calc(var(--paddingYsection) * 4);
+                    padding-bottom: calc(var(--paddingYsection) * 3);
+                }
+            }
+        }
         &.section-team {
             .compense {
-                margin-left: 0;
+                margin-left: 1.5rem;
                 margin-top: calc(var(--paddingYsection) * 1);
             }
             .compensealt {
-                margin-right: 0;
+                margin-right: -1.5rem;
+            }
+        }
+        &.section-liste {
+            .contenuDecal {
+                padding-top: 6rem;
+            }
+            .imageDecal {
+                margin-bottom: -4rem;
+            }
+        }
+        &.section-properties-list .list-propertie {
+            padding-top: 0;
+            margin-bottom: 5rem;
+            border: none;
+            .tabletBottom {
+                margin-bottom: 5rem;
             }
         }
     }

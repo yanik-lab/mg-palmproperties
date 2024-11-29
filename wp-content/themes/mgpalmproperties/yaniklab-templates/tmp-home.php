@@ -41,7 +41,7 @@ Template Name: Accueil
     ?>
         <section class="section-team bgGreen">
             <div class="row g-0 d-flex justify-content-center justify-content-lg-start">
-                <div class="col-18 col-sm-10 col-md-9 col-lg-6">
+                <div class="col-11 col-sm-10 col-md-9 col-lg-6">
                     <?php if ($hero['image_1']):  ?>
                         <div class="reveal revealFB reveal1 ">
                             <div class="reveal revealIMG reveal2">
@@ -50,7 +50,7 @@ Template Name: Accueil
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="col-18 col-sm-10 col-md-9 col-lg-6 compense">
+                <div class="col-11 col-sm-10 col-md-9 col-lg-6 compense">
                     <?php if ($hero['image_2']): ?>
                         <div class="reveal revealFB reveal2">
                             <div class="reveal revealIMG reveal3">

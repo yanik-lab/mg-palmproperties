@@ -5,13 +5,13 @@ $contenu = get_sub_field('contenu');
 $liste = get_sub_field('liste');
 ?>
 <section id="section-builder-<?php echo $counterS; ?>" class="section-liste standard first last bgGreen">
-    <div class="row g-0">
-        <div class="col-lg-6 imageDecal">
+    <div class="row g-0 align-items-start justify-content-center justify-content-lg-start">
+        <div class="col-22 col-sm-14 col-md-8 col-lg-6 col-xl-5 col-xxxl-6 imageDecal">
             <div class="reveal revealFB reveal1">
                 <?php echo wp_get_attachment_image($image, 'medium_large', '',  ['class' => 'img-fluid']); ?>
             </div>
         </div>
-        <div class="col-lg-4 offset-lg-1">
+        <div class="col-22 col-sm-18 col-md-18 col-lg-5 offset-lg-1 col-xl-6 offset-xl-1 col-xxxl-4 offset-xxxl-1 tabletCenter">
             <div class="reveal revealFB reveal2">
                 <?php echo $contenu; ?>
             </div>
@@ -21,7 +21,7 @@ $liste = get_sub_field('liste');
         $rows = $liste;
         if ($rows) :
         ?>
-            <div class="col-lg-9 offset-lg-1 contenuDecal">
+            <div class="col-22 col-sm-18 col-md-12 col-lg-10 offset-lg-1 col-xl-10 offset-xl-1 col-xxxl-9 offset-xxxl-1 contenuDecal tabletCenter">
                 <?php foreach ($rows as $row) : ?>
                     <div class="liste reveal revealFB reveal1">
                         <h5>

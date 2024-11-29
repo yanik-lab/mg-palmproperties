@@ -40,13 +40,13 @@ Template Name: Propriétés
                     $surface_habitable = get_field('surface_habitable', $post->ID);
                 ?>
                     <div class="list-propertie">
-                        <div class="row g-0 align-items-center justify-content-start">
-                            <div class="col-lg-12">
+                        <div class="row g-0 align-items-center justify-content-center justify-content-lg-start">
+                            <div class="col-sm-16 col-md-14 col-lg-12 tabletBottom">
                                 <div class="reveal revealFL reveal1">
                                     <?php echo get_the_post_thumbnail($post->ID, 'xlarge', array('class' => 'img-fluid ')); ?>
                                 </div>
                             </div>
-                            <div class="col-lg-6 offset-lg-2">
+                            <div class="col-sm-14 col-md-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-2 tabletCenter">
                                 <div class="reveal revealFR reveal2">
                                     <h3><?php the_title(); ?></h3>
                                     <?php if ($localisation) : ?>

@@ -28,7 +28,7 @@ $colonnes = get_sub_field('colonnes');
                         $class = "";
                     }
                 ?>
-                    <div class="col-lg-7 boxes">
+                    <div class="col-22 col-sm-14 col-md-13 col-lg-9 col-xl-7 boxes tabletCenter ">
                         <div class="reveal revealFB reveal<?php echo $counter; ?>">
                             <?php echo wp_get_attachment_image($row['image'], 'square', '',  ['class' => 'img-fluid d-block mx-auto']); ?>
                             <div class="boxContent <?php echo $class; ?>">

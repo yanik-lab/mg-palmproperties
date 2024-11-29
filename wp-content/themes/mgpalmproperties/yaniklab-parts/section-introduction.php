@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-24 text-center introduction">
+        <div class="col-sm-20 col-md-22 text-center introduction">
             <?php if ($args['icon'] != false): ?>
                 <div class="reveal revealFB reveal1">
                     <i class="ico pictofavicon"></i>
