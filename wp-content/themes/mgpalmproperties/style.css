@@ -9178,6 +9178,7 @@ address {
   line-height: 2.4rem;
   letter-spacing: 0.01em;
   white-space: initial;
+  margin-bottom: 3rem;
 }
 p.small,
 li.small,
@@ -9231,6 +9232,11 @@ address strong em {
   font-optical-sizing: auto;
   font-style: italic;
 }
+p:last-child,
+li:last-child,
+address:last-child {
+  margin-bottom: 0;
+}
 
 .heavy p,
 p.heavy {
@@ -9254,11 +9260,6 @@ ol {
   margin: 0;
   margin-bottom: 3rem;
   list-style-position: inside;
-  margin-bottom: 0.2rem;
-}
-ul:last-child,
-ol:last-child {
-  margin-bottom: 0;
 }
 ul:last-child,
 ol:last-child {
@@ -9752,6 +9753,9 @@ picture img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#header .header ul {
+  margin-bottom: 0;
 }
 #header .header ul li {
   display: inline-block;
@@ -10399,6 +10403,9 @@ section#single-header .swiper {
   width: 100%;
   height: 100%;
 }
+section#single-header .swiper .swiper-wrapper {
+  align-items: stretch;
+}
 section#single-header .swiper .swiper-slide {
   user-select: none;
   text-align: center;
@@ -10407,6 +10414,7 @@ section#single-header .swiper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
 }
 section#single-header .swiper .swiper-slide picture {
   height: 100%;
@@ -10485,6 +10493,7 @@ section#single-description .bien-description .bloc .details .top {
 }
 section#single-description .bien-description .bloc .details .top .ico {
   width: 3.5rem;
+  margin-right: 0.5rem;
 }
 section#single-description .bien-description .bloc .details .value {
   font-size: clamp(2.2rem, 2.2vw, 2.4rem);
@@ -10699,6 +10708,18 @@ section .mySwiper .swiper-button-prev:before {
 }
 #footer #logo-footer {
   margin-left: 2rem;
+}
+#footer ul {
+  margin-bottom: 0;
+}
+#footer ul li {
+  margin-bottom: 0;
+}
+#footer p {
+  margin-bottom: 1rem;
+}
+#footer p:last-child {
+  margin-bottom: 0;
 }
 #footer a {
   text-decoration: none;
@@ -11217,6 +11238,12 @@ button.btn-link.btn-icon .ico,
   section.section-header-page p {
     padding-right: 10rem;
   }
+  section#single-description .bien-info {
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    transform: translateY(-40%);
+  }
 }
 @media only screen and (max-width : 1200px) {
   :root {
@@ -11271,6 +11298,13 @@ button.btn-link.btn-icon .ico,
   }
   section .colFull .bgLink .wContent .content {
     padding: 3.5rem;
+  }
+  section#single-description .bien-info {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    margin-top: -15rem;
   }
   /* purgecss start ignore */
   #header.activeMobile .header #langs,
@@ -11386,6 +11420,21 @@ button.btn-link.btn-icon .ico,
     padding-bottom: 6rem;
     margin-bottom: 0;
   }
+  section#single-description .bien-info {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    margin-top: -10rem;
+  }
+  section#single-header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  section#single-header .swiper .swiper-button-next,
+  section#single-header .swiper .swiper-button-prev {
+    width: 10rem;
+  }
   #footer .top .second-menu a,
   #footer .top .socials {
     justify-content: center;
@@ -11467,6 +11516,38 @@ button.btn-link.btn-icon .ico,
   }
   section.section-header-page p {
     padding-right: 0;
+  }
+  section#single-header .swiper-slide {
+    min-height: 45rem;
+    padding-top: 6rem;
+  }
+  section#single-description .bien-info {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    margin-top: -10rem;
+  }
+  section#single-description .bien-info .box {
+    padding: 3rem;
+  }
+  section#single-description .bien-description .bloc .details .top {
+    justify-content: center;
+    margin-bottom: 0.2rem;
+  }
+  section#single-description .bien-description .bloc .details .top span {
+    padding-right: 2.5rem;
+  }
+  section#single-description .bien-description .bloc .details .value {
+    margin-bottom: 3rem;
+    padding-left: 0;
+  }
+  section#single-description .bien-description .bloc .classes {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  section#single-description .bien-description .bloc .classes .value {
+    width: 100%;
   }
   /* purgecss start ignore */
   #header.scrolled .header {
@@ -11617,6 +11698,17 @@ button.btn-link.btn-icon .ico,
   }
   section.section-properties-list .list-propertie .tabletBottom {
     margin-bottom: 5rem;
+  }
+  section#single-description .bien-info {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    margin-top: var(--paddingYsection);
+    margin-bottom: 3rem;
+  }
+  section#single-description .bien-info .box {
+    padding: 2rem;
   }
 }
 @media only screen and (max-width : 450px) {

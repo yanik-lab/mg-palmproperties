@@ -307,18 +307,16 @@
                 let maxHeight = 0;
 
                 // Parcourir chaque image et trouver la hauteur maximale
-                $(".swiper-slide .img-fluid").each(function () {
+                $(".mySwiper .swiper-slide .img-fluid").each(function () {
                     const h = $(this).outerHeight();
                     if (h > maxHeight) {
                         maxHeight = h;
                     }
                 });
 
-                console.log(maxHeight);
-
                 // Appliquer la hauteur maximale aux boutons de navigation
-                $(".swiper-button-prev").css("height", maxHeight);
-                $(".swiper-button-next").css("height", maxHeight);
+                $(".mySwiper .swiper-button-prev").css("height", maxHeight);
+                $(".mySwiper .swiper-button-next").css("height", maxHeight);
             }
         }
         sizeNavigation();

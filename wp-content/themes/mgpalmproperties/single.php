@@ -53,7 +53,7 @@ if ($pe) {
 <section id="single-description" class="">
     <div class="container-fluid">
         <div class="row justify-content-center align-items-start">
-            <div class="col-lg-7 bien-info">
+            <div class="col-22 col-sm-18 col-md-14 col-lg-14 col-xl-9 col-xxl-8 col-xxxl-7 bien-info">
                 <div class="reveal revealFB reveal1">
                     <div class="box text-center">
                         <?php if ($localisation) : ?>
@@ -102,19 +102,19 @@ if ($pe) {
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 offset-lg-1 bien-description">
+            <div class="col-22 col-sm-18 col-md-18 col-lg-18 col-xl-12 offset-xl-1 col-xxl-10 offset-xxl-1 col-xxl-9 offset-xxl-1 bien-description">
                 <div class="reveal revealFB reveal1">
                     <div class="bloc bloc1">
                         <div class="reveal revealFB reveal1">
                             <h4><?php _e('Détail du bien', 'mgpalmproperties'); ?></h4>
                         </div>
-                        <div class="row g-0 details">
+                        <div class="row g-0 details flex-column flex-md-row">
                             <?php if ($surface_habitable) : ?>
                                 <div class="col">
                                     <div class="reveal revealFB reveal2">
                                         <p class="top">
                                             <i class="ico pictosuperficie"></i>
-                                            <span><?php _e('Surface habitable', 'mgpalmproperties'); ?> : </span>
+                                            <span><?php _e('Surface habitable', 'mgpalmproperties'); ?> <span class="d-none d-md-inline-block">:</span> </span>
                                         </p>
                                         <h4 class="value">
                                             <?php echo $surface_habitable; ?> m<sup>2</sup>
@@ -127,7 +127,7 @@ if ($pe) {
                                     <div class="reveal revealFB reveal3">
                                         <p class="top">
                                             <i class="ico pictobedroom"></i>
-                                            <span><?php _e('Chambres', 'mgpalmproperties'); ?> : </span>
+                                            <span><?php _e('Chambres', 'mgpalmproperties'); ?> <span class="d-none d-md-inline-block">:</span> </span>
                                         </p>
                                         <h4 class="value">
                                             <?php echo $chambres; ?>
@@ -140,7 +140,7 @@ if ($pe) {
                                     <div class="reveal revealFB reveal4">
                                         <p class="top">
                                             <i class="ico pictobathroom"></i>
-                                            <span><?php _e('Salle de bains', 'mgpalmproperties'); ?> : </span>
+                                            <span><?php _e('Salle de bains', 'mgpalmproperties'); ?> <span class="d-none d-md-inline-block">:</span> </span>
                                         </p>
                                         <p class="value">
                                             <?php echo $salle_de_bain; ?>

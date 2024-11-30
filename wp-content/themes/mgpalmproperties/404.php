@@ -1,15 +1,21 @@
 <?php
 get_header(); ?>
 
-<section class="section-properties-introduction standard firstxl bgWhite">
+<section class="section-properties-introduction standard firstxl last bgWhite">
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-24 text-center introduction">
+            <div class="col-lg-12 col-xl-10 text-center introduction">
                 <div class="reveal revealFB reveal1">
                     <i class="ico pictofavicon"></i>
                 </div>
                 <div class="reveal revealFB reveal2">
                     <h1><?php _e("Erreur 404 <br> Page introuvable", "mgpalmproperties"); ?></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-24 text-center introduction">
+                <div class="reveal revealFB reveal2">
                     <p>
                         <?php _e("Cette page n'existe pas ou n'existe plus.", "mgpalmproperties"); ?> <br>
                         <?php _e("Nous nous excusons pour la gêne occasionnée.", "mgpalmproperties"); ?>

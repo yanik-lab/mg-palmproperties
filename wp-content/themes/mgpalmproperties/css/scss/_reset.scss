@@ -56,6 +56,10 @@ p,
 li,
 address {
     @include paragraphe;
+    margin-bottom: 3rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 .heavy p,
 p.heavy {
@@ -68,11 +72,7 @@ ul,
 ol {
     @include reset-box;
     margin-bottom: 3rem;
-    &:last-child {
-        margin-bottom: 0;
-    }
     list-style-position: inside;
-    margin-bottom: 0.2rem;
     &:last-child {
         margin-bottom: 0;
     }

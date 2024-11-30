@@ -65,6 +65,9 @@ $nokia: "only screen and (max-width : 450px)";
         &.section-header-page p {
             padding-right: 10rem;
         }
+        &#single-description .bien-info {
+            @include transform(translateY(-40%));
+        }
     }
 }
 
@@ -140,6 +143,10 @@ $nokia: "only screen and (max-width : 450px)";
             .bgLink .wContent .content {
                 padding: 3.5rem;
             }
+        }
+        &#single-description .bien-info {
+            @include transform(translateY(0%));
+            margin-top: -15rem;
         }
     }
     /* purgecss start ignore */
@@ -243,6 +250,20 @@ $nokia: "only screen and (max-width : 450px)";
                 margin-bottom: 0;
             }
         }
+        &#single-description .bien-info {
+            @include transform(translateY(0%));
+            margin-top: -10rem;
+        }
+        &#single-header {
+            padding-top: 0;
+            padding-bottom: 0;
+            .swiper {
+                .swiper-button-next,
+                .swiper-button-prev {
+                    width: 10rem;
+                }
+            }
+        }
     }
     #footer .top {
         .second-menu a,
@@ -331,6 +352,44 @@ $nokia: "only screen and (max-width : 450px)";
             }
             p {
                 padding-right: 0;
+            }
+        }
+        &#single-header {
+            // min-height: 45rem;
+            .swiper-slide {
+                min-height: 45rem;
+                padding-top: 6rem;
+            }
+        }
+        &#single-description {
+            .bien-info {
+                @include transform(translateY(0%));
+                margin-top: -10rem;
+                .box {
+                    padding: 3rem;
+                }
+            }
+            .bien-description .bloc {
+                .details {
+                    .top {
+                        justify-content: center;
+                        margin-bottom: 0.2rem;
+                        span {
+                            padding-right: 2.5rem;
+                        }
+                    }
+                    .value {
+                        margin-bottom: 3rem;
+                        padding-left: 0;
+                    }
+                }
+                .classes {
+                    justify-content: center;
+                    margin-bottom: 2rem;
+                    .value {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -436,6 +495,19 @@ $nokia: "only screen and (max-width : 450px)";
             border: none;
             .tabletBottom {
                 margin-bottom: 5rem;
+            }
+        }
+        // &#single-header {
+        //     padding-top: calc(var(--paddingYsection) * 1);
+        // }
+        &#single-description {
+            .bien-info {
+                @include transform(translateY(0%));
+                margin-top: var(--paddingYsection);
+                margin-bottom: 3rem;
+                .box {
+                    padding: 2rem;
+                }
             }
         }
     }
