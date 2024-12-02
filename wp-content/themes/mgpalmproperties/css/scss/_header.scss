@@ -52,9 +52,11 @@
                         z-index: -1;
                         width: 0;
                         left: 50%;
-                        top: 50%;
-                        height: 1rem;
-                        background-color: rgba($crea-beige-400, 0.5);
+                        // top: 50%;
+                        top: auto;
+                        bottom: 0;
+                        height: 0.1rem;
+                        background-color: rgba($crea-beige-400, 1);
                         @include transform(translate(-50%, 0%));
                         @include transition(
                             width 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99)
@@ -98,6 +100,7 @@
         bottom: 100%;
         left: 0;
         margin: auto;
+        overflow-y: scroll;
         background-color: rgba($crea-green-400, 0.99);
         @include opacity(0);
         @include transform(translateX(-100%));
@@ -105,13 +108,17 @@
             bottom 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99),
             opacity 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99)
         );
+        .bottom {
+            padding-bottom: 6rem;
+        }
         ul {
             text-align: center;
             li {
                 list-style-type: none;
+                margin-bottom: 0;
                 a {
                     display: block;
-                    padding: 2.6rem 0;
+                    padding: 2.4rem 0;
                     color: $crea-beige-400;
                     @include crea-cta;
                     font-size: 2.4rem;
@@ -168,7 +175,7 @@
                     a {
                         color: $crea-green-500;
                         &:after {
-                            background-color: rgba($crea-beige-400, 0.5);
+                            background-color: rgba($crea-beige-400, 1);
                         }
                     }
                 }
@@ -250,7 +257,7 @@
                     a {
                         color: $white;
                         &:after {
-                            background-color: rgba($white, 0.2);
+                            background-color: rgba($white, 0.5);
                         }
                     }
                 }
@@ -263,7 +270,7 @@
                         a {
                             color: $crea-green-500;
                             &:after {
-                                background-color: rgba($crea-beige-400, 0.5);
+                                background-color: rgba($crea-beige-400, 1);
                             }
                         }
                     }

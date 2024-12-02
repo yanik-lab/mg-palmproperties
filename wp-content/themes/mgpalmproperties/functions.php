@@ -10,8 +10,8 @@
 // );
 
 // ENVIRONNEMENT
-define('TSWTB_DEV', true);
-define('TSWTB_DEBUG_RESOLUTION', true);
+define('TSWTB_DEV', false);
+define('TSWTB_DEBUG_RESOLUTION', false);
 
 // WORDPRESS ASSETS
 require_once('includes/assets.php');

@@ -9,7 +9,7 @@ $line-height-base: 1;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
-$font-weight-bold: 700;
+$font-weight-sbold: 600;
 
 /*=============================================
 FONTS LOADINGS
@@ -59,16 +59,16 @@ $font-family-proxima: "proxima-nova", sans-serif;
     font-style: italic;
     // font-feature-settings: "lnum" 1;
 }
-@mixin ProximaNovaB {
+@mixin ProximaNovaSB {
     font-family: $font-family-proxima;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-sbold;
     font-optical-sizing: auto;
     font-style: normal;
     // font-feature-settings: "lnum" 1;
 }
-@mixin ProximaNovaBI {
+@mixin ProximaNovaSBI {
     font-family: $font-family-proxima;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-sbold;
     font-optical-sizing: auto;
     font-style: italic;
     // font-feature-settings: "lnum" 1;
@@ -119,22 +119,18 @@ FONTS STYLE
     }
 }
 @mixin crea-h1 {
-    // @include MonserratR;
     @include font-size(3.5, 3.5, 7);
     line-height: clamp(4rem, 4vw, 8rem);
 }
 @mixin crea-h1-alternatif {
-    // @include MonserratR;
     @include font-size(3.2, 3.2, 6);
     line-height: clamp(3.6rem, 3.6vw, 7rem);
 }
 @mixin crea-h2 {
-    // @include MonserratR;
     @include font-size(3, 3, 4);
     line-height: clamp(3.8rem, 3.8vw, 5rem);
 }
 @mixin crea-h3 {
-    // @include MonserratR;
     @include font-size(2.4, 2.4, 3.6);
     line-height: clamp(3rem, 3vw, 4.2rem);
 }
@@ -161,19 +157,19 @@ FONTS STYLE
     @include font-size(2);
     line-height: 3rem;
     letter-spacing: 0.06em;
-    @include ProximaNovaM;
+    @include ProximaNovaR;
     em {
-        @include ProximaNovaMI;
+        @include ProximaNovaRI;
         b,
         strong {
-            @include ProximaNovaBI;
+            @include ProximaNovaMI;
         }
     }
     b,
     strong {
-        @include ProximaNovaB;
+        @include ProximaNovaM;
         em {
-            @include ProximaNovaBI;
+            @include ProximaNovaMI;
         }
     }
 }
@@ -181,31 +177,31 @@ FONTS STYLE
     @include font-size(1.6);
     line-height: 2.4rem;
     letter-spacing: 0.04em;
-    @include ProximaNovaM;
+    @include ProximaNovaR;
     em {
-        @include ProximaNovaMI;
+        @include ProximaNovaRI;
         b,
         strong {
-            @include ProximaNovaBI;
+            @include ProximaNovaMI;
         }
     }
     b,
     strong {
-        @include ProximaNovaB;
+        @include ProximaNovaM;
         em {
-            @include ProximaNovaBI;
+            @include ProximaNovaMI;
         }
     }
 }
 @mixin crea-texte-16-heavy {
-    @include ProximaNovaB;
+    @include ProximaNovaM;
     @include font-size(1.6);
     line-height: 2.4rem;
     letter-spacing: 0.01em;
     white-space: initial;
 }
 @mixin crea-texte-16-book {
-    @include ProximaNovaR;
+    @include ProximaNovaL;
     @include font-size(1.6);
     line-height: 2.4rem;
     letter-spacing: 0.01em;
@@ -219,7 +215,7 @@ FONTS STYLE
     white-space: initial;
 }
 @mixin crea-texte-14-book {
-    @include ProximaNovaR;
+    @include ProximaNovaL;
     @include font-size(1.4);
     line-height: 2rem;
     letter-spacing: 0.01em;
@@ -238,14 +234,14 @@ FONTS STYLE
         @include ProximaNovaRI;
         b,
         strong {
-            @include ProximaNovaBI;
+            @include ProximaNovaSBI;
         }
     }
     b,
     strong {
-        @include ProximaNovaB;
+        @include ProximaNovaSB;
         em {
-            @include ProximaNovaBI;
+            @include ProximaNovaSBI;
         }
     }
 }
@@ -253,7 +249,7 @@ FONTS STYLE
     @include crea-texte-16-book;
 }
 @mixin crea-cta {
-    @include ProximaNovaM;
+    @include ProximaNovaR;
     @include font-size(1.4);
     line-height: 2rem;
     letter-spacing: 0.1em;
@@ -286,6 +282,9 @@ FONTS ICONS
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    &.pictoarrow-right {
+        font-size: 12px;
+    }
 }
 
 $icons: (

@@ -586,6 +586,15 @@ section {
                 text-align: center;
                 font-size: 18px;
                 background: #fff;
+                .thumb {
+                    overflow: hidden;
+                    img {
+                        @include transform(scale(1));
+                        @include transition(
+                            all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99)
+                        );
+                    }
+                }
                 .baseline {
                     padding: 2.4rem;
                     // text-transform: uppercase;
@@ -606,6 +615,11 @@ section {
                                 content: none;
                             }
                         }
+                    }
+                }
+                &:hover {
+                    img {
+                        @include transform(scale(1.02));
                     }
                 }
             }

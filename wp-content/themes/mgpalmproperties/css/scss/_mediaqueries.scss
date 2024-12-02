@@ -32,6 +32,11 @@ $nokia: "only screen and (max-width : 450px)";
             max-height: 70rem;
         }
     }
+    /* purgecss start ignore */
+    #loader .logo-loader {
+        width: 24rem;
+    }
+    /* purgecss end ignore */
 }
 
 @media #{$desktop} {
@@ -69,12 +74,20 @@ $nokia: "only screen and (max-width : 450px)";
             @include transform(translateY(-40%));
         }
     }
+    /* purgecss start ignore */
+    #loader .logo-loader {
+        width: 22rem;
+    }
+    /* purgecss end ignore */
 }
 
 @media #{$laptop} {
     :root {
         --paddingYsection: 5rem;
         --paddingXsection: 5rem;
+    }
+    .latopTop {
+        margin-top: calc(var(--paddingYsection) * 2);
     }
     #header {
         .header {
@@ -150,6 +163,9 @@ $nokia: "only screen and (max-width : 450px)";
         }
     }
     /* purgecss start ignore */
+    #loader .logo-loader {
+        width: 20rem;
+    }
     #header {
         &.activeMobile {
             .header {
@@ -176,14 +192,27 @@ $nokia: "only screen and (max-width : 450px)";
     .tabletTop {
         margin-top: calc(var(--paddingYsection) * 2);
     }
+    .tabletTopXL {
+        margin-top: calc(var(--paddingYsection) * 3);
+    }
     .tabletBottom {
         margin-bottom: calc(var(--paddingYsection) * 2);
     }
     .tabletBottomL {
         margin-bottom: calc(var(--paddingYsection) * 1);
     }
+    .tabletBottomOnly {
+        margin-bottom: calc(var(--paddingYsection) * 2);
+    }
     .tabletCenter {
         text-align: center;
+    }
+    .buttons {
+        &.mobile-center {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
     }
     section {
         &.standard {
@@ -223,7 +252,7 @@ $nokia: "only screen and (max-width : 450px)";
                 margin-top: calc(var(--paddingYsection) * 2);
             }
             .compensealt {
-                margin-right: -2rem;
+                margin-right: 0rem;
             }
         }
         &.section-liste .liste {
@@ -264,6 +293,9 @@ $nokia: "only screen and (max-width : 450px)";
                 }
             }
         }
+        &.section-properties-introduction {
+            padding-bottom: 0;
+        }
     }
     #footer .top {
         .second-menu a,
@@ -280,6 +312,9 @@ $nokia: "only screen and (max-width : 450px)";
     .mobileBottomL {
         margin-bottom: calc(var(--paddingYsection) * 1);
     }
+    .tabletBottomOnly {
+        margin-bottom: 0;
+    }
     #header {
         .header {
             padding: 1.2rem 2rem;
@@ -293,15 +328,15 @@ $nokia: "only screen and (max-width : 450px)";
             ul {
                 li {
                     a {
-                        padding: 1.6rem 0;
-                        font-size: 1.8rem;
+                        padding: 1.4rem 0;
+                        font-size: 1.6rem;
                     }
                 }
             }
         }
     }
     section {
-        text-align: center;
+        // text-align: center;
         &.full {
             height: auto;
             max-height: auto;
@@ -312,19 +347,27 @@ $nokia: "only screen and (max-width : 450px)";
             height: auto;
             max-height: auto;
             .bgLink {
+                position: relative;
                 &:before {
                     top: 0;
-                    @include opacity(0.3);
+                    @include opacity(0);
                 }
-                .wContent .content {
-                    padding: calc(var(--paddingYsection) * 3) 2.5rem;
-                    .btn-link {
-                        color: $crea-beige-300;
-                    }
-                    .bottom {
-                        height: auto !important;
-                        max-height: 50rem !important;
-                        @include opacity(1);
+                picture {
+                    position: relative;
+                }
+                .wContent {
+                    position: absolute;
+                    top: 0;
+                    .content {
+                        padding: 6rem;
+                        .btn-link {
+                            color: $crea-beige-300;
+                        }
+                        // .bottom {
+                        //     height: auto !important;
+                        //     max-height: 50rem !important;
+                        //     @include opacity(1);
+                        // }
                     }
                 }
             }
@@ -392,8 +435,24 @@ $nokia: "only screen and (max-width : 450px)";
                 }
             }
         }
+        &#single-header {
+            padding-top: 0;
+            padding-bottom: 0;
+            .swiper {
+                .swiper-button-next,
+                .swiper-button-prev {
+                    width: 8rem;
+                    &:after {
+                        font-size: 3.6rem;
+                    }
+                }
+            }
+        }
     }
     /* purgecss start ignore */
+    #loader .logo-loader {
+        width: 18rem;
+    }
     #header {
         &.scrolled {
             .header {
@@ -458,7 +517,7 @@ $nokia: "only screen and (max-width : 450px)";
         .colFull {
             .bgLink {
                 .wContent .content {
-                    padding: calc(var(--paddingYsection) * 3) 1rem;
+                    padding: 3rem;
                 }
             }
         }
@@ -511,6 +570,11 @@ $nokia: "only screen and (max-width : 450px)";
             }
         }
     }
+    /* purgecss start ignore */
+    #loader .logo-loader {
+        max-width: 70%;
+    }
+    /* purgecss end ignore */
 }
 
 @media #{$nokia} {

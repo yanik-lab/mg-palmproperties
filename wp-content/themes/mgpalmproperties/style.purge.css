@@ -730,6 +730,10 @@ summary {
   }
 }
 @media (min-width: 1400px) {
+  .col-xxl-6 {
+    flex: 0 0 auto;
+    width: 25%;
+  }
   .col-xxl-7 {
     flex: 0 0 auto;
     width: 29.16666667%;
@@ -748,6 +752,9 @@ summary {
   }
   .offset-xxl-1 {
     margin-left: 4.16666667%;
+  }
+  .offset-xxl-2 {
+    margin-left: 8.33333333%;
   }
   .offset-xxl-12 {
     margin-left: 50%;
@@ -1239,6 +1246,9 @@ FONTS ICONS
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.ico.pictoarrow-right {
+  font-size: 12px;
+}
 
 .pictophone:before {
   content: "\ea01";
@@ -1446,13 +1456,13 @@ h5, .h5 {
   line-height: 3rem;
   letter-spacing: 0.06em;
   font-family: "proxima-nova", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
 }
 h5 em, .h5 em {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-optical-sizing: auto;
   font-style: italic;
 }
@@ -1460,7 +1470,7 @@ h5 em b, .h5 em b,
 h5 em strong,
 .h5 em strong {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-optical-sizing: auto;
   font-style: italic;
 }
@@ -1468,7 +1478,7 @@ h5 b, .h5 b,
 h5 strong,
 .h5 strong {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -1476,7 +1486,7 @@ h5 b em, .h5 b em,
 h5 strong em,
 .h5 strong em {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-optical-sizing: auto;
   font-style: italic;
 }
@@ -1486,13 +1496,13 @@ h6, .h6 {
   line-height: 2.4rem;
   letter-spacing: 0.04em;
   font-family: "proxima-nova", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
 }
 h6 em, .h6 em {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-optical-sizing: auto;
   font-style: italic;
 }
@@ -1500,7 +1510,7 @@ h6 em b, .h6 em b,
 h6 em strong,
 .h6 em strong {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-optical-sizing: auto;
   font-style: italic;
 }
@@ -1508,7 +1518,7 @@ h6 b, .h6 b,
 h6 strong,
 .h6 strong {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -1516,7 +1526,7 @@ h6 b em, .h6 b em,
 h6 strong em,
 .h6 strong em {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-optical-sizing: auto;
   font-style: italic;
 }
@@ -1524,7 +1534,7 @@ h6 strong em,
 p,
 li {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: clamp(1.6rem, 1.6rem, 1.6rem);
@@ -1554,7 +1564,7 @@ p em strong,
 li em b,
 li em strong {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-optical-sizing: auto;
   font-style: italic;
 }
@@ -1563,7 +1573,7 @@ p strong,
 li b,
 li strong {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -1572,7 +1582,7 @@ p strong em,
 li b em,
 li strong em {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   font-optical-sizing: auto;
   font-style: italic;
 }
@@ -1584,7 +1594,7 @@ li:last-child {
 .heavy p,
 p.heavy {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: clamp(1.6rem, 1.6rem, 1.6rem);
@@ -2033,7 +2043,7 @@ picture img {
   padding: 1rem 2.5rem;
   color: rgb(3, 49, 59);
   font-family: "proxima-nova", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: clamp(1.4rem, 1.4rem, 1.4rem);
@@ -2049,9 +2059,10 @@ picture img {
   z-index: -1;
   width: 0;
   left: 50%;
-  top: 50%;
-  height: 1rem;
-  background-color: rgba(224, 223, 210, 0.5);
+  top: auto;
+  bottom: 0;
+  height: 0.1rem;
+  background-color: #e0dfd2;
   -webkit-transform: translate(-50%, 0%);
   -moz-transform: translate(-50%, 0%);
   -ms-transform: translate(-50%, 0%);
@@ -2090,6 +2101,7 @@ picture img {
   bottom: 100%;
   left: 0;
   margin: auto;
+  overflow-y: scroll;
   background-color: rgba(16, 73, 81, 0.99);
   opacity: 0;
   filter: alpha(opacity=0);
@@ -2103,18 +2115,22 @@ picture img {
   -o-transition: bottom 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99), opacity 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
   transition: bottom 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99), opacity 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
 }
+#header #menu-mobile .bottom {
+  padding-bottom: 6rem;
+}
 #header #menu-mobile ul {
   text-align: center;
 }
 #header #menu-mobile ul li {
   list-style-type: none;
+  margin-bottom: 0;
 }
 #header #menu-mobile ul li a {
   display: block;
-  padding: 2.6rem 0;
+  padding: 2.4rem 0;
   color: rgb(224, 223, 210);
   font-family: "proxima-nova", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: clamp(1.4rem, 1.4rem, 1.4rem);
@@ -2171,7 +2187,7 @@ picture img {
   color: rgb(3, 49, 59);
 }
 #header.scrolled .header ul li a:after {
-  background-color: rgba(224, 223, 210, 0.5);
+  background-color: #e0dfd2;
 }
 #header.scrolled .btn.btn-burger #myburger .line,
 #header.scrolled button.btn-burger #myburger .line {
@@ -2230,7 +2246,7 @@ picture img {
 .page-template-tmp-page #header .header ul li a:after,
 .page-template-tmp-home #header .header ul li a:after,
 .page-template-tmp-contact #header .header ul li a:after {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .page-template-tmp-page #header.scrolled .header ul li a,
 .page-template-tmp-home #header.scrolled .header ul li a,
@@ -2240,7 +2256,7 @@ picture img {
 .page-template-tmp-page #header.scrolled .header ul li a:after,
 .page-template-tmp-home #header.scrolled .header ul li a:after,
 .page-template-tmp-contact #header.scrolled .header ul li a:after {
-  background-color: rgba(224, 223, 210, 0.5);
+  background-color: #e0dfd2;
 }
 
 .single-propriete #header .header {
@@ -2831,6 +2847,20 @@ section .mySwiper .swiper-wrapper .swiper-slide {
   font-size: 18px;
   background: #fff;
 }
+section .mySwiper .swiper-wrapper .swiper-slide .thumb {
+  overflow: hidden;
+}
+section .mySwiper .swiper-wrapper .swiper-slide .thumb img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  -moz-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  -ms-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  -o-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+}
 section .mySwiper .swiper-wrapper .swiper-slide .baseline {
   padding: 2.4rem;
   color: rgb(143, 143, 143);
@@ -2849,6 +2879,12 @@ section .mySwiper .swiper-wrapper .swiper-slide .baseline span:after {
 }
 section .mySwiper .swiper-wrapper .swiper-slide .baseline span:last-child:after {
   content: none;
+}
+section .mySwiper .swiper-wrapper .swiper-slide:hover img {
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
 }
 section .mySwiper .swiper-scrollbar {
   left: 50%;
@@ -2965,7 +3001,7 @@ section .mySwiper .swiper-button-prev:before {
   display: flex;
   padding: 0.4rem 0;
   font-family: "proxima-nova", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: clamp(1.4rem, 1.4rem, 1.4rem);
@@ -3014,7 +3050,7 @@ section .mySwiper .swiper-button-prev:before {
   display: block;
   padding: 0.4rem;
   font-family: "proxima-nova", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: clamp(1.4rem, 1.4rem, 1.4rem);
@@ -3047,7 +3083,7 @@ button:hover,
 button.btn-basic,
 .button.btn-basic {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: clamp(1.4rem, 1.4rem, 1.4rem);
@@ -3090,7 +3126,7 @@ button.btn-basic.btn-dark:hover,
 button.btn-full,
 .button.btn-full {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: clamp(1.4rem, 1.4rem, 1.4rem);
@@ -3145,7 +3181,7 @@ button.btn-header:hover,
 button.btn-burger,
 .button.btn-burger {
   font-family: "proxima-nova", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: clamp(1.4rem, 1.4rem, 1.4rem);
@@ -3382,12 +3418,38 @@ button.btn-link.btn-icon .ico,
 .page-template-tmp-contact #header.scrolled .button.btn-burger #myburger .line {
   stroke: #ffffff;
 }
+.page-template-tmp-page #header.scrolled #menu-mobile .btn.btn-header,
+.page-template-tmp-page #header.scrolled #menu-mobile button.btn-header,
+.page-template-tmp-page #header.scrolled #menu-mobile .button.btn-header,
+.page-template-tmp-home #header.scrolled #menu-mobile .btn.btn-header,
+.page-template-tmp-home #header.scrolled #menu-mobile button.btn-header,
+.page-template-tmp-home #header.scrolled #menu-mobile .button.btn-header,
+.page-template-tmp-contact #header.scrolled #menu-mobile .btn.btn-header,
+.page-template-tmp-contact #header.scrolled #menu-mobile button.btn-header,
+.page-template-tmp-contact #header.scrolled #menu-mobile .button.btn-header {
+  color: rgb(42, 42, 42);
+  background-color: rgb(247, 247, 244);
+  border: none;
+}
+.page-template-tmp-page #header.scrolled #menu-mobile .btn.btn-header:hover,
+.page-template-tmp-page #header.scrolled #menu-mobile button.btn-header:hover,
+.page-template-tmp-page #header.scrolled #menu-mobile .button.btn-header:hover,
+.page-template-tmp-home #header.scrolled #menu-mobile .btn.btn-header:hover,
+.page-template-tmp-home #header.scrolled #menu-mobile button.btn-header:hover,
+.page-template-tmp-home #header.scrolled #menu-mobile .button.btn-header:hover,
+.page-template-tmp-contact #header.scrolled #menu-mobile .btn.btn-header:hover,
+.page-template-tmp-contact #header.scrolled #menu-mobile button.btn-header:hover,
+.page-template-tmp-contact #header.scrolled #menu-mobile .button.btn-header:hover {
+  color: rgb(42, 42, 42);
+  background-color: rgb(224, 223, 210);
+}
 
 .buttons {
   position: relative;
   z-index: 2;
   margin-top: 4rem;
   gap: 1.2rem;
+  flex-wrap: wrap;
 }
 .buttons.bigger {
   margin-top: 6rem;
@@ -3424,6 +3486,9 @@ button.btn-link.btn-icon .ico,
     height: 80vh;
     max-height: 70rem;
   }
+  #loader .logo-loader {
+    width: 24rem;
+  }
 }
 @media only screen and (max-width : 1400px) {
   #header .header ul li a {
@@ -3455,11 +3520,17 @@ button.btn-link.btn-icon .ico,
     -ms-transform: translateY(-40%);
     transform: translateY(-40%);
   }
+  #loader .logo-loader {
+    width: 22rem;
+  }
 }
 @media only screen and (max-width : 1200px) {
   :root {
     --paddingYsection: 5rem;
     --paddingXsection: 5rem;
+  }
+  .latopTop {
+    margin-top: calc(var(--paddingYsection) * 2);
   }
   #header .header {
     justify-content: space-between;
@@ -3517,6 +3588,9 @@ button.btn-link.btn-icon .ico,
     transform: translateY(0%);
     margin-top: -15rem;
   }
+  #loader .logo-loader {
+    width: 20rem;
+  }
   #header.activeMobile .header #langs,
   #header.activeMobile .header .btn-header {
     opacity: 0;
@@ -3540,14 +3614,25 @@ button.btn-link.btn-icon .ico,
   .tabletTop {
     margin-top: calc(var(--paddingYsection) * 2);
   }
+  .tabletTopXL {
+    margin-top: calc(var(--paddingYsection) * 3);
+  }
   .tabletBottom {
     margin-bottom: calc(var(--paddingYsection) * 2);
   }
   .tabletBottomL {
     margin-bottom: calc(var(--paddingYsection) * 1);
   }
+  .tabletBottomOnly {
+    margin-bottom: calc(var(--paddingYsection) * 2);
+  }
   .tabletCenter {
     text-align: center;
+  }
+  .buttons.mobile-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   section.standard .compenseTop {
     margin-top: calc(var(--paddingYsection) * 2);
@@ -3582,7 +3667,7 @@ button.btn-link.btn-icon .ico,
     margin-top: calc(var(--paddingYsection) * 2);
   }
   section.section-team .compensealt {
-    margin-right: -2rem;
+    margin-right: 0rem;
   }
   section.section-liste .liste h1, section.section-liste .liste .h1,
   section.section-liste .liste h2,
@@ -3644,6 +3729,9 @@ button.btn-link.btn-icon .ico,
   section#single-header .swiper .swiper-button-prev {
     width: 10rem;
   }
+  section.section-properties-introduction {
+    padding-bottom: 0;
+  }
   #footer .top .second-menu a,
   #footer .top .socials {
     justify-content: center;
@@ -3657,6 +3745,9 @@ button.btn-link.btn-icon .ico,
   .mobileBottomL {
     margin-bottom: calc(var(--paddingYsection) * 1);
   }
+  .tabletBottomOnly {
+    margin-bottom: 0;
+  }
   #header .header {
     padding: 1.2rem 2rem;
   }
@@ -3664,11 +3755,8 @@ button.btn-link.btn-icon .ico,
     max-height: 4rem;
   }
   #header #menu-mobile ul li a {
-    padding: 1.6rem 0;
-    font-size: 1.8rem;
-  }
-  section {
-    text-align: center;
+    padding: 1.4rem 0;
+    font-size: 1.6rem;
   }
   section.full {
     height: auto;
@@ -3680,22 +3768,26 @@ button.btn-link.btn-icon .ico,
     height: auto;
     max-height: auto;
   }
+  section .colFull .bgLink {
+    position: relative;
+  }
   section .colFull .bgLink:before {
     top: 0;
-    opacity: 0.3;
-    filter: alpha(opacity=30);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  section .colFull .bgLink picture {
+    position: relative;
+  }
+  section .colFull .bgLink .wContent {
+    position: absolute;
+    top: 0;
   }
   section .colFull .bgLink .wContent .content {
-    padding: calc(var(--paddingYsection) * 3) 2.5rem;
+    padding: 6rem;
   }
   section .colFull .bgLink .wContent .content .btn-link {
     color: rgb(247, 247, 244);
-  }
-  section .colFull .bgLink .wContent .content .bottom {
-    height: auto !important;
-    max-height: 50rem !important;
-    opacity: 1;
-    filter: alpha(opacity=100);
   }
   section .introduction h1 br, section .introduction .h1 br,
   section .introduction h2 br,
@@ -3757,6 +3849,21 @@ button.btn-link.btn-icon .ico,
   }
   section#single-description .bien-description .bloc .classes .value {
     width: 100%;
+  }
+  section#single-header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  section#single-header .swiper .swiper-button-next,
+  section#single-header .swiper .swiper-button-prev {
+    width: 8rem;
+  }
+  section#single-header .swiper .swiper-button-next:after,
+  section#single-header .swiper .swiper-button-prev:after {
+    font-size: 3.6rem;
+  }
+  #loader .logo-loader {
+    width: 18rem;
   }
   #header.scrolled .header {
     padding: 1rem 2rem;
@@ -3875,7 +3982,7 @@ button.btn-link.btn-icon .ico,
     margin-bottom: 0;
   }
   section .colFull .bgLink .wContent .content {
-    padding: calc(var(--paddingYsection) * 3) 1rem;
+    padding: 3rem;
   }
   section.full.section-header-page {
     height: auto;
@@ -3916,6 +4023,9 @@ button.btn-link.btn-icon .ico,
   }
   section#single-description .bien-info .box {
     padding: 2rem;
+  }
+  #loader .logo-loader {
+    max-width: 70%;
   }
 }
 @media only screen and (max-width : 450px) {

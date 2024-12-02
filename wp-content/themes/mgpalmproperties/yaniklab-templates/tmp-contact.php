@@ -12,8 +12,8 @@ Template Name: Contact
     if ($hero):
     ?>
         <section class="section-team standard noPT last bgGreen">
-            <div class="row g-0 d-flex">
-                <div class="col-lg-8 offset-lg-2 d-flex align-items-center compensealt">
+            <div class="row g-0 d-flex justify-content-center justify-content-lg-start">
+                <div class="col-22 col-sm-22 col-md-16 col-lg-10 offset-lg-2 col-xxl-8 offset-xxl-2 d-flex align-items-center compensealt latopTop tabletTopXL tabletBottom tabletCenter">
                     <div>
                         <div class="reveal revealFB reveal1">
                             <i class="ico pictofavicon"></i>
@@ -22,7 +22,7 @@ Template Name: Contact
                             <?php echo $hero['contenu']; ?>
                         </div>
                         <div class="reveal revealFB reveal3">
-                            <div class="buttons d-flex">
+                            <div class="buttons d-flex mobile-center">
                                 <?php if (get_field('mail', 'options')) : ?>
                                     <a href="mailto:<?php echo get_field('mail', 'options'); ?>" class="btn btn-basic btn-beige btn-icon" title="<?php _e("Nous écrire", "mgpalmproperties"); ?>">
                                         <i class="ico pictomail"></i>
@@ -39,7 +39,7 @@ Template Name: Contact
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 offset-lg-2 ">
+                <div class="col-11 col-sm-10 col-md-9 col-lg-5 offset-lg-2 ">
                     <?php if ($hero['image_1']):  ?>
                         <div class="reveal revealFB reveal1 ">
                             <div class="reveal revealIMG reveal2">
@@ -48,7 +48,7 @@ Template Name: Contact
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="col-lg-6 compense">
+                <div class="col-11 col-sm-10 col-md-9 col-lg-5 col-xxl-6 compense">
                     <?php if ($hero['image_2']): ?>
                         <div class="reveal revealFB reveal2">
                             <div class="reveal revealIMG reveal3">

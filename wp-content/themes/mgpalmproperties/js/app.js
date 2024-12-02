@@ -125,7 +125,8 @@
                 // Change uniquement le logo si les classes spécifiques sont présentes
                 if (
                     $body.hasClass("page-template-tmp-page") ||
-                    $body.hasClass("page-template-tmp-home")
+                    $body.hasClass("page-template-tmp-home") ||
+                    $body.hasClass("page-template-tmp-contact")
                 ) {
                     // Remet l'image principale en blanc
                     $img.attr("src", $img.data("logo-white"));

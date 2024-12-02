@@ -273,11 +273,13 @@ if ($bg) {
                             $localisation = get_field('localisation', $post->ID);
                         ?>
                             <a href="<?php echo $link; ?>" title="<?php echo $titre; ?>" class="swiper-slide">
-                                <?php if ($image) : ?>
-                                    <?php echo $image; ?>
-                                <?php else: ?>
-                                    <img src='<?php bloginfo('template_url'); ?>/images/temp/default-propertie.webp' alt='' class='img-fluid'>
-                                <?php endif; ?>
+                                <div class="thumb">
+                                    <?php if ($image) : ?>
+                                        <?php echo $image; ?>
+                                    <?php else: ?>
+                                        <img src='<?php bloginfo('template_url'); ?>/images/temp/default-propertie.webp' alt='' class='img-fluid'>
+                                    <?php endif; ?>
+                                </div>
                                 <div class="baseline">
                                     <h6>
                                         <span class="text-uppercase"><b><?php echo $titre; ?></b></span>

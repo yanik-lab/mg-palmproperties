@@ -16,7 +16,7 @@ Template Name: Accueil
                 <div class="container-fluid">
                     <div class="row justify-content-center">
                         <div class="col-md-20">
-                            <div class="reveal revealFB reveal1">
+                            <div class="reveal revealFB reveal1 tabletCenter">
                                 <?php echo $hero['contenu']; ?>
                                 <?php
                                 if ($hero['lien']):
@@ -109,11 +109,13 @@ Template Name: Accueil
                                     $localisation = get_field('localisation', $propertie->ID);
                                 ?>
                                     <a href="<?php echo $link; ?>" title="<?php echo $titre; ?>" class="swiper-slide">
-                                        <?php if ($image) : ?>
-                                            <?php echo $image; ?>
-                                        <?php else: ?>
-                                            <img src='<?php bloginfo('template_url'); ?>/images/temp/default-propertie.webp' alt='' class='img-fluid'>
-                                        <?php endif; ?>
+                                        <div class="thumb">
+                                            <?php if ($image) : ?>
+                                                <?php echo $image; ?>
+                                            <?php else: ?>
+                                                <img src='<?php bloginfo('template_url'); ?>/images/temp/default-propertie.webp' alt='' class='img-fluid'>
+                                            <?php endif; ?>
+                                        </div>
                                         <div class="baseline">
                                             <h6>
                                                 <span class="text-uppercase"><b><?php echo $titre; ?></b></span>
@@ -236,7 +238,7 @@ Template Name: Accueil
                 <?php
                 $bloc = $hero['bloc_1'];
                 if ($bloc) : ?>
-                    <div class="col-md-16 col-lg-8 colFull position-relative tabletBottom">
+                    <div class="col-md-16 col-lg-8 colFull position-relative tabletBottomOnly">
                         <div class="reveal revealFB reveal1 w-100 h-100">
                             <div class="reveal revealIMG reveal2 w-100 h-100 bgLink">
                                 <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
@@ -267,7 +269,7 @@ Template Name: Accueil
                 <?php
                 $bloc = $hero['bloc_2'];
                 if ($bloc) : ?>
-                    <div class="col-md-16 col-lg-8 colFull position-relative tabletBottom">
+                    <div class="col-md-16 col-lg-8 colFull position-relative tabletBottomOnly">
                         <div class="reveal revealFB reveal2 w-100 h-100">
                             <div class="reveal revealIMG reveal3 w-100 h-100 bgLink">
                                 <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
@@ -298,7 +300,7 @@ Template Name: Accueil
                 <?php
                 $bloc = $hero['bloc_3'];
                 if ($bloc) : ?>
-                    <div class="col-md-16 col-lg-8 colFull position-relative tabletBottom">
+                    <div class="col-md-16 col-lg-8 colFull position-relative tabletBottomOnly">
                         <div class="reveal revealFB reveal3 w-100 h-100">
                             <div class="reveal revealIMG reveal4 w-100 h-100 bgLink">
                                 <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
