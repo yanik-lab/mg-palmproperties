@@ -14,7 +14,7 @@
          *************
          *************/
         $.fn.isOnScreen = function () {
-            var offsetPercentage = 20; // Définir le pourcentage souhaité ici
+            var offsetPercentage = 13; // Définir le pourcentage souhaité ici
             var win = $(window);
             var viewport = {
                 top: win.scrollTop(),
@@ -73,9 +73,10 @@
          *************
          *************/
         const $header = $("#header");
-        const $picture = $("#logo-header picture");
-        const $img = $picture.find("img");
-        const $sources = $picture.find("source");
+        // const $picture = $("#logo-header picture");
+        // const $img = $picture.find("img");
+        const $img = $("#logo-header img");
+        // const $sources = $picture.find("source");
         const $body = $("body");
         function manageHeaderOnScroll() {
             const scrollTop = $(window).scrollTop();
@@ -97,12 +98,12 @@
                     );
 
                     // Met à jour les balises <source>
-                    $sources.each(function () {
-                        $(this).attr(
-                            "srcset",
-                            `${$img.data("logo-color-2x")}.webp 2x`
-                        );
-                    });
+                    // $sources.each(function () {
+                    //     $(this).attr(
+                    //         "srcset",
+                    //         `${$img.data("logo-color-2x")}.webp 2x`
+                    //     );
+                    // });
                 } else {
                     // Si pas les classes, charge le logo color par défaut
                     $img.attr("src", $img.data("logo-color"));
@@ -113,12 +114,12 @@
                         )} 2x`
                     );
 
-                    $sources.each(function () {
-                        $(this).attr(
-                            "srcset",
-                            `${$img.data("logo-color-2x")}.webp 2x`
-                        );
-                    });
+                    // $sources.each(function () {
+                    //     $(this).attr(
+                    //         "srcset",
+                    //         `${$img.data("logo-color-2x")}.webp 2x`
+                    //     );
+                    // });
                 }
             } else {
                 $header.removeClass("scrolled");
@@ -138,12 +139,12 @@
                     );
 
                     // Remet les balises <source> en blanc
-                    $sources.each(function () {
-                        $(this).attr(
-                            "srcset",
-                            `${$img.data("logo-white-2x")}.webp 2x`
-                        );
-                    });
+                    // $sources.each(function () {
+                    //     $(this).attr(
+                    //         "srcset",
+                    //         `${$img.data("logo-white-2x")}.webp 2x`
+                    //     );
+                    // });
                 } else {
                     // Si pas les classes, charge le logo color par défaut
                     $img.attr("src", $img.data("logo-color"));
@@ -154,12 +155,12 @@
                         )} 2x`
                     );
 
-                    $sources.each(function () {
-                        $(this).attr(
-                            "srcset",
-                            `${$img.data("logo-color-2x")}.webp 2x`
-                        );
-                    });
+                    // $sources.each(function () {
+                    //     $(this).attr(
+                    //         "srcset",
+                    //         `${$img.data("logo-color-2x")}.webp 2x`
+                    //     );
+                    // });
                 }
             }
         }

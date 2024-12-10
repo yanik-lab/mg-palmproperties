@@ -1,15 +1,3 @@
-# BEGIN Imagify: webp file type
-<IfModule mod_mime.c>
-	AddType image/webp .webp
-</IfModule>
-# END Imagify: webp file type
-
-# BEGIN Imagify: avif file type
-<IfModule mod_mime.c>
-	AddType image/avif .avif
-</IfModule>
-# END Imagify: avif file type
-
 # BEGIN WordPress
 # Les directives (lignes) entre « BEGIN WordPress » et « END WordPress » sont générées
 # dynamiquement, et doivent être modifiées uniquement via les filtres WordPress.

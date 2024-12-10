@@ -352,7 +352,7 @@ $nokia: "only screen and (max-width : 450px)";
                     top: 0;
                     @include opacity(0);
                 }
-                picture {
+                .picture {
                     position: relative;
                 }
                 .wContent {

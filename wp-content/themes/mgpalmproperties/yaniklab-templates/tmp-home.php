@@ -12,6 +12,7 @@ Template Name: Accueil
     if ($hero):
     ?>
         <section class="section-header fullxl bgGreen bgResponsive bgFixed" style="background-image:url('<?php echo $hero['image']['sizes']['xlarge']; ?>');">
+            <div class="backgroundFixed"></div>
             <div class="special">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
@@ -241,7 +242,9 @@ Template Name: Accueil
                     <div class="col-md-16 col-lg-8 colFull position-relative tabletBottomOnly">
                         <div class="reveal revealFB reveal1 w-100 h-100">
                             <div class="reveal revealIMG reveal2 w-100 h-100 bgLink">
-                                <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
+                                <div class="picture">
+                                    <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
+                                </div>
                                 <div class="wContent w-100 h-100">
                                     <div class="reveal revealFB reveal2 position-relative z-1 w-100 h-100">
                                         <div class="content w-100 h-100">
@@ -272,7 +275,9 @@ Template Name: Accueil
                     <div class="col-md-16 col-lg-8 colFull position-relative tabletBottomOnly">
                         <div class="reveal revealFB reveal2 w-100 h-100">
                             <div class="reveal revealIMG reveal3 w-100 h-100 bgLink">
-                                <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
+                                <div class="picture">
+                                    <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
+                                </div>
                                 <div class="wContent w-100 h-100">
                                     <div class="reveal revealFB reveal3 position-relative z-1 w-100 h-100">
                                         <div class="content w-100 h-100">
@@ -303,7 +308,9 @@ Template Name: Accueil
                     <div class="col-md-16 col-lg-8 colFull position-relative tabletBottomOnly">
                         <div class="reveal revealFB reveal3 w-100 h-100">
                             <div class="reveal revealIMG reveal4 w-100 h-100 bgLink">
-                                <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
+                                <div class="picture">
+                                    <?php echo wp_get_attachment_image($bloc['image_de_fond'], 'medium_large', '',  ['class' => 'img-fluid']); ?>
+                                </div>
                                 <div class="wContent w-100 h-100">
                                     <div class="reveal revealFB reveal4 position-relative z-1 w-100 h-100">
                                         <div class="content w-100 h-100">

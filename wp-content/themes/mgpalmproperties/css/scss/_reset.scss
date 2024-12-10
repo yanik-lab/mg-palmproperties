@@ -129,16 +129,16 @@ ol {
         height: auto;
     }
 }
-picture {
-    display: block;
-    width: 100%;
-    height: auto;
-    img {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-}
+// picture {
+//     display: block;
+//     width: 100%;
+//     height: auto;
+//     img {
+//         width: 100%;
+//         max-width: 100%;
+//         height: auto;
+//     }
+// }
 .imgResponsive {
     display: block;
     width: 100%;
@@ -191,6 +191,15 @@ picture {
     }
     &.bgFixed {
         background-attachment: fixed;
+    }
+}
+@supports (-webkit-touch-callout: none) {
+    .bgResponsive {
+        &.bgFixed {
+            background-size: auto 100%;
+            background-position: top;
+            background-attachment: scroll; /* Fallback pour iOS */
+        }
     }
 }
 /***************************************
@@ -306,7 +315,7 @@ picture {
 .reveal {
     $revealDistance: 2rem;
     @include opacity(0);
-    @include transition(all 0.65s cubic-bezier(0.25, 0.74, 0.22, 0.99));
+    @include transition(all 0.5s cubic-bezier(0.25, 0.74, 0.22, 0.99));
     transition-delay: 0.1s;
     &.loaded {
         @include opacity(1);
@@ -347,7 +356,7 @@ picture {
             bottom: 100%;
             left: 0;
             @include opacity(0);
-            @include transition(all 0.65s cubic-bezier(0.25, 0.74, 0.22, 0.99));
+            @include transition(all 0.5s cubic-bezier(0.25, 0.74, 0.22, 0.99));
         }
         &.loaded {
             &:after {
@@ -373,39 +382,29 @@ picture {
             top: 0;
             right: 0;
             left: 0;
-            bottom: 0;
-            background-color: rgba($crea-green-600, 1);
-            @include transition(all 0.65s cubic-bezier(0.25, 0.74, 0.22, 0.99));
+            bottom: 100%;
+            @include opacity(0);
+            @include transition(
+                opacity 0.5s cubic-bezier(0.25, 0.74, 0.22, 0.99)
+            );
         }
         &.loaded {
             &:after {
-                bottom: 100%;
+                @include opacity(1);
             }
-            // &.revealIMGFR {
-            //     &:after {
-            //         top: 0;
-            //         left: 100%;
-            //     }
-            // }
-            // &.revealIMGFL {
-            //     &:after {
-            //         top: 0;
-            //         width: 0;
-            //     }
-            // }
         }
     }
     @for $i from 1 to 10 {
         &.reveal#{$i} {
-            transition-delay: $i * 0.2s;
+            transition-delay: $i * 0.13s;
             &.revealIMG {
                 &:after {
-                    transition-delay: $i * 0.2s;
+                    transition-delay: $i * 0.13s;
                 }
             }
             &.revealBG {
                 &:after {
-                    transition-delay: $i * 0.2s;
+                    transition-delay: $i * 0.13s;
                 }
             }
         }
