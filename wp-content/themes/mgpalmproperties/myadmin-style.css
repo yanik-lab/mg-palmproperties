@@ -6,7 +6,7 @@ h5,
 h6 {
     font-weight: normal;
 }
-h1 b,
+/* h1 b,
 h2 b,
 h3 b,
 h4 b,
@@ -19,8 +19,8 @@ H4 strong,
 h5 strong,
 h6 strong {
     color: #c82254;
-}
-h2 {
+} */
+/* h2 {
     font-size: 20px;
     line-height: 1.2;
 }
@@ -38,7 +38,7 @@ p.titre,
     font-weight: bold;
     line-height: 1.2;
     text-transform: uppercase;
-}
+} */
 /* .acf-field-group { */
 /* border: 10px solid red; */
 /* } */

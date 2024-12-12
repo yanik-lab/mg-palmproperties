@@ -10446,6 +10446,122 @@ section#single-header .swiper .swiper-button-next {
   top: 0;
   bottom: 0;
 }
+
+/* purgecss start ignore */
+section .mySwiper .swiper-wrapper {
+  padding-bottom: 3.5rem;
+}
+section .mySwiper .swiper-wrapper .swiper-slide {
+  text-decoration: none;
+  user-select: none;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+}
+section .mySwiper .swiper-wrapper .swiper-slide .thumb {
+  overflow: hidden;
+}
+section .mySwiper .swiper-wrapper .swiper-slide .thumb img {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  -moz-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  -ms-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  -o-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+}
+section .mySwiper .swiper-wrapper .swiper-slide .baseline {
+  padding: 2.4rem;
+  color: rgb(143, 143, 143);
+}
+section .mySwiper .swiper-wrapper .swiper-slide .baseline b,
+section .mySwiper .swiper-wrapper .swiper-slide .baseline strong {
+  color: rgb(42, 42, 42);
+}
+section .mySwiper .swiper-wrapper .swiper-slide .baseline span {
+  padding-right: 0.3rem;
+}
+section .mySwiper .swiper-wrapper .swiper-slide .baseline span:after {
+  content: "•";
+  padding-left: 0.8rem;
+  color: rgb(143, 143, 143);
+}
+section .mySwiper .swiper-wrapper .swiper-slide .baseline span:last-child:after {
+  content: none;
+}
+section .mySwiper .swiper-wrapper .swiper-slide:hover img {
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+}
+section .mySwiper .swiper-scrollbar {
+  left: 50%;
+  width: 40rem;
+  max-width: 80%;
+  height: 0.4rem;
+  margin: auto;
+  background-color: rgb(224, 223, 210);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+section .mySwiper .swiper-scrollbar-drag {
+  background-color: rgb(192, 185, 166);
+}
+section .mySwiper .swiper-button-next,
+section .mySwiper .swiper-button-prev {
+  width: 22vw;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  margin: 0;
+}
+section .mySwiper .swiper-button-next:after,
+section .mySwiper .swiper-button-prev:after {
+  color: #ffffff;
+}
+section .mySwiper .swiper-button-next:before,
+section .mySwiper .swiper-button-prev:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(0, 0, 0);
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  -moz-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  -ms-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  -o-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+  transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
+}
+section .mySwiper .swiper-button-next:hover:before,
+section .mySwiper .swiper-button-prev:hover:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+section .mySwiper .swiper-button-next {
+  right: 0;
+  padding-right: 2rem;
+  justify-content: flex-end;
+}
+section .mySwiper .swiper-button-next:before {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 90%, rgba(0, 0, 0, 0.3) 100%);
+}
+section .mySwiper .swiper-button-prev {
+  left: 0;
+  padding-left: 2rem;
+  justify-content: flex-start;
+}
+section .mySwiper .swiper-button-prev:before {
+  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 90%, rgba(0, 0, 0, 0.3) 100%);
+}
 section#single-description .bien-info {
   -webkit-transform: translateY(-60%);
   -moz-transform: translateY(-60%);
@@ -10602,122 +10718,6 @@ section#single-description .bien-description .bloc .classes.ges .box.boxF {
 }
 section#single-description .bien-description .bloc .classes.ges .box.boxG {
   background-color: #7e2ad5;
-}
-
-/* purgecss start ignore */
-section .mySwiper .swiper-wrapper {
-  padding-bottom: 3.5rem;
-}
-section .mySwiper .swiper-wrapper .swiper-slide {
-  text-decoration: none;
-  user-select: none;
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-}
-section .mySwiper .swiper-wrapper .swiper-slide .thumb {
-  overflow: hidden;
-}
-section .mySwiper .swiper-wrapper .swiper-slide .thumb img {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-  -moz-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-  -ms-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-  -o-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-  transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-}
-section .mySwiper .swiper-wrapper .swiper-slide .baseline {
-  padding: 2.4rem;
-  color: rgb(143, 143, 143);
-}
-section .mySwiper .swiper-wrapper .swiper-slide .baseline b,
-section .mySwiper .swiper-wrapper .swiper-slide .baseline strong {
-  color: rgb(42, 42, 42);
-}
-section .mySwiper .swiper-wrapper .swiper-slide .baseline span {
-  padding-right: 0.3rem;
-}
-section .mySwiper .swiper-wrapper .swiper-slide .baseline span:after {
-  content: "•";
-  padding-left: 0.8rem;
-  color: rgb(143, 143, 143);
-}
-section .mySwiper .swiper-wrapper .swiper-slide .baseline span:last-child:after {
-  content: none;
-}
-section .mySwiper .swiper-wrapper .swiper-slide:hover img {
-  -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  transform: scale(1.02);
-}
-section .mySwiper .swiper-scrollbar {
-  left: 50%;
-  width: 40rem;
-  max-width: 80%;
-  height: 0.4rem;
-  margin: auto;
-  background-color: rgb(224, 223, 210);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-section .mySwiper .swiper-scrollbar-drag {
-  background-color: rgb(192, 185, 166);
-}
-section .mySwiper .swiper-button-next,
-section .mySwiper .swiper-button-prev {
-  width: 22vw;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  margin: 0;
-}
-section .mySwiper .swiper-button-next:after,
-section .mySwiper .swiper-button-prev:after {
-  color: #ffffff;
-}
-section .mySwiper .swiper-button-next:before,
-section .mySwiper .swiper-button-prev:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgb(0, 0, 0);
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-  -moz-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-  -ms-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-  -o-transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-  transition: all 0.25s cubic-bezier(0.25, 0.74, 0.22, 0.99);
-}
-section .mySwiper .swiper-button-next:hover:before,
-section .mySwiper .swiper-button-prev:hover:before {
-  opacity: 1;
-  filter: alpha(opacity=100);
-}
-section .mySwiper .swiper-button-next {
-  right: 0;
-  padding-right: 2rem;
-  justify-content: flex-end;
-}
-section .mySwiper .swiper-button-next:before {
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 90%, rgba(0, 0, 0, 0.3) 100%);
-}
-section .mySwiper .swiper-button-prev {
-  left: 0;
-  padding-left: 2rem;
-  justify-content: flex-start;
-}
-section .mySwiper .swiper-button-prev:before {
-  background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 90%, rgba(0, 0, 0, 0.3) 100%);
 }
 
 /* purgecss end ignore */
