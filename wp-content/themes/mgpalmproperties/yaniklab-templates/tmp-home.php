@@ -114,7 +114,7 @@ Template Name: Accueil
                                             <?php if ($image) : ?>
                                                 <?php echo $image; ?>
                                             <?php else: ?>
-                                                <img src='<?php bloginfo('template_url'); ?>/images/temp/default-propertie.webp' alt='' class='img-fluid'>
+                                                <img src='<?php bloginfo('template_url'); ?>/images/temp/default-propertie.png' alt='' class='img-fluid'>
                                             <?php endif; ?>
                                         </div>
                                         <div class="baseline">

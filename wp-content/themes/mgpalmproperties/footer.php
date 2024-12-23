@@ -6,7 +6,7 @@
             <div class="row flex-column flex-md-row justify-content-center">
                 <div class="col-lg-8 tabletCenter tabletBottomL">
                     <a href="<?php echo get_bloginfo('url'); ?>" class="logo group d-block" id="logo-footer">
-                        <img src='<?php bloginfo('template_url'); ?>/images/logo-mg-palm-properties-horizontal.png.webp' alt='<?php _e("Logo", "mgpalmproperties"); ?> <?php bloginfo('title'); ?>' srcset='<?php bloginfo('template_url'); ?>/images/logo-mg-palm-properties-horizontal@2x.png.webp 2x' class='img-fluid logo-loader' loading='lazy'>
+                        <img src='<?php bloginfo('template_url'); ?>/images/logo-mg-palm-properties-horizontal.png' alt='<?php _e("Logo", "mgpalmproperties"); ?> <?php bloginfo('title'); ?>' srcset='<?php bloginfo('template_url'); ?>/images/logo-mg-palm-properties-horizontal@2x.png 2x' class='img-fluid logo-loader' loading='lazy'>
                     </a>
                 </div>
                 <div class="col tabletCenter mobileBottomL">
@@ -21,7 +21,7 @@
                     ?>
                 </div>
                 <div class="col tabletCenter mobileBottomL">
-                    <p><?php _e("Nous contacter", "mgpalmproperties"); ?></p>
+                    <p class="first"><?php _e("Nous contacter", "mgpalmproperties"); ?></p>
                     <div class="second-menu">
                         <?php if (get_field('telephone', 'options')) : ?>
                             <a href="<?php echo formatPhoneNumber(get_field('telephone', 'options')); ?>" class="btn btn-icon" title="<?php _e("Nous appeler", "mgpalmproperties"); ?>">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="col tabletCenter">
-                    <p><?php _e("Nous suivre", "mgpalmproperties"); ?></p>
+                    <p class="first"><?php _e("Nous suivre", "mgpalmproperties"); ?></p>
                     <?php echo get_template_part('yaniklab-parts/part', 'socials'); ?>
                 </div>
             </div>

@@ -9034,7 +9034,7 @@ h1, .h1 {
 }
 h1.h2, .h2.h1 {
   font-size: clamp(3rem, 3vw, 4rem);
-  line-height: clamp(3.8rem, 3.8vw, 5rem);
+  line-height: clamp(3.8rem, 3.8vw, 4.5rem);
 }
 
 .homeh1 {
@@ -9043,7 +9043,7 @@ h1.h2, .h2.h1 {
 
 h2, .h2 {
   font-size: clamp(3rem, 3vw, 4rem);
-  line-height: clamp(3.8rem, 3.8vw, 5rem);
+  line-height: clamp(3.8rem, 3.8vw, 4.5rem);
 }
 
 h3, .h3 {
@@ -9320,6 +9320,12 @@ ol:last-child {
   height: 100%;
 }
 
+/* purgecss start ignore */
+iframe {
+  width: 100%;
+}
+
+/* purgecss end ignore */
 .svg-fluid svg {
   max-width: 100%;
   height: auto;
@@ -10592,8 +10598,14 @@ section#single-description .bien-description .bloc {
   margin-bottom: 4rem;
   border-bottom: 1px solid rgb(224, 223, 210);
 }
+section#single-description .bien-description .bloc.noPB {
+  padding-bottom: 0;
+}
 section#single-description .bien-description .bloc h4, section#single-description .bien-description .bloc .h4 {
   margin-bottom: 3rem;
+}
+section#single-description .bien-description .bloc .details .marged {
+  margin-bottom: 4rem;
 }
 section#single-description .bien-description .bloc .details .top {
   display: flex;
@@ -10619,7 +10631,7 @@ section#single-description .bien-description .bloc .details .value {
   font-weight: 400;
   font-optical-sizing: auto;
   font-style: normal;
-  padding-left: 3.5rem;
+  padding-left: 4rem;
   margin-bottom: 0;
 }
 section#single-description .bien-description .bloc .details .value em {
@@ -10741,6 +10753,9 @@ section#single-description .bien-description .bloc .classes.ges .box.boxG {
 }
 #footer p:last-child {
   margin-bottom: 0;
+}
+#footer p.first {
+  margin-top: 5px;
 }
 #footer a {
   text-decoration: none;
@@ -11611,6 +11626,12 @@ button.btn-link.btn-icon .ico,
   }
   section#single-description .bien-info .box {
     padding: 3rem;
+  }
+  section#single-description .bien-description .bloc {
+    text-align: center;
+  }
+  section#single-description .bien-description .bloc .details {
+    text-align: center;
   }
   section#single-description .bien-description .bloc .details .top {
     justify-content: center;

@@ -141,11 +141,11 @@ function df_disable_comments_admin_bar()
 add_action('init', 'df_disable_comments_admin_bar');
 
 // DESACTIVATE EMBED
-function my_deregister_scripts()
-{
-    wp_dequeue_script('wp-embed');
-}
-add_action('wp_footer', 'my_deregister_scripts');
+// function my_deregister_scripts()
+// {
+//     wp_dequeue_script('wp-embed');
+// }
+// add_action('wp_footer', 'my_deregister_scripts');
 
 // DISABLE GUTENBERG
 add_filter('use_block_editor_for_post_type', '__return_false', 10);

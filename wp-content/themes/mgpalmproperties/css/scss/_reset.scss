@@ -123,6 +123,11 @@ ol {
         height: 100%;
     }
 }
+/* purgecss start ignore */
+iframe {
+    width: 100%;
+}
+/* purgecss end ignore */
 .svg-fluid {
     svg {
         max-width: 100%;

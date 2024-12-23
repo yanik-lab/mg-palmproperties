@@ -5,11 +5,15 @@ $typeprix = get_field('prix_nous_consulter', $post->ID);
 $prix = get_field('prix', $post->ID);
 $reference = get_field('reference', $post->ID);
 $details_intro = get_field('details_intro', $post->ID);
+$pieces = get_field('pieces', $post->ID);
 $chambres = get_field('chambres', $post->ID);
 $surface_habitable = get_field('surface_habitable', $post->ID);
+$surface_terrain = get_field('surface_terrain', $post->ID);
 $salle_de_bain = get_field('salle_de_bain', $post->ID);
+$video = get_field('video', $post->ID);
 $descriptif = get_field('descriptif', $post->ID);
 $pe = get_field('performance_energetique', $post->ID);
+$images = get_field('galerie');
 if ($pe) {
     $ce = $pe['classe_energetique'];
     $cetxt = $pe['classe_energetique_txt'];
@@ -28,14 +32,21 @@ if ($pe) {
             </div>
         </div>
     </div>
-    <div class="swiper mySwiperSingle">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="<?php echo bloginfo('template_url'); ?>/images/temp/a3d4443e-4108-464c-95c6-096d33960ec5.jpg" data-fancybox="gallery" class="" alt=""></div>
-            <div class="swiper-slide"><img src="<?php echo bloginfo('template_url'); ?>/images/temp/365615.jpg" data-fancybox="gallery" class="" alt=""></div>
+    <?php if ($images): ?>
+        <div class="swiper mySwiperSingle">
+            <div class="swiper-wrapper">
+                <?php foreach ($images as $image_id): ?>
+                    <div class="swiper-slide">
+                        <?php echo wp_get_attachment_image($image_id, 'bloclarge', '',  ['class' => '']); ?>
+                    </div>
+                <?php endforeach; ?>
+                <!-- <div class="swiper-slide"><img src="<?php echo bloginfo('template_url'); ?>/images/temp/a3d4443e-4108-464c-95c6-096d33960ec5.jpg" data-fancybox="gallery" class="" alt=""></div>
+                <div class="swiper-slide"><img src="<?php echo bloginfo('template_url'); ?>/images/temp/365615.jpg" data-fancybox="gallery" class="" alt=""></div> -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
+    <?php endif; ?>
     <!-- <div id="allpicture" class="container-fluid">
         <div class="row g-0 justify-content-center">
             <div class="col-lg-17 position-relative">
@@ -62,17 +73,16 @@ if ($pe) {
                                 <span><?php echo $localisation; ?></span>
                             </h6>
                         <?php endif; ?>
-                        <h1 class="h2 mb-2"><?php the_title(); ?></h1>
-                        <p class="heavy mb-1">
+                        <h1 class="h2 mb-3 mt-3"><?php the_title(); ?></h1>
+                        <h5 class="mb-1">
                             <?php
-                            _e('Prix : ', 'mgpalmproperties');
                             if ($typeprix === true):
-                                _e('Nous consulter', 'mgpalmproperties');
+                                _e('Prix : Nous consulter', 'mgpalmproperties');
                             else :
-                                echo $prix;
+                                echo number_format($prix, 0, '', ' ') . ' €';
                             endif;
                             ?>
-                        </p>
+                        </h5>
                         <?php
                         if ($reference) :
                             echo "<p>" . __('REF : ', 'mgpalmproperties') . "" . $reference . "</p>";
@@ -104,13 +114,13 @@ if ($pe) {
             </div>
             <div class="col-22 col-sm-18 col-md-18 col-lg-18 col-xl-12 offset-xl-1 col-xxl-10 offset-xxl-1 col-xxl-9 offset-xxl-1 bien-description">
                 <div class="reveal revealFB reveal1">
-                    <div class="bloc bloc1">
+                    <div class="bloc noPB bloc1">
                         <div class="reveal revealFB reveal1">
                             <h4><?php _e('Détail du bien', 'mgpalmproperties'); ?></h4>
                         </div>
                         <div class="row g-0 details flex-column flex-md-row">
                             <?php if ($surface_habitable) : ?>
-                                <div class="col">
+                                <div class="col-md-8 marged">
                                     <div class="reveal revealFB reveal2">
                                         <p class="top">
                                             <i class="ico pictosuperficie"></i>
@@ -122,9 +132,22 @@ if ($pe) {
                                     </div>
                                 </div>
                             <?php endif; ?>
-                            <?php if ($chambres) : ?>
-                                <div class="col">
+                            <?php if ($pieces) : ?>
+                                <div class="col-md-8 marged">
                                     <div class="reveal revealFB reveal3">
+                                        <p class="top">
+                                            <i class="ico pictosuperficie"></i>
+                                            <span><?php _e('Pièces', 'mgpalmproperties'); ?> <span class="d-none d-md-inline-block">:</span> </span>
+                                        </p>
+                                        <h4 class="value">
+                                            <?php echo $pieces; ?>
+                                        </h4>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($chambres) : ?>
+                                <div class="col-md-8 marged">
+                                    <div class="reveal revealFB reveal4">
                                         <p class="top">
                                             <i class="ico pictobedroom"></i>
                                             <span><?php _e('Chambres', 'mgpalmproperties'); ?> <span class="d-none d-md-inline-block">:</span> </span>
@@ -136,11 +159,11 @@ if ($pe) {
                                 </div>
                             <?php endif; ?>
                             <?php if ($salle_de_bain) : ?>
-                                <div class="col">
-                                    <div class="reveal revealFB reveal4">
+                                <div class="col-md-8 marged">
+                                    <div class="reveal revealFB reveal1">
                                         <p class="top">
                                             <i class="ico pictobathroom"></i>
-                                            <span><?php _e('Salle de bains', 'mgpalmproperties'); ?> <span class="d-none d-md-inline-block">:</span> </span>
+                                            <span><?php _e('Salles de bains', 'mgpalmproperties'); ?> <span class="d-none d-md-inline-block">:</span> </span>
                                         </p>
                                         <p class="value">
                                             <?php echo $salle_de_bain; ?>
@@ -148,8 +171,31 @@ if ($pe) {
                                     </div>
                                 </div>
                             <?php endif; ?>
+                            <?php if ($surface_terrain) : ?>
+                                <div class="col-md-8 marged">
+                                    <div class="reveal revealFB reveal2">
+                                        <p class="top">
+                                            <i class="ico pictosuperficie"></i>
+                                            <span><?php _e('Surface terrain', 'mgpalmproperties'); ?> <span class="d-none d-md-inline-block">:</span> </span>
+                                        </p>
+                                        <h4 class="value">
+                                            <?php echo $surface_terrain; ?> m<sup>2</sup>
+                                        </h4>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
+                    <?php if ($video): ?>
+                        <div class="bloc bloc2">
+                            <div class="reveal revealFB reveal1">
+                                <h4><?php _e('Vidéo', 'mgpalmproperties'); ?></h4>
+                            </div>
+                            <div class="reveal revealFB reveal2">
+                                <?php echo $video; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                     <?php if ($descriptif): ?>
                         <div class="bloc bloc2">
                             <div class="reveal revealFB reveal1">
@@ -277,7 +323,7 @@ if ($bg) {
                                     <?php if ($image) : ?>
                                         <?php echo $image; ?>
                                     <?php else: ?>
-                                        <img src='<?php bloginfo('template_url'); ?>/images/temp/default-propertie.webp' alt='' class='img-fluid'>
+                                        <img src='<?php bloginfo('template_url'); ?>/images/temp/default-propertie.png' alt='' class='img-fluid'>
                                     <?php endif; ?>
                                 </div>
                                 <div class="baseline">

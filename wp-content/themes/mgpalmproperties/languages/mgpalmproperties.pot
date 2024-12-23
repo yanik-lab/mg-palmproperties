@@ -1,0 +1,188 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: YanikLab - MG Palm Properties\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-20 09:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.14; wp-6.7.1\n"
+"X-Domain: mgpalmproperties"
+
+#. Name of the template
+#: yaniklab-templates/tmp-home.php:2
+msgid "Accueil"
+msgstr ""
+
+#: yaniklab-templates/tmp-soon.php:16
+msgid "Bientôt disponible"
+msgstr ""
+
+#: single.php:84
+msgid ""
+"Bonjour,%0D%0A%0D%0AJe souhaiterais obtenir plus d'information concernant la "
+"propriété "
+msgstr ""
+
+#. Name of the template
+#: yaniklab-templates/tmp-page.php:2
+msgid "Builder de sections"
+msgstr ""
+
+#: 404.php:20
+msgid "Cette page n'existe pas ou n'existe plus."
+msgstr ""
+
+#: single.php:130
+msgid "Chambres"
+msgstr ""
+
+#: single.php:287 yaniklab-templates/tmp-home.php:124
+#: yaniklab-templates/tmp-properties.php:63
+msgid "chambres"
+msgstr ""
+
+#: single.php:170
+msgid "Classe énergie"
+msgstr ""
+
+#. Name of the template
+#: yaniklab-templates/tmp-contact.php:2
+msgid "Contact"
+msgstr ""
+
+#: single.php:84 single.php:86
+msgid "Demander + d'infos par email"
+msgstr ""
+
+#: single.php:156
+msgid "Descriptif"
+msgstr ""
+
+#: single.php:307
+msgid "Découvrez tous nos biens"
+msgstr ""
+
+#: yaniklab-templates/tmp-properties.php:70
+msgid "Découvrir ce bien"
+msgstr ""
+
+#: single.php:109
+msgid "Détail du bien"
+msgstr ""
+
+#: 404.php:12
+msgid "Erreur 404 <br> Page introuvable"
+msgstr ""
+
+#: single.php:191
+msgid "GES"
+msgstr ""
+
+#: single.php:231
+msgid "Intéressé par ce bien ?"
+msgstr ""
+
+#: yaniklab-templates/tmp-soon.php:25
+msgid ""
+"La traduction n'est pas encore disponible, <br> veuillez revenir plus tard"
+msgstr ""
+
+#: footer.php:9 header.php:28 header.php:38
+msgid "Logo"
+msgstr ""
+
+#. Description of the theme
+msgid "MG Palm Properties - Create by YanikLab"
+msgstr ""
+
+#: single.php:247
+msgid "Nos autres propriétés à la vente"
+msgstr ""
+
+#: footer.php:27 footer.php:29 single.php:90 single.php:92
+#: yaniklab-templates/tmp-contact.php:33 yaniklab-templates/tmp-contact.php:35
+msgid "Nous appeler"
+msgstr ""
+
+#: single.php:70
+msgid "Nous consulter"
+msgstr ""
+
+#: footer.php:24
+msgid "Nous contacter"
+msgstr ""
+
+#: 404.php:21
+msgid "Nous nous excusons pour la gêne occasionnée."
+msgstr ""
+
+#: footer.php:41
+msgid "Nous suivre"
+msgstr ""
+
+#: footer.php:33 footer.php:35 yaniklab-templates/tmp-contact.php:27
+#: yaniklab-templates/tmp-contact.php:29
+msgid "Nous écrire"
+msgstr ""
+
+#: single.php:166
+msgid "Performances énergétiques"
+msgstr ""
+
+#: single.php:68
+msgid "Prix : "
+msgstr ""
+
+#: single.php:84
+msgid "Propriété : "
+msgstr ""
+
+#. Name of the template
+#: yaniklab-templates/tmp-properties.php:2
+msgid "Propriétés"
+msgstr ""
+
+#: single.php:78
+msgid "REF : "
+msgstr ""
+
+#: 404.php:26 yaniklab-templates/tmp-soon.php:30
+msgid "Retour à l'accueil"
+msgstr ""
+
+#: single.php:143
+msgid "Salle de bains"
+msgstr ""
+
+#. Name of the template
+#: yaniklab-templates/tmp-soon.php:2
+msgid "Soon"
+msgstr ""
+
+#: single.php:117
+msgid "Surface habitable"
+msgstr ""
+
+#: single.php:45
+msgid "Toutes les photos"
+msgstr ""
+
+#. Author of the theme
+msgid "Tyméo"
+msgstr ""
+
+#. Name of the theme
+msgid "YanikLab - MG Palm Properties"
+msgstr ""
+
+#: single.php:84
+msgid "à"
+msgstr ""

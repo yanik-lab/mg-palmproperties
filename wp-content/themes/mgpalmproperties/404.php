@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 
-<section class="section-properties-introduction standard firstxl last bgWhite">
+<section class="standard firstxl last bgWhite">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-12 col-xl-10 text-center introduction">
