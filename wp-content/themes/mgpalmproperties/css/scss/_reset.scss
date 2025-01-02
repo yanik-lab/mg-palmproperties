@@ -301,6 +301,12 @@ iframe {
  PLUGINS
  ***************************************/
 /* purgecss start ignore */
+.lg-backdrop {
+    z-index: 10400 !important;
+}
+.lg-outer {
+    z-index: 10500 !important;
+}
 .grecaptcha-badge {
     display: none !important;
 }

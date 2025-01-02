@@ -159,7 +159,13 @@ $nokia: "only screen and (max-width : 450px)";
         }
         &#single-description .bien-info {
             @include transform(translateY(0%));
-            margin-top: -15rem;
+            margin-top: -8rem;
+            .box {
+                padding: 3.5rem;
+            }
+        }
+        &#single-header #allpicture {
+            bottom: 10rem;
         }
     }
     /* purgecss start ignore */
@@ -281,12 +287,19 @@ $nokia: "only screen and (max-width : 450px)";
         }
         &#single-description .bien-info {
             @include transform(translateY(0%));
-            margin-top: -10rem;
+            margin-top: -8rem;
+            .box {
+                padding: 3.5rem;
+            }
+        }
+        &#single-header #allpicture {
+            bottom: 10rem;
         }
         &#single-header {
             padding-top: 0;
             padding-bottom: 0;
             .swiper {
+                margin-top: 8rem;
                 .swiper-button-next,
                 .swiper-button-prev {
                     width: 10rem;
@@ -399,6 +412,9 @@ $nokia: "only screen and (max-width : 450px)";
         }
         &#single-header {
             // min-height: 45rem;
+            .swiper {
+                margin-top: 0;
+            }
             .swiper-slide {
                 min-height: 45rem;
                 padding-top: 6rem;
@@ -407,9 +423,9 @@ $nokia: "only screen and (max-width : 450px)";
         &#single-description {
             .bien-info {
                 @include transform(translateY(0%));
-                margin-top: -10rem;
+                margin-top: -4rem;
                 .box {
-                    padding: 3rem;
+                    padding: 2.5rem;
                 }
             }
             .bien-description .bloc {
@@ -440,6 +456,9 @@ $nokia: "only screen and (max-width : 450px)";
         &#single-header {
             padding-top: 0;
             padding-bottom: 0;
+            #allpicture {
+                bottom: 6rem;
+            }
             .swiper {
                 .swiper-button-next,
                 .swiper-button-prev {
@@ -569,6 +588,11 @@ $nokia: "only screen and (max-width : 450px)";
                 .box {
                     padding: 2rem;
                 }
+            }
+        }
+        &#single-header {
+            #allpicture {
+                bottom: 2rem;
             }
         }
     }

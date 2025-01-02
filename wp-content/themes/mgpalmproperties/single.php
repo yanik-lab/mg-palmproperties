@@ -34,31 +34,33 @@ if ($pe) {
     </div>
     <?php if ($images): ?>
         <div class="swiper mySwiperSingle">
-            <div class="swiper-wrapper">
-                <?php foreach ($images as $image_id): ?>
-                    <div class="swiper-slide">
-                        <?php echo wp_get_attachment_image($image_id, 'bloclarge', '',  ['class' => '']); ?>
+            <div id="mySwiperContainer" class="swiper-wrapper">
+                <?php $counter = 1;
+                foreach ($images as $image_id): ?>
+                    <div id="slide-<?php echo $counter; ?>" class="swiper-slide">
+                        <a data-src="<?php echo wp_get_attachment_url($image_id); ?>">
+                            <?php echo wp_get_attachment_image($image_id, 'bloclarge', '',  ['class' => '']); ?>
+                        </a>
                     </div>
-                <?php endforeach; ?>
-                <!-- <div class="swiper-slide"><img src="<?php echo bloginfo('template_url'); ?>/images/temp/a3d4443e-4108-464c-95c6-096d33960ec5.jpg" data-fancybox="gallery" class="" alt=""></div>
-                <div class="swiper-slide"><img src="<?php echo bloginfo('template_url'); ?>/images/temp/365615.jpg" data-fancybox="gallery" class="" alt=""></div> -->
+                <?php $counter++;
+                endforeach; ?>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
-    <?php endif; ?>
-    <!-- <div id="allpicture" class="container-fluid">
-        <div class="row g-0 justify-content-center">
-            <div class="col-lg-17 position-relative">
-                <div class="reveal revealFR reveal2 text-end">
-                    <button type="button" class="btn btn-header btn-icon" id="openGallery">
-                        <i class="ico pictophotos"></i>
-                        <span><?php _e('Toutes les photos', 'mgpalmproperties'); ?></span>
-                    </button>
+        <div id="allpicture" class="container-fluid">
+            <div class="row g-0 justify-content-center">
+                <div class="col-xl-21 col-xxl-19 col-xxxl-17 position-relative">
+                    <div class="reveal revealFR reveal2 d-flex justify-content-center justify-content-xl-end">
+                        <button type="button" class="btn btn-header btn-icon" id="openGallery">
+                            <i class="ico pictophotos"></i>
+                            <span><?php _e('Toutes les photos', 'mgpalmproperties'); ?></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    <?php endif; ?>
 </section>
 
 <section id="single-description" class="">
@@ -112,7 +114,7 @@ if ($pe) {
                     </div>
                 </div>
             </div>
-            <div class="col-22 col-sm-18 col-md-18 col-lg-18 col-xl-12 offset-xl-1 col-xxl-10 offset-xxl-1 col-xxl-9 offset-xxl-1 bien-description">
+            <div class="col-22 col-sm-18 col-md-18 col-lg-18 col-xl-12 offset-xl-1 col-xxl-10 offset-xxl-1 col-xxxl-9 offset-xxxl-1 bien-description">
                 <div class="reveal revealFB reveal1">
                     <div class="bloc noPB bloc1">
                         <div class="reveal revealFB reveal1">

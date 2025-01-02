@@ -271,6 +271,24 @@
                 });
             });
         }
+        // if ($(".mySwiperSingle").length) {
+        //     $(".mySwiperSingle").each(function (index, element) {
+        //         const swiper = new Swiper(this, {
+        //             slidesPerView: 1,
+        //             grabCursor: true,
+        //             loop: true,
+        //             speed: 650,
+        //             effect: "fade",
+        //             keyboard: {
+        //                 enabled: true,
+        //             },
+        //             navigation: {
+        //                 nextEl: ".swiper-button-next",
+        //                 prevEl: ".swiper-button-prev",
+        //             },
+        //         });
+        //     });
+        // }
         if ($(".mySwiperSingle").length) {
             $(".mySwiperSingle").each(function (index, element) {
                 const swiper = new Swiper(this, {
@@ -278,7 +296,6 @@
                     grabCursor: true,
                     loop: true,
                     speed: 650,
-                    // lazy: true,
                     effect: "fade",
                     keyboard: {
                         enabled: true,
@@ -287,23 +304,46 @@
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
                     },
-                    // breakpoints: {
-                    //     // when window width is >= 992px
-                    //     992: {
-                    //         slidesPerView: 2.5,
-                    //     },
-                    //     // when window width is >= 570px
-                    //     570: {
-                    //         slidesPerView: 1,
-                    //     },
-                    //     // when window width is < 570px
-                    //     0: {
-                    //         slidesPerView: 1,
-                    //     },
-                    // },
                 });
+
+                // Gestion de la galerie LightGallery pour chaque Swiper
+                const slides = this.querySelectorAll(".swiper-slide a");
+                const dynamicEl = [];
+
+                slides.forEach((slide) => {
+                    const src = slide.getAttribute("data-src");
+                    const thumb = slide.querySelector("img")?.src || "";
+                    const title = slide.querySelector("img")?.alt || "";
+                    const description =
+                        slide.querySelector("img")?.dataset?.description || "";
+
+                    dynamicEl.push({
+                        src: src,
+                        thumb: thumb,
+                        // subHtml: `<h4>${title}</h4><p>${description}</p>`,
+                        subHtml: "&nbsp;",
+                    });
+                });
+
+                // Initialise LightGallery
+                const dynamicGallery = lightGallery(
+                    this.querySelector("#mySwiperContainer"),
+                    {
+                        dynamic: true,
+                        dynamicEl: dynamicEl,
+                    }
+                );
+
+                // Ouvre la galerie LightGallery au slide actif
+                document
+                    .getElementById("openGallery")
+                    .addEventListener("click", () => {
+                        const activeIndex = swiper.realIndex; // Utilise le vrai index (sans lepliement du loop)
+                        dynamicGallery.openGallery(activeIndex);
+                    });
             });
         }
+
         function sizeNavigation() {
             if ($(".mySwiper").length) {
                 let maxHeight = 0;
@@ -322,6 +362,79 @@
             }
         }
         sizeNavigation();
+
+        /*************
+         *************
+         LIGHT GALLERY
+         *************
+         *************/
+        // const lg = document.getElementById("mySwiperContainer");
+
+        // const plugin = lightGallery(lg, {
+        //     speed: 500,
+        //     showZoomInOutIcons: true,
+        //     actualSize: false,
+        //     controls: true,
+        //     selector: ".swiper-slide > a",
+        //     plugins: [lgZoom],
+        // // });
+        // const slides = document.querySelectorAll(
+        //     "#mySwiperContainer .swiper-slide a"
+        // );
+        // const dynamicEl = [];
+
+        // // console.log(slides);
+
+        // slides.forEach((slide) => {
+        //     const src = slide.getAttribute("data-src"); // Récupère l'attribut data-src
+        //     const thumb = slide.querySelector("img")?.src; // Récupère l'URL de la miniature (src de l'image)
+        //     const title = slide.querySelector("img")?.alt || ""; // Optionnel : Utilise l'attribut alt comme titre
+        //     const description =
+        //         slide.querySelector("img")?.dataset?.description || ""; // Optionnel : Description (si présente)
+
+        //     dynamicEl.push({
+        //         src: src,
+        //         thumb: thumb,
+        //         subHtml: `<h4>${title}</h4><p>${description}</p>`,
+        //     });
+        // });
+
+        // // Initialise lightGallery avec les données générées dynamiquement
+        // const dynamicGallery = lightGallery(
+        //     document.getElementById("mySwiperContainer"),
+        //     {
+        //         dynamic: true,
+        //         dynamicEl: dynamicEl,
+        //     }
+        // );
+
+        // // Exemple : démarre avec la 3e image (index 2)
+        // document.getElementById("openGallery").addEventListener("click", () => {
+        //     const activeIndex = swiper.activeIndex; // Récupère l'index du slide actif
+        //     console.log(activeIndex);
+
+        //     if (activeIndex) {
+        //         dynamicGallery.openGallery(activeIndex); // Ouvre la galerie au slide actif
+        //     } else {
+        //         dynamicGallery.openGallery();
+        //     }
+        // });
+
+        // // plugin.slide(2);
+
+        // //  console.log($lgContainer);
+        // $("#openGallery").on("click", function () {
+        //     // console.log($lgContainer);
+        //     console.log("tpto");
+        //     // $lgContainer.openGallery(0);
+        //     $("#slide-1 a").trigger("click");
+        // });
+
+        // lightGallery(document.getElementById("mySwiperContainer"));
+
+        // $("#openGallery").on("click", () => {
+        //     $("#mySwiperContainer a:first-child > img").trigger("click");
+        // });
 
         /*************
          *************
