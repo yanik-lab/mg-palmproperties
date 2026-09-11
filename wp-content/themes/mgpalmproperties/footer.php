@@ -50,8 +50,7 @@
         <p><a href="<?php echo pll_get_the_permalink(3); ?>" title=""><?php echo pll_get_the_title(3); ?></a></p>
         <p>
             <em>
-                <a href="https://www.studiomona.fr/" title="StudioMona" class="d-inline-block">StudioMona</a> x
-                <a href="https://www.yanik-lab.fr/" title="YanikLab" class="d-inline-block">YanikLab</a>
+                <a href="https://25eme-heure.co/" title="25ème heure" class="d-inline-block" target="_blank">25ème heure</a>
             </em>
         </p>
     </div>
