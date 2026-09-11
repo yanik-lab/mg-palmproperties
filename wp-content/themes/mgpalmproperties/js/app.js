@@ -29,7 +29,7 @@
                 (100 *
                     (Math.min(viewport.bottom, bounds.bottom) -
                         Math.max(viewport.top, bounds.top))) /
-                    this.outerHeight()
+                    this.outerHeight(),
             );
 
             // Check if the percentage of the element in the viewport meets the offset percentage
@@ -93,8 +93,8 @@
                     $img.attr(
                         "srcset",
                         `${$img.data("logo-color")} 1x, ${$img.data(
-                            "logo-color-2x"
-                        )} 2x`
+                            "logo-color-2x",
+                        )} 2x`,
                     );
 
                     // Met à jour les balises <source>
@@ -110,8 +110,8 @@
                     $img.attr(
                         "srcset",
                         `${$img.data("logo-color")} 1x, ${$img.data(
-                            "logo-color-2x"
-                        )} 2x`
+                            "logo-color-2x",
+                        )} 2x`,
                     );
 
                     // $sources.each(function () {
@@ -134,8 +134,8 @@
                     $img.attr(
                         "srcset",
                         `${$img.data("logo-white")} 1x, ${$img.data(
-                            "logo-white-2x"
-                        )} 2x`
+                            "logo-white-2x",
+                        )} 2x`,
                     );
 
                     // Remet les balises <source> en blanc
@@ -151,8 +151,8 @@
                     $img.attr(
                         "srcset",
                         `${$img.data("logo-color")} 1x, ${$img.data(
-                            "logo-color-2x"
-                        )} 2x`
+                            "logo-color-2x",
+                        )} 2x`,
                     );
 
                     // $sources.each(function () {
@@ -331,7 +331,7 @@
                     {
                         dynamic: true,
                         dynamicEl: dynamicEl,
-                    }
+                    },
                 );
 
                 // Ouvre la galerie LightGallery au slide actif
